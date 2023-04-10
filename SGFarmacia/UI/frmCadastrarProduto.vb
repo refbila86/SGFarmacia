@@ -1,0 +1,221 @@
+﻿Public Class frmCadastrarProduto
+    Dim sql As String
+    Dim ds, dst As New DataSet
+    Dim tbl As New DataTable
+    Dim categoriaBLL As New CategoriaBLL
+    Dim produtoBLL As New ProdutoBLL
+    Dim produtoDTO As New ProdutoDTO
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Close()
+    End Sub
+
+    Private Sub frmCadastrarProduto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Me.txtID.Text = "" Then
+            Me.btnRegistar.Text = "Registar o produto"
+            Me.lblRegistar.Text = "Registar Produtos"
+        Else
+            Me.btnRegistar.Text = "Alterar o produto"
+            Me.lblRegistar.Text = "Alterar Produtos"
+        End If
+        CarregaCategoria()
+    End Sub
+    Public Sub CarregaCategoria()
+        cboCategoria.Items.Clear()
+        Try
+            Dim total_linhas As Integer = 0
+            ds = categoriaBLL.ConsultaDesignacao
+            total_linhas = ds.Tables(0).Rows.Count
+            For i = 0 To total_linhas - 1
+                Me.cboCategoria.Items.Add(ds.Tables(0).Rows(i)("designacao").ToString)
+            Next
+        Catch ex As Exception
+            MsgBox("Erro ao listar a categoria", MsgBoxStyle.Critical, "ERRO")
+        End Try
+    End Sub
+
+    Private Sub cboCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategoria.SelectedIndexChanged
+        GetIdByDescription(cboCategoria.Text)
+    End Sub
+
+    Private Sub btnNovo_Click(sender As Object, e As EventArgs) Handles btnNovo.Click
+        Me.txtDesignacao.Focus()
+        Me.btnNovo.Visible = False
+        Me.btnRegistar.Visible = True
+    End Sub
+    Sub Verifica_Campos()
+        If Me.txtDesignacao.Text = "" Then
+            MsgBox("Digite o nome do produto", MsgBoxStyle.Information, "Informação")
+            Me.txtDesignacao.Focus()
+            Exit Sub
+        ElseIf Me.txtNomeGenerico.Text = "" Then
+            MsgBox("Digite o nome generico", MsgBoxStyle.Information, "Informação")
+            Me.txtNomeGenerico.Focus()
+            Exit Sub
+        ElseIf Me.txtPrecoCompra.Text = "" Then
+            MsgBox("Digite o preco de compora", MsgBoxStyle.Information, "Informação")
+            Me.txtPrecoCompra.Focus()
+            Exit Sub
+        ElseIf Me.txtPrecoVenda.Text = "" Then
+            MsgBox("Digite o preco de venda", MsgBoxStyle.Information, "Informação")
+            Me.txtPrecoVenda.Focus()
+            Exit Sub
+        ElseIf Me.txtQtdCaixa.Text = "" Then
+            MsgBox("Digite a qtd por caixa", MsgBoxStyle.Information, "Informação")
+            Me.txtQtdCaixa.Focus()
+            Exit Sub
+        ElseIf Me.cboPaisOrigem.Text = "" Then
+            MsgBox("Digite o pais de origem", MsgBoxStyle.Information, "Informação")
+            Me.cboPaisOrigem.Focus()
+            Exit Sub
+        End If
+    End Sub
+    Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click
+        Dim data As String
+        If Me.cboCategoria.Text = "" Then
+            MsgBox("Escolha categoria", MsgBoxStyle.Information, "Informação")
+            Exit Sub
+        End If
+        Verifica_Campos()
+
+        If acao = "Novo" Then
+            Try
+                If MsgBox("Confirma o registo do produto: " & Me.txtDesignacao.Text & "?", vbQuestion + vbYesNo, "Confirmação") = MsgBoxResult.Yes Then
+                    produtoDTO.Designacao = Me.txtDesignacao.Text.ToUpper
+                    'produtoDTO.ID = txtID.Text
+                    produtoDTO.Categoria_ID = categoria_id
+                    produtoDTO.Preco_Compra = Me.txtPrecoCompra.Text
+                    produtoDTO.Preco_Venda = Me.txtPrecoVenda.Text
+                    produtoDTO.Pais_Origem = Me.cboPaisOrigem.Text.ToUpper
+                    produtoDTO.Nome_Generico = Me.txtNomeGenerico.Text.ToUpper
+                    produtoDTO.Qtd_Cx = Me.txtQtdCaixa.Text
+                    produtoDTO.Unidade_Medida = Me.cboUnidadeMedida.Text.ToUpper
+                    data = Format(Me.dpValidade.Value, "yyyy-MM-dd HH:mm:ss")
+                    produtoDTO.Validade = data
+                    produtoBLL.RegistarProduto(produtoDTO)
+                    frmListarProdutos.ListarProdutos()
+                    frmListarProdutos.ColorirGrid()
+                    Me.btnRegistar.Visible = False
+                    Me.btnNovo.Visible = True
+                End If
+            Catch ex As Exception
+                MsgBox("Erro ao gravar o produto - " & ex.Message, MsgBoxStyle.Critical, "ERRO")
+            End Try
+        Else
+            Me.btnRegistar.Text = "Alterar o produto"
+            Try
+                If MsgBox("Confirma o alteração do produto: " & Me.txtDesignacao.Text & "?", vbQuestion + vbYesNo, "Confirmação") = MsgBoxResult.Yes Then
+                    produtoDTO.Categoria_ID = categoria_id
+                    produtoDTO.ID = Me.txtID.Text
+                    produtoDTO.Designacao = Me.txtDesignacao.Text.ToUpper
+                    produtoDTO.Preco_Compra = Me.txtPrecoCompra.Text
+                    produtoDTO.Preco_Venda = Me.txtPrecoVenda.Text
+                    produtoDTO.Pais_Origem = Me.cboPaisOrigem.Text.ToUpper
+                    produtoDTO.Nome_Generico = Me.txtNomeGenerico.Text.ToUpper
+                    produtoDTO.Qtd_Cx = Me.txtQtdCaixa.Text
+                    produtoDTO.Unidade_Medida = Me.cboUnidadeMedida.Text.ToUpper
+                    data = Format(Me.dpValidade.Value, "yyyy-MM-dd HH:mm:ss")
+                    produtoDTO.Validade = data
+                    produtoDTO.Criado = Format(Now(), "yyyy-MM-dd HH:mm:ss")
+                    produtoBLL.ActualizarProduto(produtoDTO)
+                    frmListarProdutos.ListarProdutos()
+                    frmListarProdutos.ColorirGrid()
+                    LimparForm()
+                    Me.Close()
+                End If
+            Catch ex As Exception
+                MsgBox("Erro ao gravar o produto - " & ex.Message, MsgBoxStyle.Critical, "ERRO")
+            End Try
+        End If
+
+
+    End Sub
+    Sub LimparForm()
+        Me.txtID.Text = ""
+        'Me.txtDesignacao
+        Me.txtDesignacao.Text = ""
+        Me.txtNomeGenerico.Text = ""
+        Me.txtPrecoCompra.Text = ""
+        Me.txtPrecoVenda.Text = ""
+        Me.txtQtdCaixa.Text = ""
+        Me.cboCategoria.Items.Clear()
+        CarregaCategoria()
+        Me.cboPaisOrigem.Text = ""
+        acao = ""
+    End Sub
+    Private Sub txtDesignacao_TextChanged(sender As Object, e As EventArgs) Handles txtDesignacao.TextChanged
+
+    End Sub
+
+    Private Sub GetIdByDescription(ByRef description As String)
+        Try
+            tbl = categoriaBLL.BuscaIDCategoria(cboCategoria.Text)
+            If tbl.Rows.Count > 0 Then
+                categoria_id = tbl.Rows(0)(0).ToString()
+                txtIDCategoria.Text = categoria_id
+            End If
+        Catch ex As Exception
+            MsgBox("Erro ao trazer o codigo da categoria - " & ex.Message, MsgBoxStyle.Critical, "ERRO")
+        End Try
+        tbl = Nothing
+    End Sub
+
+    Private Sub txtNomeGenerico_TextChanged(sender As Object, e As EventArgs) Handles txtNomeGenerico.TextChanged
+
+    End Sub
+
+    Private Sub txtDesignacao_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDesignacao.KeyPress
+        'Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        'KeyAscii = CShort(SoLETRAS(KeyAscii))
+
+        'If KeyAscii = 0 Then
+
+        '    e.Handled = True
+
+        'End If
+    End Sub
+
+    Private Sub cboPaisOrigem_TextChanged(sender As Object, e As EventArgs) Handles cboPaisOrigem.TextChanged
+
+    End Sub
+
+    Private Sub txtNomeGenerico_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNomeGenerico.KeyPress
+        'Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        'KeyAscii = CShort(SoLETRAS(KeyAscii))
+
+        'If KeyAscii = 0 Then
+
+        '    e.Handled = True
+
+        'End If
+    End Sub
+
+    Private Sub txtQtdCaixa_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQtdCaixa.KeyPress
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        KeyAscii = CShort(SoNumeros(KeyAscii))
+
+        If KeyAscii = 0 Then
+
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub dpValidade_ValueChanged(sender As Object, e As EventArgs) Handles dpValidade.ValueChanged
+
+    End Sub
+
+    Private Sub cboPaisOrigem_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cboPaisOrigem.KeyPress
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        KeyAscii = CShort(SoLETRAS(KeyAscii))
+
+        If KeyAscii = 0 Then
+
+            e.Handled = True
+
+        End If
+    End Sub
+End Class
