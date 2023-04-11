@@ -202,5 +202,20 @@
   <ItemGroup>
     <None Include="Resources\logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Cart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARINHO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping Cart2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

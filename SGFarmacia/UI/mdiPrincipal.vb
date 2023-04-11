@@ -20,4 +20,13 @@
     Private Sub mdiPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub btnConsultas_Click(sender As Object, e As EventArgs) Handles btnConsultas.Click
+
+    End Sub
+
+    Private Sub btnFacturas_Click(sender As Object, e As EventArgs) Handles btnFacturas.Click
+        frmSaidaProdutos.MdiParent = Me
+        frmSaidaProdutos.Show()
+    End Sub
 End Class
