@@ -79,6 +79,14 @@
 
     End Sub
 
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub dgEntradaProdutos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgEntradaProdutos.CellContentClick
+
+    End Sub
+
     Public Sub ListarEntradaDeProdutos()
         dgEntradaProdutos.Rows.Clear()
         'Dim dataActual As String

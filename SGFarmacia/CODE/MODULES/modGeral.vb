@@ -1,8 +1,8 @@
 ﻿
 Module modGeral
-    Public ano_id, mes_id, categoria_id, produto_id, folha_mes_id, c, folha_de_salario_id, funcionario_id, stock_actual, entrada_id, provincia_id, salario_id, Faltas_, Dias_Trabalhados_, Pagamento_Diario_, Dias_Trabalho_, existe, tipo_contrato, funcao_id, beneficio_id, desconto_id, contrato_id_ As Integer
-    Public Nome_Completo, Categoria_, strmessage, aprovado, folha_gerada, contaTentativasAcesso, erro, perfil, utilizador, acao, data_inicio, data_fim As String
-    Public Salario_Base_, Salario_Liquido_, Alimentacao_, Combustivel_, Bonus_, Total_Subsidio_, INSS_, IRPS_, O_Despesas_, Total_Despesas_, Salario_Receber_ As Double
+    Public ano_id, mes_id, categoria_id, produto_id, folha_mes_id, c, folha_de_salario_id, funcionario_id, stock_actual, saida_id, entrada_id, provincia_id, salario_id, Faltas_, Dias_Trabalhados_, Pagamento_Diario_, Dias_Trabalho_, existe, tipo_contrato, funcao_id, beneficio_id, desconto_id, contrato_id_ As Integer
+    Public Nome_Completo, Categoria_, strmessage, aprovado, folha_gerada, contaTentativasAcesso, erro, perfil, utilizador, acao, data_inicio, data_fim, artigo As String
+    Public Salario_Base_, Salario_Liquido_, qtd_retirar, Alimentacao_, Combustivel_, Bonus_, Total_Subsidio_, INSS_, IRPS_, O_Despesas_, Total_Despesas_, Salario_Receber_ As Double
     Dim i As Integer
     'Dim strmessage As String
     Public encontrou, folha_salario, limite As Boolean

@@ -35,7 +35,6 @@
         con.ExecutarComandoSQL(sql)
     End Sub
     Public Function ListarEntradaProduto(ByRef entrada_id As Integer)
-        'sql = "SELECT COUNT(*) FROM entrada WHERE data like '%" & data & "%'"
         sql = "SELECT COUNT(*) FROM entrada WHERE id = " & entrada_id & ""
         con.VerificaSeProduto(sql)
         If existe = 1 Then
@@ -43,8 +42,6 @@
             con.ListarEntradaProduto(sql)
         Else
             frmEntradaProdutos.dgEntradaProdutos.Rows.Clear()
-            'sql = "select e.id, p.designacao, e.tipo_entrada, e.qtd_introduzir, e.total_introduzir, e.qtd_por_cx, e.preco_compra, e.preco_venda from entrada_produto e inner join produto p on p.id=e.produto_id"
-            'con.ExecutarComandoSQL(sql)
         End If
         Return ds
     End Function

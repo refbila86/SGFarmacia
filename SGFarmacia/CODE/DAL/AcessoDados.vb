@@ -19,10 +19,10 @@ Public Class AcessoDados
 
     Public adptImagem As MySqlDataAdapter
 
-    'Dim servidor = "192.168.168.37"
-    'Dim user = "fvServer"
-    'Dim pass = "@fvServer2023"
-    'Dim basedados = "fam"
+    ''Dim servidor = "192.168.168.37"
+    ''Dim user = "fvServer"
+    ''Dim pass = "@fvServer2023"
+    ''Dim basedados = "fam"
 
     Dim servidor = "localhost"
     Dim user = "root"
@@ -171,6 +171,26 @@ Public Class AcessoDados
 
         End Try
     End Sub
+    Public Sub ListarSaidaProduto(sql As String)
+        frmListarSaidasDoDia.dgListaVendas.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmListarSaidasDoDia.dgListaVendas.Rows.Add(dr.Item("nrvenda").ToString, dr.Item("cliente").ToString, dr.Item("nuit").ToString, dr.Item("contacto").ToString, dr.Item("totalgeral").ToString, "Editar", "Remover")
+            End While
+        Catch ex As Exception
+            MessageBox.Show("Ocorreu um erro: " + ex.Message)
+        Finally
+            dr.Close()
+            con.Close()
+
+        End Try
+    End Sub
     Public Sub ListarProdutosPorNome(sql As String)
         frmEntradaProdutos.dgPesquisar.Rows.Clear()
         Dim i As Integer
@@ -187,6 +207,62 @@ Public Class AcessoDados
             dr.Close()
             con.Close()
             MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
+    Public Sub ListarProdutosPorNomeSaida(sql As String)
+        frmSaidaProdutos.dgPesquisar.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmSaidaProdutos.dgPesquisar.Rows.Add(dr.Item("id").ToString, dr.Item("designacao").ToString, dr.Item("pais_origem").ToString, dr.Item("preco_venda").ToString, dr.Item("preco_compra").ToString, dr.Item("qtd_cx").ToString, "Seleccionar")
+            End While
+        Catch ex As Exception
+            dr.Close()
+            con.Close()
+            MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
+    Public Sub ListarItensDaVenda(sql As String)
+        frmSaidaProdutos.dgVendaItens.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmSaidaProdutos.dgVendaItens.Rows.Add(dr.Item("id").ToString, dr.Item("produto_id").ToString, dr.Item("designacao").ToString, dr.Item("qtd").ToString, dr.Item("precounitario").ToString, dr.Item("totalunitario").ToString, dr.Item("desconto").ToString, "Editar", "Remover")
+            End While
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical)
+        Finally
+            dr.Close()
+            con.Close()
+        End Try
+    End Sub
+    Public Sub ListarDetalhesDaVenda(sql As String)
+        frmSaidaProdutos.dgVendaItens.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmSaidaProdutos.dgVendaItens.Rows.Add(dr.Item("artigo").ToString, dr.Item("produtoid").ToString, dr.Item("designacao").ToString, dr.Item("precounitario").ToString, dr.Item("qtd").ToString, dr.Item("desconto").ToString, dr.Item("totalunitario").ToString, "Editar", "Remover")
+            End While
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical)
+        Finally
+            dr.Close()
+            con.Close()
         End Try
     End Sub
     Public Sub ListarColaboradores(sql As String)

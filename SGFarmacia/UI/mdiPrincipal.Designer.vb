@@ -321,13 +321,13 @@ Partial Class mdiPrincipal
         'AlunosToolStripMenuItem
         '
         Me.AlunosToolStripMenuItem.Name = "AlunosToolStripMenuItem"
-        Me.AlunosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AlunosToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.AlunosToolStripMenuItem.Text = "Vendas"
         '
         'CursosToolStripMenuItem
         '
         Me.CursosToolStripMenuItem.Name = "CursosToolStripMenuItem"
-        Me.CursosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CursosToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.CursosToolStripMenuItem.Text = "Cadastro"
         '
         'ToolStripStatusLabel9
@@ -409,7 +409,7 @@ Partial Class mdiPrincipal
         '
         Me.ToolStripDropDownButton6.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnTrocarSenha, Me.btnConfigurarEmail, Me.ToolStripMenuItem4, Me.btnBloquearRecursos})
         Me.ToolStripDropDownButton6.ForeColor = System.Drawing.Color.White
-        Me.ToolStripDropDownButton6.Image = CType(resources.GetObject("ToolStripDropDownButton6.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton6.Image = Global.SGFarmacia.My.Resources.Resources.mintxo_logo
         Me.ToolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton6.Name = "ToolStripDropDownButton6"
         Me.ToolStripDropDownButton6.Size = New System.Drawing.Size(171, 93)
@@ -457,8 +457,9 @@ Partial Class mdiPrincipal
         Me.Panel2.Controls.Add(Me.Panel5)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 95)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(190, 425)
+        Me.Panel2.Size = New System.Drawing.Size(190, 545)
         Me.Panel2.TabIndex = 10
         '
         'Button3
@@ -471,16 +472,17 @@ Partial Class mdiPrincipal
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(0, 365)
+        Me.Button3.Location = New System.Drawing.Point(0, 450)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(190, 34)
+        Me.Button3.Size = New System.Drawing.Size(190, 42)
         Me.Button3.TabIndex = 9
         Me.Button3.Text = "Diario"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -488,9 +490,10 @@ Partial Class mdiPrincipal
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 318)
+        Me.Button1.Location = New System.Drawing.Point(0, 392)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(190, 47)
+        Me.Button1.Size = New System.Drawing.Size(190, 58)
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "CAIXA"
         Me.Button1.UseVisualStyleBackColor = False
@@ -506,9 +509,10 @@ Partial Class mdiPrincipal
         Me.btnGuia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnGuia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuia.ForeColor = System.Drawing.Color.White
-        Me.btnGuia.Location = New System.Drawing.Point(0, 284)
+        Me.btnGuia.Location = New System.Drawing.Point(0, 350)
+        Me.btnGuia.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnGuia.Name = "btnGuia"
-        Me.btnGuia.Size = New System.Drawing.Size(190, 34)
+        Me.btnGuia.Size = New System.Drawing.Size(190, 42)
         Me.btnGuia.TabIndex = 7
         Me.btnGuia.Text = "Guia de Entrega"
         Me.btnGuia.UseVisualStyleBackColor = False
@@ -524,9 +528,10 @@ Partial Class mdiPrincipal
         Me.btnRecibo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRecibo.ForeColor = System.Drawing.Color.White
-        Me.btnRecibo.Location = New System.Drawing.Point(0, 250)
+        Me.btnRecibo.Location = New System.Drawing.Point(0, 308)
+        Me.btnRecibo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnRecibo.Name = "btnRecibo"
-        Me.btnRecibo.Size = New System.Drawing.Size(190, 34)
+        Me.btnRecibo.Size = New System.Drawing.Size(190, 42)
         Me.btnRecibo.TabIndex = 6
         Me.btnRecibo.Text = "Recibo"
         Me.btnRecibo.UseVisualStyleBackColor = False
@@ -542,11 +547,12 @@ Partial Class mdiPrincipal
         Me.btnCotacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnCotacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCotacao.ForeColor = System.Drawing.Color.White
-        Me.btnCotacao.Location = New System.Drawing.Point(0, 216)
+        Me.btnCotacao.Location = New System.Drawing.Point(0, 266)
+        Me.btnCotacao.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnCotacao.Name = "btnCotacao"
-        Me.btnCotacao.Size = New System.Drawing.Size(190, 34)
+        Me.btnCotacao.Size = New System.Drawing.Size(190, 42)
         Me.btnCotacao.TabIndex = 5
-        Me.btnCotacao.Text = "Cotação"
+        Me.btnCotacao.Text = "Forncedores"
         Me.btnCotacao.UseVisualStyleBackColor = False
         '
         'btnFacturas
@@ -559,16 +565,17 @@ Partial Class mdiPrincipal
         Me.btnFacturas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFacturas.ForeColor = System.Drawing.Color.White
-        Me.btnFacturas.Location = New System.Drawing.Point(0, 182)
+        Me.btnFacturas.Location = New System.Drawing.Point(0, 224)
+        Me.btnFacturas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnFacturas.Name = "btnFacturas"
-        Me.btnFacturas.Size = New System.Drawing.Size(190, 34)
+        Me.btnFacturas.Size = New System.Drawing.Size(190, 42)
         Me.btnFacturas.TabIndex = 4
         Me.btnFacturas.Text = "Produtos"
         Me.btnFacturas.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -576,41 +583,50 @@ Partial Class mdiPrincipal
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(0, 136)
+        Me.Button2.Location = New System.Drawing.Point(0, 167)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(190, 46)
+        Me.Button2.Size = New System.Drawing.Size(190, 57)
         Me.Button2.TabIndex = 3
-        Me.Button2.Text = "VENDAS"
+        Me.Button2.Text = "SAIDAS"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Panel5
         '
+        Me.Panel5.BackColor = System.Drawing.Color.DimGray
         Me.Panel5.Controls.Add(Me.PictureBox2)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(190, 136)
+        Me.Panel5.Size = New System.Drawing.Size(190, 167)
         Me.Panel5.TabIndex = 0
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.SGFarmacia.My.Resources.Resources.logo
-        Me.PictureBox2.Location = New System.Drawing.Point(-20, -28)
+        Me.PictureBox2.Image = Global.SGFarmacia.My.Resources.Resources.mintxo_logo
+        Me.PictureBox2.Location = New System.Drawing.Point(13, 0)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(228, 198)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.Size = New System.Drawing.Size(163, 164)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
         '
         'mdiPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 520)
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.ClientSize = New System.Drawing.Size(800, 640)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.sBarraMenus)
+        Me.DoubleBuffered = True
+        Me.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "mdiPrincipal"
         Me.Text = "Sistema de Gestão e Controlo de Fármacos"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

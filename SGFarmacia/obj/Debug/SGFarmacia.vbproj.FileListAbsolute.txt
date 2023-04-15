@@ -26,3 +26,4 @@ C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmEntradaProdutos.resources
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmListarEntradasDoDia.resources
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmSaidaProdutos.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmListarSaidasDoDia.resources

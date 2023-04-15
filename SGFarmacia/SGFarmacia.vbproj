@@ -82,12 +82,16 @@
     <Compile Include="CODE\BLL\ProdutoBLL.vb" />
     <Compile Include="CODE\BLL\ProdutoStockBLL.vb" />
     <Compile Include="CODE\BLL\Produto_EntradaBLL.vb" />
+    <Compile Include="CODE\BLL\VendaBLL.vb" />
+    <Compile Include="CODE\BLL\VendaItensBLL.vb" />
     <Compile Include="CODE\DAL\AcessoDados.vb" />
     <Compile Include="CODE\DTO\CategoriaDTO.vb" />
     <Compile Include="CODE\DTO\EntradaDTO.vb" />
     <Compile Include="CODE\DTO\ProdutoDTO.vb" />
     <Compile Include="CODE\DTO\ProdutoStockDTO.vb" />
     <Compile Include="CODE\DTO\Produto_EntradaDTO.vb" />
+    <Compile Include="CODE\DTO\VendaDTO.vb" />
+    <Compile Include="CODE\DTO\VendaItensDTO.vb" />
     <Compile Include="CODE\MODULES\modGeral.vb" />
     <Compile Include="UI\frmCadastrarProduto.Designer.vb">
       <DependentUpon>frmCadastrarProduto.vb</DependentUpon>
@@ -136,6 +140,12 @@
     <Compile Include="UI\frmListarProdutos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\frmListarSaidasDoDia.Designer.vb">
+      <DependentUpon>frmListarSaidasDoDia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmListarSaidasDoDia.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\frmSaidaProdutos.Designer.vb">
       <DependentUpon>frmSaidaProdutos.vb</DependentUpon>
     </Compile>
@@ -170,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmListarProdutos.resx">
       <DependentUpon>frmListarProdutos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmListarSaidasDoDia.resx">
+      <DependentUpon>frmListarSaidasDoDia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmSaidaProdutos.resx">
       <DependentUpon>frmSaidaProdutos.vb</DependentUpon>
@@ -216,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shopping Cart2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mintxo logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

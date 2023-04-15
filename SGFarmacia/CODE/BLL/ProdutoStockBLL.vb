@@ -27,6 +27,14 @@
         sql = "UPDATE produto_stock SET stock_actual  = stock_actual + " & produtoStockDTO.Stock_Actual & " WHERE produto_id= " & produtoStockDTO.PRoduto_id & ""
         con.ExecutarComandoSQL(sql)
     End Sub
+    Public Sub DiminuirStock(qtd_retirar As Integer, produto_id As Integer)
+        sql = "UPDATE produto_stock SET stock_actual  = stock_actual - " & qtd_retirar & " WHERE produto_id= " & produto_id & ""
+        con.ExecutarComandoSQL(sql)
+    End Sub
+    Public Sub AumentarStock(qtd_retirar As Integer, produto_id As Integer)
+        sql = "UPDATE produto_stock SET stock_actual  = stock_actual + " & qtd_retirar & " WHERE produto_id= " & produto_id & ""
+        con.ExecutarComandoSQL(sql)
+    End Sub
     Public Function ConsultaDesignacao()
         sql = "SELECT designacao FROM Categoria"
         ds = con.Listar(sql)

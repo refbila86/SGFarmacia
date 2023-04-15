@@ -12,8 +12,9 @@
         Dim dt As String
         For i As Integer = 0 To dgListaFuncionarios.Rows.Count - 1
             dt = dgListaFuncionarios.Rows(i).Cells("stockactual").Value.ToString
-            If dt = "" Then
+            If dt = "" Or dt = 0 Then
                 dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Red
+                'dgListaFuncionarios.Rows(i).DefaultCellStyle.Font.Bold
             Else
                 dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Blue
             End If

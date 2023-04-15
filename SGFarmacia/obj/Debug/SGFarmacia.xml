@@ -52,6 +52,11 @@ SGFarmacia
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SGFarmacia.My.Resources.Resources.mintxo_logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SGFarmacia.My.Resources.Resources.Shopping_Cart">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
