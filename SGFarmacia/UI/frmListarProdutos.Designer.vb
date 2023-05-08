@@ -22,14 +22,20 @@ Partial Class frmListarProdutos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListarProdutos))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListarProdutos))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.dgListaFuncionarios = New System.Windows.Forms.DataGridView()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnRegistar = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.dpData = New System.Windows.Forms.DateTimePicker()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.produto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nomegenerico = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,12 +48,6 @@ Partial Class frmListarProdutos
         Me.paisorigem = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colEditar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.btnRegistar = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.dpData = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.dgListaFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,98 +95,6 @@ Partial Class frmListarProdutos
         Me.dgListaFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgListaFuncionarios.Size = New System.Drawing.Size(800, 372)
         Me.dgListaFuncionarios.TabIndex = 17
-        '
-        'id
-        '
-        Me.id.Frozen = True
-        Me.id.HeaderText = "ID"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        Me.id.Width = 30
-        '
-        'produto
-        '
-        Me.produto.Frozen = True
-        Me.produto.HeaderText = "Designacao do produto"
-        Me.produto.Name = "produto"
-        Me.produto.ReadOnly = True
-        Me.produto.Width = 185
-        '
-        'nomegenerico
-        '
-        Me.nomegenerico.Frozen = True
-        Me.nomegenerico.HeaderText = "Nome genérico"
-        Me.nomegenerico.Name = "nomegenerico"
-        Me.nomegenerico.ReadOnly = True
-        Me.nomegenerico.Width = 175
-        '
-        'categoria
-        '
-        Me.categoria.Frozen = True
-        Me.categoria.HeaderText = "Categoria"
-        Me.categoria.Name = "categoria"
-        Me.categoria.ReadOnly = True
-        Me.categoria.Width = 150
-        '
-        'stockactual
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.stockactual.DefaultCellStyle = DataGridViewCellStyle1
-        Me.stockactual.HeaderText = "Stock actual"
-        Me.stockactual.Name = "stockactual"
-        Me.stockactual.ReadOnly = True
-        '
-        'precocompra
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.precocompra.DefaultCellStyle = DataGridViewCellStyle2
-        Me.precocompra.HeaderText = "Preço compra"
-        Me.precocompra.Name = "precocompra"
-        Me.precocompra.ReadOnly = True
-        '
-        'valordia
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.valordia.DefaultCellStyle = DataGridViewCellStyle3
-        Me.valordia.HeaderText = "Preço venda"
-        Me.valordia.Name = "valordia"
-        Me.valordia.ReadOnly = True
-        '
-        'qtdcaixa
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.qtdcaixa.DefaultCellStyle = DataGridViewCellStyle4
-        Me.qtdcaixa.HeaderText = "Qtd por caixa"
-        Me.qtdcaixa.Name = "qtdcaixa"
-        Me.qtdcaixa.ReadOnly = True
-        '
-        'validade
-        '
-        Me.validade.HeaderText = "Validade"
-        Me.validade.Name = "validade"
-        Me.validade.ReadOnly = True
-        '
-        'paisorigem
-        '
-        Me.paisorigem.HeaderText = "Pais de origem"
-        Me.paisorigem.Name = "paisorigem"
-        Me.paisorigem.ReadOnly = True
-        Me.paisorigem.Width = 130
-        '
-        'colEditar
-        '
-        Me.colEditar.HeaderText = ""
-        Me.colEditar.Name = "colEditar"
-        Me.colEditar.ReadOnly = True
-        '
-        'colRemover
-        '
-        Me.colRemover.HeaderText = ""
-        Me.colRemover.Name = "colRemover"
-        Me.colRemover.ReadOnly = True
         '
         'Panel4
         '
@@ -254,6 +162,100 @@ Partial Class frmListarProdutos
         Me.dpData.Name = "dpData"
         Me.dpData.Size = New System.Drawing.Size(196, 20)
         Me.dpData.TabIndex = 23
+        '
+        'id
+        '
+        Me.id.Frozen = True
+        Me.id.HeaderText = "ID"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Width = 30
+        '
+        'produto
+        '
+        Me.produto.Frozen = True
+        Me.produto.HeaderText = "Designacao do produto"
+        Me.produto.Name = "produto"
+        Me.produto.ReadOnly = True
+        Me.produto.Width = 185
+        '
+        'nomegenerico
+        '
+        Me.nomegenerico.Frozen = True
+        Me.nomegenerico.HeaderText = "Nome genérico"
+        Me.nomegenerico.Name = "nomegenerico"
+        Me.nomegenerico.ReadOnly = True
+        Me.nomegenerico.Visible = False
+        Me.nomegenerico.Width = 175
+        '
+        'categoria
+        '
+        Me.categoria.Frozen = True
+        Me.categoria.HeaderText = "Categoria"
+        Me.categoria.Name = "categoria"
+        Me.categoria.ReadOnly = True
+        Me.categoria.Width = 150
+        '
+        'stockactual
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.stockactual.DefaultCellStyle = DataGridViewCellStyle1
+        Me.stockactual.HeaderText = "Stock actual"
+        Me.stockactual.Name = "stockactual"
+        Me.stockactual.ReadOnly = True
+        '
+        'precocompra
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.precocompra.DefaultCellStyle = DataGridViewCellStyle2
+        Me.precocompra.HeaderText = "Preço compra"
+        Me.precocompra.Name = "precocompra"
+        Me.precocompra.ReadOnly = True
+        '
+        'valordia
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.valordia.DefaultCellStyle = DataGridViewCellStyle3
+        Me.valordia.HeaderText = "Preço venda"
+        Me.valordia.Name = "valordia"
+        Me.valordia.ReadOnly = True
+        '
+        'qtdcaixa
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.qtdcaixa.DefaultCellStyle = DataGridViewCellStyle4
+        Me.qtdcaixa.HeaderText = "Qtd por caixa"
+        Me.qtdcaixa.Name = "qtdcaixa"
+        Me.qtdcaixa.ReadOnly = True
+        '
+        'validade
+        '
+        Me.validade.HeaderText = "Validade"
+        Me.validade.Name = "validade"
+        Me.validade.ReadOnly = True
+        Me.validade.Width = 195
+        '
+        'paisorigem
+        '
+        Me.paisorigem.HeaderText = "Pais origem"
+        Me.paisorigem.Name = "paisorigem"
+        Me.paisorigem.ReadOnly = True
+        Me.paisorigem.Visible = False
+        '
+        'colEditar
+        '
+        Me.colEditar.HeaderText = ""
+        Me.colEditar.Name = "colEditar"
+        Me.colEditar.ReadOnly = True
+        '
+        'colRemover
+        '
+        Me.colRemover.HeaderText = ""
+        Me.colRemover.Name = "colRemover"
+        Me.colRemover.ReadOnly = True
         '
         'frmListarProdutos
         '

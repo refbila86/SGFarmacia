@@ -1,4 +1,4 @@
-﻿Public Class VendaDTO
+﻿Public Class Nota_CreditoDTO
     Private id_ As Integer
     Public Property ID() As Integer
         Get
@@ -80,13 +80,23 @@
             cancelado_ = value
         End Set
     End Property
-    Private nr_nota_debito_ As String
-    Public Property Nr_Nota_Debido() As String
+
+    Private vd_referencia_ As String
+    Public Property VD_Referencia() As String
         Get
-            Return nr_nota_debito_
+            Return vd_referencia_
         End Get
         Set(ByVal value As String)
-            nr_nota_debito_ = value
+            vd_referencia_ = value
+        End Set
+    End Property
+    Private motivo_ As String
+    Public Property Motivo() As String
+        Get
+            Return motivo_
+        End Get
+        Set(ByVal value As String)
+            motivo_ = value
         End Set
     End Property
 End Class

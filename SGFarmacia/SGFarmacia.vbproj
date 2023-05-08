@@ -79,6 +79,8 @@
   <ItemGroup>
     <Compile Include="CODE\BLL\CategoriaBLL.vb" />
     <Compile Include="CODE\BLL\EntradaBLL.vb" />
+    <Compile Include="CODE\BLL\Nota_CreditoBLL.vb" />
+    <Compile Include="CODE\BLL\Nota_CreditoItensBLL.vb" />
     <Compile Include="CODE\BLL\ProdutoBLL.vb" />
     <Compile Include="CODE\BLL\ProdutoStockBLL.vb" />
     <Compile Include="CODE\BLL\Produto_EntradaBLL.vb" />
@@ -87,11 +89,14 @@
     <Compile Include="CODE\DAL\AcessoDados.vb" />
     <Compile Include="CODE\DTO\CategoriaDTO.vb" />
     <Compile Include="CODE\DTO\EntradaDTO.vb" />
+    <Compile Include="CODE\DTO\Nota_CreditoDTO.vb" />
+    <Compile Include="CODE\DTO\Nota_CreditoItensDTO.vb" />
     <Compile Include="CODE\DTO\ProdutoDTO.vb" />
     <Compile Include="CODE\DTO\ProdutoStockDTO.vb" />
     <Compile Include="CODE\DTO\Produto_EntradaDTO.vb" />
     <Compile Include="CODE\DTO\VendaDTO.vb" />
     <Compile Include="CODE\DTO\VendaItensDTO.vb" />
+    <Compile Include="CODE\MODULES\modFuncoes.vb" />
     <Compile Include="CODE\MODULES\modGeral.vb" />
     <Compile Include="UI\frmCadastrarProduto.Designer.vb">
       <DependentUpon>frmCadastrarProduto.vb</DependentUpon>
@@ -122,6 +127,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UI\frmCaixaDiario.Designer.vb">
+      <DependentUpon>frmCaixaDiario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmCaixaDiario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmCamera.Designer.vb">
+      <DependentUpon>frmCamera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmCamera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmDetalhesCaixaDiario.Designer.vb">
+      <DependentUpon>frmDetalhesCaixaDiario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmDetalhesCaixaDiario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\frmEntradaProdutos.Designer.vb">
       <DependentUpon>frmEntradaProdutos.vb</DependentUpon>
     </Compile>
@@ -132,6 +155,12 @@
       <DependentUpon>frmListarEntradasDoDia.vb</DependentUpon>
     </Compile>
     <Compile Include="UI\frmListarEntradasDoDia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmListarNotasCredito.Designer.vb">
+      <DependentUpon>frmListarNotasCredito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmListarNotasCredito.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmListarProdutos.Designer.vb">
@@ -150,6 +179,12 @@
       <DependentUpon>frmSaidaProdutos.vb</DependentUpon>
     </Compile>
     <Compile Include="UI\frmSaidaProdutos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmSplash.Designer.vb">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmSplash.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\mdiPrincipal.Designer.vb">
@@ -172,11 +207,23 @@
     <EmbeddedResource Include="UI\frmCadastrarCategoria.resx">
       <DependentUpon>frmCadastrarCategoria.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmCaixaDiario.resx">
+      <DependentUpon>frmCaixaDiario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmCamera.resx">
+      <DependentUpon>frmCamera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmDetalhesCaixaDiario.resx">
+      <DependentUpon>frmDetalhesCaixaDiario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmEntradaProdutos.resx">
       <DependentUpon>frmEntradaProdutos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmListarEntradasDoDia.resx">
       <DependentUpon>frmListarEntradasDoDia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmListarNotasCredito.resx">
+      <DependentUpon>frmListarNotasCredito.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmListarProdutos.resx">
       <DependentUpon>frmListarProdutos.vb</DependentUpon>
@@ -186,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmSaidaProdutos.resx">
       <DependentUpon>frmSaidaProdutos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmSplash.resx">
+      <DependentUpon>frmSplash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\mdiPrincipal.resx">
       <DependentUpon>mdiPrincipal.vb</DependentUpon>

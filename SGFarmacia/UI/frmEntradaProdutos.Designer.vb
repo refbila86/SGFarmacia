@@ -51,6 +51,7 @@ Partial Class frmEntradaProdutos
         Me.precodecompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.qtdcaixa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSelecionar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.mskData = New System.Windows.Forms.MaskedTextBox()
         Me.btnRegistar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -59,6 +60,7 @@ Partial Class frmEntradaProdutos
         Me.txtStockActual = New System.Windows.Forms.TextBox()
         Me.btnAdicionaar = New System.Windows.Forms.Button()
         Me.cboTipoEntrada = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtTotalIntroduzir = New System.Windows.Forms.TextBox()
         Me.txtQtdIntroduzir = New System.Windows.Forms.TextBox()
         Me.txtPrecoVenda = New System.Windows.Forms.TextBox()
@@ -75,7 +77,6 @@ Partial Class frmEntradaProdutos
         Me.txtDesignacao = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.dpData = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtTotalGasto = New System.Windows.Forms.TextBox()
@@ -83,7 +84,8 @@ Partial Class frmEntradaProdutos
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtTotalEsperado = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.mskData = New System.Windows.Forms.MaskedTextBox()
+        Me.dpValidade = New System.Windows.Forms.DateTimePicker()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.dgEntradaProdutos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,7 +104,7 @@ Partial Class frmEntradaProdutos
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(720, 33)
+        Me.Panel1.Size = New System.Drawing.Size(654, 33)
         Me.Panel1.TabIndex = 2
         '
         'Button3
@@ -115,7 +117,7 @@ Partial Class frmEntradaProdutos
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(694, 4)
+        Me.Button3.Location = New System.Drawing.Point(628, 4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(22, 25)
         Me.Button3.TabIndex = 5
@@ -127,7 +129,7 @@ Partial Class frmEntradaProdutos
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(720, 33)
+        Me.Panel2.Size = New System.Drawing.Size(654, 33)
         Me.Panel2.TabIndex = 1
         '
         'Label1
@@ -148,7 +150,7 @@ Partial Class frmEntradaProdutos
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 33)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(720, 50)
+        Me.Panel4.Size = New System.Drawing.Size(654, 50)
         Me.Panel4.TabIndex = 7
         '
         'dgEntradaProdutos
@@ -258,11 +260,13 @@ Partial Class frmEntradaProdutos
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.pnPesquisar)
+        Me.GroupBox1.Controls.Add(Me.mskData)
         Me.GroupBox1.Controls.Add(Me.btnRegistar)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.txtStockActual)
         Me.GroupBox1.Controls.Add(Me.btnAdicionaar)
         Me.GroupBox1.Controls.Add(Me.cboTipoEntrada)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtTotalIntroduzir)
         Me.GroupBox1.Controls.Add(Me.txtQtdIntroduzir)
         Me.GroupBox1.Controls.Add(Me.txtPrecoVenda)
@@ -281,17 +285,17 @@ Partial Class frmEntradaProdutos
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Location = New System.Drawing.Point(0, 111)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(710, 280)
+        Me.GroupBox1.Size = New System.Drawing.Size(646, 280)
         Me.GroupBox1.TabIndex = 21
         Me.GroupBox1.TabStop = False
         '
         'pnPesquisar
         '
         Me.pnPesquisar.Controls.Add(Me.dgPesquisar)
-        Me.pnPesquisar.Location = New System.Drawing.Point(80, 31)
+        Me.pnPesquisar.Location = New System.Drawing.Point(69, 31)
         Me.pnPesquisar.Name = "pnPesquisar"
-        Me.pnPesquisar.Size = New System.Drawing.Size(614, 226)
-        Me.pnPesquisar.TabIndex = 25
+        Me.pnPesquisar.Size = New System.Drawing.Size(566, 226)
+        Me.pnPesquisar.TabIndex = 28
         Me.pnPesquisar.Visible = False
         '
         'dgPesquisar
@@ -308,7 +312,7 @@ Partial Class frmEntradaProdutos
         Me.dgPesquisar.ReadOnly = True
         Me.dgPesquisar.RowHeadersVisible = False
         Me.dgPesquisar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgPesquisar.Size = New System.Drawing.Size(600, 216)
+        Me.dgPesquisar.Size = New System.Drawing.Size(557, 216)
         Me.dgPesquisar.TabIndex = 19
         '
         'DataGridViewTextBoxColumn1
@@ -316,6 +320,7 @@ Partial Class frmEntradaProdutos
         Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
         Me.DataGridViewTextBoxColumn1.Width = 45
         '
         'designacao
@@ -358,6 +363,14 @@ Partial Class frmEntradaProdutos
         Me.colSelecionar.Name = "colSelecionar"
         Me.colSelecionar.ReadOnly = True
         Me.colSelecionar.Width = 85
+        '
+        'mskData
+        '
+        Me.mskData.Location = New System.Drawing.Point(12, 260)
+        Me.mskData.Mask = "####-##-##"
+        Me.mskData.Name = "mskData"
+        Me.mskData.Size = New System.Drawing.Size(196, 20)
+        Me.mskData.TabIndex = 27
         '
         'btnRegistar
         '
@@ -449,6 +462,16 @@ Partial Class frmEntradaProdutos
         Me.cboTipoEntrada.Name = "cboTipoEntrada"
         Me.cboTipoEntrada.Size = New System.Drawing.Size(318, 21)
         Me.cboTipoEntrada.TabIndex = 8
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.Blue
+        Me.Label3.Location = New System.Drawing.Point(31, 239)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(33, 13)
+        Me.Label3.TabIndex = 19
+        Me.Label3.Text = "Data:"
         '
         'txtTotalIntroduzir
         '
@@ -609,16 +632,6 @@ Partial Class frmEntradaProdutos
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Designação:"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.Blue
-        Me.Label3.Location = New System.Drawing.Point(355, 91)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(33, 13)
-        Me.Label3.TabIndex = 19
-        Me.Label3.Text = "Data:"
-        '
         'dpData
         '
         Me.dpData.Location = New System.Drawing.Point(80, 510)
@@ -674,27 +687,39 @@ Partial Class frmEntradaProdutos
         'Button1
         '
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Location = New System.Drawing.Point(704, 89)
+        Me.Button1.Location = New System.Drawing.Point(356, 90)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 26
         Me.Button1.Text = "Pesquisar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'mskData
+        'dpValidade
         '
-        Me.mskData.Location = New System.Drawing.Point(410, 93)
-        Me.mskData.Mask = "####-##-##"
-        Me.mskData.Name = "mskData"
-        Me.mskData.Size = New System.Drawing.Size(196, 20)
-        Me.mskData.TabIndex = 27
+        Me.dpValidade.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.dpValidade.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dpValidade.Location = New System.Drawing.Point(545, 86)
+        Me.dpValidade.Name = "dpValidade"
+        Me.dpValidade.Size = New System.Drawing.Size(84, 20)
+        Me.dpValidade.TabIndex = 28
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(488, 88)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(51, 13)
+        Me.Label15.TabIndex = 27
+        Me.Label15.Text = "Validade:"
         '
         'frmEntradaProdutos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(720, 402)
-        Me.Controls.Add(Me.mskData)
+        Me.ClientSize = New System.Drawing.Size(654, 402)
+        Me.Controls.Add(Me.dpValidade)
+        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dpData)
         Me.Controls.Add(Me.GroupBox1)
@@ -702,7 +727,6 @@ Partial Class frmEntradaProdutos
         Me.Controls.Add(Me.txtNrEntrada)
         Me.Controls.Add(Me.txtTotalEsperado)
         Me.Controls.Add(Me.txtTotalGasto)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label7)
@@ -759,15 +783,6 @@ Partial Class frmEntradaProdutos
     Friend WithEvents Label11 As Label
     Friend WithEvents txtPaisOrigem As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents pnPesquisar As Panel
-    Friend WithEvents dgPesquisar As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents designacao As DataGridViewTextBoxColumn
-    Friend WithEvents paisorigem As DataGridViewTextBoxColumn
-    Friend WithEvents precovenda As DataGridViewTextBoxColumn
-    Friend WithEvents precodecompra As DataGridViewTextBoxColumn
-    Friend WithEvents qtdcaixa As DataGridViewTextBoxColumn
-    Friend WithEvents colSelecionar As DataGridViewButtonColumn
     Friend WithEvents txtStockActual As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
@@ -789,4 +804,15 @@ Partial Class frmEntradaProdutos
     Friend WithEvents Button4 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnRegistar As Button
+    Friend WithEvents dpValidade As DateTimePicker
+    Friend WithEvents Label15 As Label
+    Friend WithEvents pnPesquisar As Panel
+    Friend WithEvents dgPesquisar As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents designacao As DataGridViewTextBoxColumn
+    Friend WithEvents paisorigem As DataGridViewTextBoxColumn
+    Friend WithEvents precovenda As DataGridViewTextBoxColumn
+    Friend WithEvents precodecompra As DataGridViewTextBoxColumn
+    Friend WithEvents qtdcaixa As DataGridViewTextBoxColumn
+    Friend WithEvents colSelecionar As DataGridViewButtonColumn
 End Class

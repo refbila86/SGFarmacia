@@ -125,4 +125,13 @@
             criado_ = value
         End Set
     End Property
+    Private validade_ As String
+    Public Property Validade() As String
+        Get
+            Return validade_
+        End Get
+        Set(ByVal value As String)
+            validade_ = value
+        End Set
+    End Property
 End Class

@@ -9,19 +9,29 @@
 
     End Sub
     Sub ColorirGrid()
+        ' On Error Resume Next
         Dim dt As String
+        'Dim valor As Integer
         For i As Integer = 0 To dgListaFuncionarios.Rows.Count - 1
             dt = dgListaFuncionarios.Rows(i).Cells("stockactual").Value.ToString
-            If dt = "" Or dt = 0 Then
+            If dt = "" Or dt = "0" Then
                 dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Red
-                'dgListaFuncionarios.Rows(i).DefaultCellStyle.Font.Bold
             Else
-                dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Blue
+                dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.DarkGreen
             End If
         Next
+
+        'For i As Integer = 0 To dgListaFuncionarios.Rows.Count - 1
+        '    valor = dgListaFuncionarios.Rows(i).Cells("stockactual").Value.ToString
+        '    If valor = 0 Then
+        '        dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Red
+        '    Else
+        '        dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Black
+        '    End If
+        'Next
+
     End Sub
     Private Sub frmListarProdutos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         ListarProdutos()
         ColorirGrid()
     End Sub
@@ -55,9 +65,8 @@
             frmCadastrarProduto.txtPrecoCompra.Text = Me.dgListaFuncionarios.Rows(e.RowIndex).Cells(5).Value.ToString
             frmCadastrarProduto.txtPrecoVenda.Text = Me.dgListaFuncionarios.Rows(e.RowIndex).Cells(6).Value.ToString
             frmCadastrarProduto.txtQtdCaixa.Text = Me.dgListaFuncionarios.Rows(e.RowIndex).Cells(7).Value.ToString
-            frmCadastrarProduto.dpValidade.Text = Me.dgListaFuncionarios.Rows(e.RowIndex).Cells(8).Value.ToString
             frmCadastrarProduto.cboPaisOrigem.Text = Me.dgListaFuncionarios.Rows(e.RowIndex).Cells(9).Value.ToString
-            frmCadastrarProduto.txtPrecoVenda.Text = Me.dgListaFuncionarios.Rows(e.RowIndex).Cells(6).Value.ToString
+
             frmCadastrarProduto.btnNovo.Visible = False
             frmCadastrarProduto.btnRegistar.Visible = True
             frmCadastrarProduto.ShowDialog()

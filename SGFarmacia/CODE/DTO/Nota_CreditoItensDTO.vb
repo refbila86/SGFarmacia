@@ -1,4 +1,4 @@
-﻿Public Class VendaItensDTO
+﻿Public Class Nota_CreditoItensDTO
     Private id_ As Integer
     Public Property ID() As Integer
         Get

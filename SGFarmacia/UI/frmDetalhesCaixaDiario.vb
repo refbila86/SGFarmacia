@@ -1,4 +1,4 @@
-﻿Public Class frmSaidaProdutos
+﻿Public Class frmDetalhesCaixaDiario
 
     Dim sql As String
     Dim ds, dst As New DataSet
@@ -145,32 +145,6 @@
             End Try
         Else
             MsgBox("O VD: " & Me.txtNrVenda.Text & " ja foi emitido" & vbCrLf & "Não pode ser alterado", vbCritical, "Proibição")
-            'If MsgBox("Confirma o cancelamento da VD nº: " & Me.txtNrVenda.Text & "?" & vbCrLf & "Será criada a Nota de Credito nº: " & Me.txtCodigoNotaCredito.Text & "!", vbQuestion + vbYesNo, "Confirmação") = MsgBoxResult.Yes Then
-            '    vendaBLL.CancelarVD(vendaDTO)
-            '    frmListarSaidasDoDia.ColorirGrid()
-            '    RetornaStock()
-            '    'Me.dgVendaItens.Rows.Clear()
-            '    HabilitaComponentes()
-            'End If
-            'motivo = InputBox("Escreva o motivo do cancelamento em poucas palavras", "Motivo do cancelamento")
-
-            'nota_creditoDTO.Codigo_Venda = Me.txtNrVenda.Text
-            'nota_creditoDTO.Nome_Cliente = Me.txtCliente.Text.ToUpper
-            'nota_creditoDTO.Nuit = Me.txtNuit.Text
-            'nota_creditoDTO.Contacto = Me.txtContacto.Text
-            'nota_creditoDTO.Total_Geral = CDbl(Me.txtTotalGeral.Text)
-            'nota_creditoDTO.Data = mskData.Text
-            'nota_creditoDTO.Utilizador = "admin"
-            'nota_creditoBLL.RegistarNotaCredito(nota_creditoDTO)
-            ''vendaItensBLL.RemoverItensVenda(Me.txtNrVenda.Text)
-            'GravaItensNotaCredito()
-            'LimparFormulario()
-            'Me.Close()
-            'frmListarSaidasDoDia.ListarSaidaDeProdutos()
-            'End If
-            'Catch ex As Exception
-            '    MsgBox("Erro gravar a categoria - " & ex.Message, MsgBoxStyle.Critical, "ERRO")
-            'End Try
         End If
 
     End Sub
@@ -460,11 +434,11 @@
 
         Dim Multa As Double = 0
         For I As Integer = 0 To Me.dgVendaItens.Rows.Count - 1
-            Total += CDbl(dgVendaItens.Rows(I).Cells(6).Value) 'Cells() indica qual célula o valor vai ser pego
-            desconto += CDbl(dgVendaItens.Rows(I).Cells(5).Value)
+            Total += CDbl(dgVendaItens.Rows(I).Cells(5).Value) 'Cells() indica qual célula o valor vai ser pego
+            'desconto += CDbl(dgVendaItens.Rows(I).Cells(5).Value)
         Next
         Me.txtTotal.Text = Total.ToString("C")
-        Me.txtTotalDesconto.Text = desconto.ToString("C")
+        'Me.txtTotalDesconto.Text = desconto.ToString("C")
         Me.txtTotalGeral.Text = (Total + desconto).ToString("C")
     End Sub
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
@@ -530,7 +504,7 @@
     End Sub
     Private Sub ListarDetalhesVenda()
         Try
-            dst = vendaItensBLL.ConsultarDetalhesVenda(Me.txtNrVD.Text)
+            dst = vendaItensBLL.ConsultarDetalhesVendaDiario(Me.txtNVenda.Text)
         Catch ex As Exception
             MsgBox("Ocorreu um erro ao trazer detalhes da venda: " & ex.Message, MsgBoxStyle.Critical, "ERROR")
         Finally
@@ -656,6 +630,10 @@
         End Try
     End Sub
 
+    Private Sub txtNVenda_TextChanged(sender As Object, e As EventArgs) Handles txtNVenda.TextChanged
+        ListarDetalhesVenda()
+    End Sub
+
     Private Sub btnGravaNota_Click(sender As Object, e As EventArgs) Handles btnGravaNota.Click
         GravarItensNotaCredito()
     End Sub
@@ -663,4 +641,5 @@
     Private Sub txtDesconto_MouseMove(sender As Object, e As MouseEventArgs) Handles txtDesconto.MouseMove
         Me.txtDesconto.Enabled = True
     End Sub
+
 End Class

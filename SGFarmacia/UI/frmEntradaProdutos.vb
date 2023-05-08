@@ -25,29 +25,8 @@
 
     End Sub
 
-    Private Sub dgPesquisar_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgPesquisar.CellContentClick
-        Dim pais As String
-        Dim x As Integer
-        Dim colName As String = dgPesquisar.Columns(e.ColumnIndex).Name
-        Try
-            If colName = "colSelecionar" Then
-                x = dgPesquisar.Rows.IndexOf(dgPesquisar.CurrentRow)
-                If x >= 0 And x <= dgPesquisar.Rows.Count - 1 Then
-                    Me.txtID.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(0).Value.ToString
-                    Me.txtDesignacao.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(1).Value.ToString
-                    pais = Me.dgPesquisar.Rows(e.RowIndex).Cells(2).Value.ToString
-                    Me.txtPaisOrigem.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(2).Value.ToString
-                    Me.txtPrecoVenda.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(3).Value
-                    Me.txtPrecoCompra.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(4).Value
-                    Me.txtQtdCaixa.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(5).Value
-                    Me.pnPesquisar.Visible = False
-                    'GetPriceByProdutName(Me.txtDesignacao.Text)
-                End If
+    Private Sub dgPesquisar_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
-            End If
-        Catch ex As Exception
-            MsgBox("Ocorreu um erro: " & ex.Message)
-        End Try
 
     End Sub
     Private Function CalculaStock(ByRef qtd_introduzir As Integer, qtd_caixa As Integer) As Integer
@@ -167,7 +146,6 @@
             Try
                 Me.pnPesquisar.Visible = True
                 ds = produtoBLL.PesquisarProduto(Me.txtDesignacao.Text)
-                'Me.lblNrTotal.Text = dgListaFuncionarios.Rows.Count
             Catch ex As Exception
                 MsgBox("Não foi possivel os dados do funcionario", MsgBoxStyle.Critical, "ERRO")
             End Try
@@ -196,6 +174,14 @@
         data = Format(Me.dpData.Value, "yyyy-MM-dd ")
         Try
             If MsgBox("Confirma a entrada do produto: " & Me.txtDesignacao.Text & "?", vbQuestion + vbYesNo, "Confirmação") = MsgBoxResult.Yes Then
+
+                If Format(dpValidade.Value, "yyyy-MM-dd") = Format(Now, "yyyy-MM-dd") Then
+                    MsgBox("Verifique o prazo de validade!!", vbCritical, "Validade")
+                    Exit Sub
+                Else
+                    produtoEntradaDTO.Validade = Format(dpValidade.Value, "yyyy-MM-dd")
+                End If
+
                 produtoStockDTO.Stock_Actual = Me.txtTotalIntroduzir.Text
                 produtoStockDTO.PRoduto_id = Me.txtID.Text
                 produtoStockBLL.VerificaExistenciaProduto(produtoStockDTO)
@@ -206,9 +192,6 @@
                 GetIdByDate(Me.mskData.Text)
                 entradaDTO.ID = entrada_id
                 entradaBLL.VerificaEntrada(entradaDTO)
-
-
-
 
                 If Me.cboTipoEntrada.Text = "Grosso" Then
                     produtoEntradaDTO.Tipo_Entrada = Me.cboTipoEntrada.Text
@@ -223,11 +206,20 @@
 
                 produtoEntradaDTO.Qtd_Por_Caixa = Me.txtQtdCaixa.Text
                 produtoEntradaDTO.Preco_Compra = Me.txtPrecoCompra.Text
+
+
+
                 produtoEntradaDTO.Origem = Me.txtPaisOrigem.Text
                 produtoEntradaDTO.Preco_Venda = Me.txtPrecoVenda.Text
                 produtoEntradaDTO.Entrada_ID = entrada_id
-                produtoEntradaDTO.Criado = data
+                produtoEntradaDTO.Criado = Format(Now, "yyyy-MM-dd")
+
+                produtoDTO.Criado = Format(Now, "yyyy-MM-dd")
+
                 produtoEntradaBLL.VerificaEntradaProduto(produtoEntradaDTO)
+                produtoDTO.ID = Me.txtID.Text
+                produtoDTO.Validade = Format(dpValidade.Value, "yyyy-MM-dd")
+                produtoBLL.ActualizarValidade(produtoDTO)
                 frmListarEntradasDoDia.ListarEntradaDeProdutos()
                 'entradaBLL.VerificaEntrada(entradaDTO)
                 Me.Close()
@@ -237,7 +229,38 @@
         End Try
     End Sub
 
+    Private Sub dgPesquisar_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles dgPesquisar.CellContentClick
+        Dim pais As String
+        Dim x As Integer
+        Dim colName As String = dgPesquisar.Columns(e.ColumnIndex).Name
+        Try
+            If colName = "colSelecionar" Then
+                x = dgPesquisar.Rows.IndexOf(dgPesquisar.CurrentRow)
+                If x >= 0 And x <= dgPesquisar.Rows.Count - 1 Then
+                    Me.txtID.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(0).Value.ToString
+                    Me.txtDesignacao.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(1).Value.ToString
+                    pais = Me.dgPesquisar.Rows(e.RowIndex).Cells(2).Value.ToString
+                    txtPaisOrigem.Text = pais
+                    Me.txtPrecoVenda.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(3).Value
+                    Me.txtPrecoCompra.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(4).Value
+                    Me.txtQtdCaixa.Text = Me.dgPesquisar.Rows(e.RowIndex).Cells(5).Value
+                    Me.pnPesquisar.Visible = False
+                    'GetPriceByProdutName(Me.txtDesignacao.Text)
+                End If
+
+            End If
+        Catch ex As Exception
+            MsgBox("Ocorreu um erro: " & ex.Message)
+        End Try
+    End Sub
+
     Private Sub mskData_MaskChanged(sender As Object, e As EventArgs) Handles mskData.MaskChanged
 
+    End Sub
+
+    Private Sub dgPesquisar_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgPesquisar.CellValueChanged
+        If (e.RowIndex <> -1) Then
+            dgPesquisar(e.ColumnIndex, e.RowIndex).Value = dgPesquisar(e.ColumnIndex, e.RowIndex).Value.ToString().ToUpper()
+        End If
     End Sub
 End Class

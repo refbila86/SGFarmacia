@@ -23,8 +23,6 @@ Partial Class frmSaidaProdutos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSaidaProdutos))
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNrVD = New System.Windows.Forms.TextBox()
@@ -39,7 +37,6 @@ Partial Class frmSaidaProdutos
         Me.colEditar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.chkIncluirCliente = New System.Windows.Forms.CheckBox()
@@ -66,7 +63,6 @@ Partial Class frmSaidaProdutos
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtTotalGeral = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCodigoBarras = New System.Windows.Forms.TextBox()
         Me.txtStockActual = New System.Windows.Forms.TextBox()
@@ -74,69 +70,47 @@ Partial Class frmSaidaProdutos
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.lblNrVenda = New System.Windows.Forms.Label()
         Me.txtNrVenda = New System.Windows.Forms.TextBox()
         Me.btnRegistar = New System.Windows.Forms.Button()
         Me.btnNovaVenda = New System.Windows.Forms.Button()
         Me.txtID = New System.Windows.Forms.TextBox()
+        Me.mskData = New System.Windows.Forms.MaskedTextBox()
+        Me.btnCancelarVenda = New System.Windows.Forms.Button()
+        Me.txtCodigoNotaCredito = New System.Windows.Forms.TextBox()
+        Me.lblNotaCredito = New System.Windows.Forms.Label()
+        Me.btnGravaNota = New System.Windows.Forms.Button()
         Me.dgPesquisar = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.designacao = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.paisorigem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.origem = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precovenda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precodecompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.qtdcaixa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSelecionar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.pnPesquisar = New System.Windows.Forms.Panel()
-        Me.Panel2.SuspendLayout()
+        Me.btnAdicionar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel4.SuspendLayout()
         CType(Me.dgVendaItens, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgPesquisar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnPesquisar.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(772, 36)
-        Me.Panel2.TabIndex = 2
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(744, 6)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(22, 31)
-        Me.Button3.TabIndex = 6
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.LimeGreen
+        Me.Panel4.BackColor = System.Drawing.Color.ForestGreen
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.txtNrVD)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 36)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(772, 46)
+        Me.Panel4.Size = New System.Drawing.Size(772, 59)
         Me.Panel4.TabIndex = 8
         '
         'Label1
@@ -144,7 +118,7 @@ Partial Class frmSaidaProdutos
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Label1.Location = New System.Drawing.Point(210, -1)
+        Me.Label1.Location = New System.Drawing.Point(210, 5)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(374, 46)
         Me.Label1.TabIndex = 6
@@ -252,7 +226,7 @@ Partial Class frmSaidaProdutos
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnAdicionar)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Panel1)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
@@ -265,18 +239,6 @@ Partial Class frmSaidaProdutos
         Me.GroupBox1.Size = New System.Drawing.Size(753, 180)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(468, 130)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(285, 40)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "ADICIONAR A LISTA"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -309,7 +271,7 @@ Partial Class frmSaidaProdutos
         'TextBox1
         '
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(393, 69)
+        Me.TextBox1.Location = New System.Drawing.Point(393, 70)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(58, 20)
@@ -434,7 +396,7 @@ Partial Class frmSaidaProdutos
         Me.txtQtd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtQtd.Name = "txtQtd"
         Me.txtQtd.Size = New System.Drawing.Size(57, 20)
-        Me.txtQtd.TabIndex = 3
+        Me.txtQtd.TabIndex = 4
         Me.txtQtd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPrecoUnitario
@@ -452,10 +414,11 @@ Partial Class frmSaidaProdutos
         Me.txtContacto.Enabled = False
         Me.txtContacto.Location = New System.Drawing.Point(280, 43)
         Me.txtContacto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtContacto.MaxLength = 10
+        Me.txtContacto.MaxLength = 9
         Me.txtContacto.Name = "txtContacto"
         Me.txtContacto.Size = New System.Drawing.Size(169, 20)
-        Me.txtContacto.TabIndex = 5
+        Me.txtContacto.TabIndex = 2
+        Me.txtContacto.Text = "N/A"
         Me.txtContacto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtNuit
@@ -466,7 +429,8 @@ Partial Class frmSaidaProdutos
         Me.txtNuit.MaxLength = 9
         Me.txtNuit.Name = "txtNuit"
         Me.txtNuit.Size = New System.Drawing.Size(122, 20)
-        Me.txtNuit.TabIndex = 5
+        Me.txtNuit.TabIndex = 1
+        Me.txtNuit.Text = "N/A"
         Me.txtNuit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtCliente
@@ -477,7 +441,8 @@ Partial Class frmSaidaProdutos
         Me.txtCliente.MaxLength = 50
         Me.txtCliente.Name = "txtCliente"
         Me.txtCliente.Size = New System.Drawing.Size(269, 20)
-        Me.txtCliente.TabIndex = 5
+        Me.txtCliente.TabIndex = 0
+        Me.txtCliente.Text = "N/A"
         Me.txtCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtProduto
@@ -488,12 +453,12 @@ Partial Class frmSaidaProdutos
         Me.txtProduto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtProduto.Name = "txtProduto"
         Me.txtProduto.Size = New System.Drawing.Size(307, 21)
-        Me.txtProduto.TabIndex = 5
+        Me.txtProduto.TabIndex = 3
         Me.txtProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.LimeGreen
+        Me.Panel1.BackColor = System.Drawing.Color.ForestGreen
         Me.Panel1.Controls.Add(Me.txtTotal)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.txtTotalDesconto)
@@ -575,23 +540,12 @@ Partial Class frmSaidaProdutos
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "TOTAL GERAL:"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.cb
-        Me.PictureBox1.Location = New System.Drawing.Point(384, 10)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(73, 34)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Silver
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 20)
+        Me.Label2.Location = New System.Drawing.Point(14, 15)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(112, 24)
         Me.Label2.TabIndex = 1
@@ -624,7 +578,7 @@ Partial Class frmSaidaProdutos
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(298, 98)
+        Me.Label10.Location = New System.Drawing.Point(610, 76)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(61, 16)
         Me.Label10.TabIndex = 8
@@ -634,7 +588,7 @@ Partial Class frmSaidaProdutos
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(498, 98)
+        Me.Label11.Location = New System.Drawing.Point(610, 63)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(36, 16)
         Me.Label11.TabIndex = 8
@@ -644,7 +598,7 @@ Partial Class frmSaidaProdutos
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(357, 98)
+        Me.Label12.Location = New System.Drawing.Point(669, 76)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(61, 16)
         Me.Label12.TabIndex = 8
@@ -654,23 +608,23 @@ Partial Class frmSaidaProdutos
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(416, 98)
+        Me.Label13.Location = New System.Drawing.Point(669, 574)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(36, 16)
         Me.Label13.TabIndex = 8
         Me.Label13.Text = "Data:"
         Me.Label13.Visible = False
         '
-        'Label17
+        'lblNrVenda
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.Red
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(19, 88)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(120, 24)
-        Me.Label17.TabIndex = 1
-        Me.Label17.Text = "Nº de venda:"
+        Me.lblNrVenda.AutoSize = True
+        Me.lblNrVenda.BackColor = System.Drawing.Color.Red
+        Me.lblNrVenda.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNrVenda.Location = New System.Drawing.Point(19, 88)
+        Me.lblNrVenda.Name = "lblNrVenda"
+        Me.lblNrVenda.Size = New System.Drawing.Size(120, 24)
+        Me.lblNrVenda.TabIndex = 1
+        Me.lblNrVenda.Text = "Nº de venda:"
         '
         'txtNrVenda
         '
@@ -695,7 +649,7 @@ Partial Class frmSaidaProdutos
         Me.btnRegistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegistar.ForeColor = System.Drawing.Color.White
         Me.btnRegistar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegistar.Location = New System.Drawing.Point(396, 521)
+        Me.btnRegistar.Location = New System.Drawing.Point(283, 521)
         Me.btnRegistar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnRegistar.Name = "btnRegistar"
         Me.btnRegistar.Size = New System.Drawing.Size(171, 36)
@@ -712,24 +666,90 @@ Partial Class frmSaidaProdutos
         Me.btnNovaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNovaVenda.ForeColor = System.Drawing.Color.White
         Me.btnNovaVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovaVenda.Location = New System.Drawing.Point(206, 521)
+        Me.btnNovaVenda.Location = New System.Drawing.Point(10, 521)
         Me.btnNovaVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnNovaVenda.Name = "btnNovaVenda"
         Me.btnNovaVenda.Size = New System.Drawing.Size(171, 36)
         Me.btnNovaVenda.TabIndex = 28
         Me.btnNovaVenda.Text = "NOVA VENDA"
         Me.btnNovaVenda.UseVisualStyleBackColor = False
+        Me.btnNovaVenda.Visible = False
         '
         'txtID
         '
         Me.txtID.Enabled = False
-        Me.txtID.Location = New System.Drawing.Point(537, 90)
+        Me.txtID.Location = New System.Drawing.Point(652, 59)
         Me.txtID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtID.MaxLength = 9
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(122, 20)
         Me.txtID.TabIndex = 5
         Me.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtID.Visible = False
+        '
+        'mskData
+        '
+        Me.mskData.Enabled = False
+        Me.mskData.Location = New System.Drawing.Point(555, 582)
+        Me.mskData.Mask = "####-##-##"
+        Me.mskData.Name = "mskData"
+        Me.mskData.Size = New System.Drawing.Size(115, 20)
+        Me.mskData.TabIndex = 30
+        Me.mskData.Visible = False
+        '
+        'btnCancelarVenda
+        '
+        Me.btnCancelarVenda.BackColor = System.Drawing.Color.Red
+        Me.btnCancelarVenda.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCancelarVenda.FlatAppearance.BorderSize = 0
+        Me.btnCancelarVenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
+        Me.btnCancelarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelarVenda.ForeColor = System.Drawing.Color.White
+        Me.btnCancelarVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelarVenda.Location = New System.Drawing.Point(283, 521)
+        Me.btnCancelarVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnCancelarVenda.Name = "btnCancelarVenda"
+        Me.btnCancelarVenda.Size = New System.Drawing.Size(171, 36)
+        Me.btnCancelarVenda.TabIndex = 28
+        Me.btnCancelarVenda.Text = "CANCELAR VENDA"
+        Me.btnCancelarVenda.UseVisualStyleBackColor = False
+        '
+        'txtCodigoNotaCredito
+        '
+        Me.txtCodigoNotaCredito.BackColor = System.Drawing.Color.Black
+        Me.txtCodigoNotaCredito.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodigoNotaCredito.ForeColor = System.Drawing.Color.White
+        Me.txtCodigoNotaCredito.Location = New System.Drawing.Point(633, 90)
+        Me.txtCodigoNotaCredito.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCodigoNotaCredito.Multiline = True
+        Me.txtCodigoNotaCredito.Name = "txtCodigoNotaCredito"
+        Me.txtCodigoNotaCredito.ReadOnly = True
+        Me.txtCodigoNotaCredito.Size = New System.Drawing.Size(132, 31)
+        Me.txtCodigoNotaCredito.TabIndex = 3
+        Me.txtCodigoNotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtCodigoNotaCredito.Visible = False
+        '
+        'lblNotaCredito
+        '
+        Me.lblNotaCredito.AutoSize = True
+        Me.lblNotaCredito.BackColor = System.Drawing.Color.Red
+        Me.lblNotaCredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNotaCredito.Location = New System.Drawing.Point(484, 92)
+        Me.lblNotaCredito.Name = "lblNotaCredito"
+        Me.lblNotaCredito.Size = New System.Drawing.Size(143, 24)
+        Me.lblNotaCredito.TabIndex = 1
+        Me.lblNotaCredito.Text = "Nota de credito:"
+        Me.lblNotaCredito.Visible = False
+        '
+        'btnGravaNota
+        '
+        Me.btnGravaNota.Location = New System.Drawing.Point(581, 518)
+        Me.btnGravaNota.Name = "btnGravaNota"
+        Me.btnGravaNota.Size = New System.Drawing.Size(162, 38)
+        Me.btnGravaNota.TabIndex = 31
+        Me.btnGravaNota.Text = "Gravar Nota"
+        Me.btnGravaNota.UseVisualStyleBackColor = True
+        Me.btnGravaNota.Visible = False
         '
         'dgPesquisar
         '
@@ -737,7 +757,7 @@ Partial Class frmSaidaProdutos
         Me.dgPesquisar.AllowUserToDeleteRows = False
         Me.dgPesquisar.BackgroundColor = System.Drawing.Color.White
         Me.dgPesquisar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgPesquisar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.designacao, Me.paisorigem, Me.precovenda, Me.precodecompra, Me.qtdcaixa, Me.colSelecionar})
+        Me.dgPesquisar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.designacao, Me.origem, Me.precovenda, Me.precodecompra, Me.qtdcaixa, Me.colSelecionar})
         Me.dgPesquisar.EnableHeadersVisualStyles = False
         Me.dgPesquisar.GridColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.dgPesquisar.Location = New System.Drawing.Point(4, 9)
@@ -763,11 +783,11 @@ Partial Class frmSaidaProdutos
         Me.designacao.ReadOnly = True
         Me.designacao.Width = 130
         '
-        'paisorigem
+        'origem
         '
-        Me.paisorigem.HeaderText = "Pais origem"
-        Me.paisorigem.Name = "paisorigem"
-        Me.paisorigem.ReadOnly = True
+        Me.origem.HeaderText = "Pais origem"
+        Me.origem.Name = "origem"
+        Me.origem.ReadOnly = True
         '
         'precovenda
         '
@@ -800,41 +820,70 @@ Partial Class frmSaidaProdutos
         'pnPesquisar
         '
         Me.pnPesquisar.Controls.Add(Me.dgPesquisar)
-        Me.pnPesquisar.Location = New System.Drawing.Point(56, 279)
+        Me.pnPesquisar.Location = New System.Drawing.Point(56, 257)
         Me.pnPesquisar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.pnPesquisar.Name = "pnPesquisar"
         Me.pnPesquisar.Size = New System.Drawing.Size(614, 209)
         Me.pnPesquisar.TabIndex = 29
         Me.pnPesquisar.Visible = False
         '
+        'btnAdicionar
+        '
+        Me.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAdicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdicionar.Image = CType(resources.GetObject("btnAdicionar.Image"), System.Drawing.Image)
+        Me.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdicionar.Location = New System.Drawing.Point(468, 130)
+        Me.btnAdicionar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnAdicionar.Name = "btnAdicionar"
+        Me.btnAdicionar.Size = New System.Drawing.Size(285, 40)
+        Me.btnAdicionar.TabIndex = 5
+        Me.btnAdicionar.Text = "ADICIONAR A LISTA"
+        Me.btnAdicionar.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.cb
+        Me.PictureBox1.Location = New System.Drawing.Point(384, 10)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(73, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'frmSaidaProdutos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(772, 568)
+        Me.Controls.Add(Me.btnGravaNota)
+        Me.Controls.Add(Me.mskData)
         Me.Controls.Add(Me.txtStockActual)
         Me.Controls.Add(Me.pnPesquisar)
         Me.Controls.Add(Me.btnNovaVenda)
+        Me.Controls.Add(Me.btnCancelarVenda)
         Me.Controls.Add(Me.btnRegistar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dgVendaItens)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.lblNotaCredito)
+        Me.Controls.Add(Me.lblNrVenda)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.txtCodigoNotaCredito)
         Me.Controls.Add(Me.txtNrVenda)
         Me.Controls.Add(Me.txtID)
         Me.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
         Me.Name = "frmSaidaProdutos"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Venda de produtos"
-        Me.Panel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.dgVendaItens, System.ComponentModel.ISupportInitialize).EndInit()
@@ -844,20 +893,17 @@ Partial Class frmSaidaProdutos
         Me.GroupBox2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgPesquisar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnPesquisar.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents dgVendaItens As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button3 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents txtCodigoBarras As TextBox
     Friend WithEvents PictureBox1 As PictureBox
@@ -882,14 +928,14 @@ Partial Class frmSaidaProdutos
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAdicionar As Button
     Friend WithEvents lblEndereco As Label
     Friend WithEvents lblContacto As Label
     Friend WithEvents lblCliente As Label
     Friend WithEvents txtContacto As TextBox
     Friend WithEvents txtNuit As TextBox
     Friend WithEvents txtCliente As TextBox
-    Friend WithEvents Label17 As Label
+    Friend WithEvents lblNrVenda As Label
     Friend WithEvents txtNrVenda As TextBox
     Friend WithEvents chkIncluirCliente As CheckBox
     Friend WithEvents btnRegistar As Button
@@ -898,15 +944,6 @@ Partial Class frmSaidaProdutos
     Friend WithEvents txtDesconto As TextBox
     Friend WithEvents txtID As TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents dgPesquisar As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents designacao As DataGridViewTextBoxColumn
-    Friend WithEvents paisorigem As DataGridViewTextBoxColumn
-    Friend WithEvents precovenda As DataGridViewTextBoxColumn
-    Friend WithEvents precodecompra As DataGridViewTextBoxColumn
-    Friend WithEvents qtdcaixa As DataGridViewTextBoxColumn
-    Friend WithEvents colSelecionar As DataGridViewButtonColumn
-    Friend WithEvents pnPesquisar As Panel
     Friend WithEvents artigo As DataGridViewTextBoxColumn
     Friend WithEvents produto_id As DataGridViewTextBoxColumn
     Friend WithEvents produto As DataGridViewTextBoxColumn
@@ -917,4 +954,18 @@ Partial Class frmSaidaProdutos
     Friend WithEvents colEditar As DataGridViewButtonColumn
     Friend WithEvents colRemover As DataGridViewButtonColumn
     Friend WithEvents txtNrVD As TextBox
+    Friend WithEvents mskData As MaskedTextBox
+    Friend WithEvents btnCancelarVenda As Button
+    Friend WithEvents txtCodigoNotaCredito As TextBox
+    Friend WithEvents lblNotaCredito As Label
+    Friend WithEvents btnGravaNota As Button
+    Friend WithEvents dgPesquisar As DataGridView
+    Friend WithEvents pnPesquisar As Panel
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents designacao As DataGridViewTextBoxColumn
+    Friend WithEvents origem As DataGridViewTextBoxColumn
+    Friend WithEvents precovenda As DataGridViewTextBoxColumn
+    Friend WithEvents precodecompra As DataGridViewTextBoxColumn
+    Friend WithEvents qtdcaixa As DataGridViewTextBoxColumn
+    Friend WithEvents colSelecionar As DataGridViewButtonColumn
 End Class

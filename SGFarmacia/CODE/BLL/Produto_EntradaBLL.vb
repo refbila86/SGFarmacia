@@ -15,7 +15,7 @@
         con.VerificaSeProduto(sql)
         If existe = 1 Then
             VerificaEntradaProduto = True
-            sql = "UPDATE produto_entrada SET qtd_introduzir  = qtd_introduzir + " & produtoEntradaDTO.Qtd_Introduzir & ", total_introduzir = total_introduzir + " & produtoEntradaDTO.Total_Introduzir & "  WHERE entrada_id= " & produtoEntradaDTO.Entrada_ID & ""
+            sql = "UPDATE produto_entrada SET qtd_introduzir  = qtd_introduzir + " & produtoEntradaDTO.Qtd_Introduzir & ", total_introduzir = total_introduzir + " & produtoEntradaDTO.Total_Introduzir & ", validade = '" & produtoEntradaDTO.Validade & "'  WHERE entrada_id= " & produtoEntradaDTO.Entrada_ID & ""
             con.ExecutarComandoSQL(sql)
         Else
             sql = "INSERT INTO entrada_produto (produto_id, tipo_entrada, origem, qtd_introduzir, total_introduzir, qtd_por_cx, preco_compra, preco_venda, entrada_id, criado) VALUES (" & produtoEntradaDTO.Produto_ID & ",'" & produtoEntradaDTO.Tipo_Entrada & "','" & produtoEntradaDTO.Origem & "'," & produtoEntradaDTO.Qtd_Introduzir & ", " & produtoEntradaDTO.Total_Introduzir & ", " & produtoEntradaDTO.Qtd_Por_Caixa & ", " & produtoEntradaDTO.Preco_Compra & ", " & produtoEntradaDTO.Preco_Venda & ", " & produtoEntradaDTO.Entrada_ID & ", '" & produtoEntradaDTO.Criado & "')"
@@ -38,7 +38,7 @@
         sql = "SELECT COUNT(*) FROM entrada WHERE id = " & entrada_id & ""
         con.VerificaSeProduto(sql)
         If existe = 1 Then
-            sql = "select e.id, p.designacao, e.tipo_entrada, e.origem, e.qtd_introduzir, e.total_introduzir, e.qtd_por_cx, e.preco_compra, e.preco_venda from entrada_produto e inner join produto p on p.id=e.produto_id where e.entrada_id = " & entrada_id & ""
+            sql = "select e.id, p.designacao, e.tipo_entrada, e.qtd_introduzir, e.total_introduzir, e.qtd_por_cx, e.preco_compra, e.preco_venda from entrada_produto e inner join produto p on p.id=e.produto_id where e.entrada_id = " & entrada_id & ""
             con.ListarEntradaProduto(sql)
         Else
             frmEntradaProdutos.dgEntradaProdutos.Rows.Clear()

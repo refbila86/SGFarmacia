@@ -27,3 +27,8 @@ C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmListarEntradasDoDia.resources
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmSaidaProdutos.resources
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmListarSaidasDoDia.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmCamera.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmSplash.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmListarNotasCredito.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmCaixaDiario.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmDetalhesCaixaDiario.resources

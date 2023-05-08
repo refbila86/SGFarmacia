@@ -56,6 +56,8 @@ Partial Class frmCadastrarProduto
         Me.txtNomeGenerico = New System.Windows.Forms.TextBox()
         Me.txtCodigoBarras = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtResultado = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +66,7 @@ Partial Class frmCadastrarProduto
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LimeGreen
+        Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.lblRegistar)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -212,6 +215,7 @@ Partial Class frmCadastrarProduto
         Me.Label7.Size = New System.Drawing.Size(51, 13)
         Me.Label7.TabIndex = 4
         Me.Label7.Text = "Validade:"
+        Me.Label7.Visible = False
         '
         'dpValidade
         '
@@ -221,6 +225,7 @@ Partial Class frmCadastrarProduto
         Me.dpValidade.Name = "dpValidade"
         Me.dpValidade.Size = New System.Drawing.Size(84, 20)
         Me.dpValidade.TabIndex = 8
+        Me.dpValidade.Visible = False
         '
         'GroupBox1
         '
@@ -399,11 +404,31 @@ Partial Class frmCadastrarProduto
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Codigo barras:"
         '
+        'txtResultado
+        '
+        Me.txtResultado.Location = New System.Drawing.Point(16, 341)
+        Me.txtResultado.Multiline = True
+        Me.txtResultado.Name = "txtResultado"
+        Me.txtResultado.Size = New System.Drawing.Size(132, 48)
+        Me.txtResultado.TabIndex = 12
+        Me.txtResultado.Visible = False
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(105, 46)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 7
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Visible = False
+        '
         'frmCadastrarProduto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(672, 398)
+        Me.Controls.Add(Me.txtResultado)
         Me.Controls.Add(Me.cboPaisOrigem)
         Me.Controls.Add(Me.btnRegistar)
         Me.Controls.Add(Me.GroupBox1)
@@ -477,4 +502,6 @@ Partial Class frmCadastrarProduto
     Friend WithEvents txtNomeGenerico As TextBox
     Friend WithEvents txtCodigoBarras As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents txtResultado As TextBox
+    Friend WithEvents Button4 As Button
 End Class

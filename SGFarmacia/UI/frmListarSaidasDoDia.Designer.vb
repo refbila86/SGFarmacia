@@ -36,7 +36,9 @@ Partial Class frmListarSaidasDoDia
         Me.nuit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.contacto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valortotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEditar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.cancelado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colVisualizar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colCancelar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -134,7 +136,7 @@ Partial Class frmListarSaidasDoDia
         Me.dgListaVendas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgListaVendas.BackgroundColor = System.Drawing.Color.White
         Me.dgListaVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgListaVendas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nrvenda, Me.total, Me.nuit, Me.contacto, Me.valortotal, Me.colEditar, Me.colRemover})
+        Me.dgListaVendas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nrvenda, Me.total, Me.nuit, Me.contacto, Me.valortotal, Me.cancelado, Me.colVisualizar, Me.colCancelar, Me.colRemover})
         Me.dgListaVendas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgListaVendas.EnableHeadersVisualStyles = False
         Me.dgListaVendas.GridColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(251, Byte), Integer))
@@ -148,42 +150,64 @@ Partial Class frmListarSaidasDoDia
         '
         'nrvenda
         '
+        Me.nrvenda.FillWeight = 106.8817!
         Me.nrvenda.HeaderText = "Nº Venda"
         Me.nrvenda.Name = "nrvenda"
         Me.nrvenda.ReadOnly = True
         '
         'total
         '
+        Me.total.FillWeight = 106.8817!
         Me.total.HeaderText = "Cliente"
         Me.total.Name = "total"
         Me.total.ReadOnly = True
         '
         'nuit
         '
+        Me.nuit.FillWeight = 106.8817!
         Me.nuit.HeaderText = "Nuit"
         Me.nuit.Name = "nuit"
         Me.nuit.ReadOnly = True
         '
         'contacto
         '
+        Me.contacto.FillWeight = 106.8817!
         Me.contacto.HeaderText = "Contacto"
         Me.contacto.Name = "contacto"
         Me.contacto.ReadOnly = True
         '
         'valortotal
         '
+        Me.valortotal.FillWeight = 106.8817!
         Me.valortotal.HeaderText = "Valor Total"
         Me.valortotal.Name = "valortotal"
         Me.valortotal.ReadOnly = True
         '
-        'colEditar
+        'cancelado
         '
-        Me.colEditar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.colEditar.HeaderText = ""
-        Me.colEditar.Name = "colEditar"
-        Me.colEditar.ReadOnly = True
-        Me.colEditar.Text = "Editar"
-        Me.colEditar.Width = 5
+        Me.cancelado.FillWeight = 106.8817!
+        Me.cancelado.HeaderText = "VD Cancelado"
+        Me.cancelado.Name = "cancelado"
+        Me.cancelado.ReadOnly = True
+        '
+        'colVisualizar
+        '
+        Me.colVisualizar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.colVisualizar.FillWeight = 58.70967!
+        Me.colVisualizar.HeaderText = ""
+        Me.colVisualizar.Name = "colVisualizar"
+        Me.colVisualizar.ReadOnly = True
+        Me.colVisualizar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colVisualizar.Width = 5
+        '
+        'colCancelar
+        '
+        Me.colCancelar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.colCancelar.HeaderText = ""
+        Me.colCancelar.Name = "colCancelar"
+        Me.colCancelar.ReadOnly = True
+        Me.colCancelar.Text = ""
+        Me.colCancelar.Width = 5
         '
         'colRemover
         '
@@ -192,7 +216,7 @@ Partial Class frmListarSaidasDoDia
         Me.colRemover.Name = "colRemover"
         Me.colRemover.ReadOnly = True
         Me.colRemover.Text = "Remover"
-        Me.colRemover.Width = 5
+        Me.colRemover.Visible = False
         '
         'frmListarSaidasDoDia
         '
@@ -203,9 +227,9 @@ Partial Class frmListarSaidasDoDia
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmListarSaidasDoDia"
-        Me.Text = "frmListarSaidasDoDia"
+        Me.Text = "Listar vendas do dia"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel4.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -219,15 +243,17 @@ Partial Class frmListarSaidasDoDia
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents dgListaVendas As DataGridView
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents mskData As MaskedTextBox
     Friend WithEvents nrvenda As DataGridViewTextBoxColumn
     Friend WithEvents total As DataGridViewTextBoxColumn
     Friend WithEvents nuit As DataGridViewTextBoxColumn
     Friend WithEvents contacto As DataGridViewTextBoxColumn
     Friend WithEvents valortotal As DataGridViewTextBoxColumn
-    Friend WithEvents colEditar As DataGridViewButtonColumn
+    Friend WithEvents cancelado As DataGridViewTextBoxColumn
+    Friend WithEvents colVisualizar As DataGridViewButtonColumn
+    Friend WithEvents colCancelar As DataGridViewButtonColumn
     Friend WithEvents colRemover As DataGridViewButtonColumn
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label3 As Label
-    Friend WithEvents mskData As MaskedTextBox
 End Class

@@ -50,7 +50,7 @@
         Dim Multa As Double = 0
         For I As Integer = 0 To Me.dgEntradaProdutos.Rows.Count - 1
             TotalCompra += CDbl(dgEntradaProdutos.Rows(I).Cells(7).Value) 'Cells() indica qual célula o valor vai ser pego
-            TotalVenda += CDbl(dgEntradaProdutos.Rows(I).Cells(8).Value) 'Cells() indica qual célula o valor vai ser pego
+            ' TotalVenda += CDbl(dgEntradaProdutos.Rows(I).Cells(8).Value) 'Cells() indica qual célula o valor vai ser pego
         Next
         Me.txtTotalCompra.Text = TotalCompra.ToString("C")
         Me.txtTotalVenda.Text = TotalVenda.ToString("C")
@@ -63,7 +63,7 @@
         entrada_id = Nothing
     End Sub
 
-    Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click
+    Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click, btnStock.Click
         frmEntradaProdutos.txtDesignacao.Clear()
         frmEntradaProdutos.txtPaisOrigem.Clear()
         frmEntradaProdutos.txtPrecoCompra.Clear()
@@ -79,11 +79,11 @@
 
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
-    Private Sub dgEntradaProdutos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgEntradaProdutos.CellContentClick
+    Private Sub dgEntradaProdutos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
 

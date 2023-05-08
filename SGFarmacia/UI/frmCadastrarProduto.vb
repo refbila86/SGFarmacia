@@ -69,6 +69,76 @@
             Exit Sub
         End If
     End Sub
+    Public Sub CalculaValidade()
+        Dim calculo, dia, prazo As Double
+        Me.txtResultado.Clear()
+        Dim dtini As DateTime = dpValidade.Value
+        Dim dtfim As DateTime = Now
+        calculo += DateDiff(DateInterval.Day, dtini, dtfim).ToString + vbCrLf
+        dia = -1 * CInt(calculo)
+        prazo = dia
+        txtResultado.Text = Str(prazo)
+        'txtResultado.Text += DateDiff(DateInterval.Month, dtini, dtfim).ToString + vbCrLf
+    End Sub
+    Public Sub CalculaValidades()
+        Dim dtini As DateTime = dpValidade.Value
+        Dim dtfim As DateTime = Now
+        Dim Dias As Double
+        'TimeSpan
+        'Dim dif As TimeSpan = dtfim.Subtract(dtini)
+        'txtResultado.Text = dif.TotalSeconds.ToString + "  Segundos" + vbCrLf
+        'txtResultado.Text += dif.TotalMinutes.ToString + "  Minutos " + vbCrLf
+        'txtResultado.Text += dif.TotalHours.ToString + "  Horas " + vbCrLf
+        'txtResultado.Text += dif.TotalDays.ToString + "  Dias " + vbCrLf
+        ''DateDiff
+        'txtResultado2.Text = DateDiff(DateInterval.Second, dtini, dtfim).ToString + "  Segundos" + vbCrLf
+        'txtResultado2.Text += DateDiff(DateInterval.Minute, dtini, dtfim).ToString + "  Minutos" + vbCrLf
+        txtResultado.Text += DateDiff(DateInterval.Day, dtini, dtfim).ToString + " Dias" + vbCrLf
+        'Dias = (DateDiff(DateInterval.Day, dtfim, dtini).ToString)
+        'MsgBox(Dias + "  Dias" + vbCrLf)
+
+        'txtResultado2.Text += DateDiff(DateInterval.Quarter, dtini, dtfim).ToString + "  Trimestres" + vbCrLf
+        'txtResultado2.Text += DateDiff(DateInterval.Month, dtini, dtfim).ToString + "  Meses" + vbCrLf
+    End Sub
+    Private Function calculaNumeroDiasVividos() As Integer
+        Dim dataValidade As Date
+        Dim horasEmFalta As TimeSpan
+        Dim diasEmFalta As double
+        ' obtem o valor da data de validade do controle DateTimePickerl
+        dataValidade = dpValidade.Value
+        ' subtrai a data de validade da data atual
+        horasEmFalta = Now.Subtract(dataValidade)
+
+        'Calcula o número de dias entre as datas
+        diasEmFalta = horasEmFalta.Days
+        'se o valor for menor que 1 indica que a data de nascimento é maior que a data atual
+        If diasEmFalta > 1 Then
+            Throw New ArgumentException("Você ainda não nasceu...")
+        End If
+        Return diasEmFalta
+    End Function
+
+
+    Public Sub CalculaDiaMesAno()
+        Dim Msg As String
+        Dim data As String = Me.dpValidade.Value
+        Dim d1, d2, d3, d4, d5 As Single
+
+        d1 = DateDiff("d", data, Now)
+        d2 = DateDiff("m", data, Now)
+        d3 = DateDiff("yyyy", data, Now)
+        d4 = DateDiff("s", data, Now)
+
+        Msg = " O prazo de validade: " & vbCrLf
+        Msg = Msg & " ============================== " & vbCrLf
+        Msg = Msg & " Em dias : " & d1 & " dias " & vbCrLf
+        Msg = Msg & " Em meses : " & d2 & " meses " & vbCrLf
+        Msg = Msg & " Em anos : " & d3 & " anos " & vbCrLf
+        Msg = Msg & " Em segundos : " & d4 & " segundos " & vbCrLf
+
+        MsgBox(Msg, vbOKOnly, " calculando intervalos de datas ")
+
+    End Sub
     Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click
         Dim data As String
         If Me.cboCategoria.Text = "" Then
@@ -89,13 +159,15 @@
                     produtoDTO.Nome_Generico = Me.txtNomeGenerico.Text.ToUpper
                     produtoDTO.Qtd_Cx = Me.txtQtdCaixa.Text
                     produtoDTO.Unidade_Medida = Me.cboUnidadeMedida.Text.ToUpper
-                    data = Format(Me.dpValidade.Value, "yyyy-MM-dd HH:mm:ss")
-                    produtoDTO.Validade = data
+                    'data = Format(Me.dpValidade.Value, "yyyy-MM-dd HH:mm:ss")
+                    produtoDTO.Criado = Format(Now, "yyyy-MM-dd hh:mm:ss")
                     produtoBLL.RegistarProduto(produtoDTO)
                     frmListarProdutos.ListarProdutos()
                     frmListarProdutos.ColorirGrid()
                     Me.btnRegistar.Visible = False
                     Me.btnNovo.Visible = True
+                    'CalculaDiaMesAno()
+                    CalculaValidade()
                 End If
             Catch ex As Exception
                 MsgBox("Erro ao gravar o produto - " & ex.Message, MsgBoxStyle.Critical, "ERRO")
@@ -119,6 +191,7 @@
                     produtoBLL.ActualizarProduto(produtoDTO)
                     frmListarProdutos.ListarProdutos()
                     frmListarProdutos.ColorirGrid()
+                    CalculaDiaMesAno()
                     LimparForm()
                     Me.Close()
                 End If
@@ -126,7 +199,6 @@
                 MsgBox("Erro ao gravar o produto - " & ex.Message, MsgBoxStyle.Critical, "ERRO")
             End Try
         End If
-
 
     End Sub
     Sub LimparForm()
@@ -204,7 +276,22 @@
     End Sub
 
     Private Sub dpValidade_ValueChanged(sender As Object, e As EventArgs) Handles dpValidade.ValueChanged
+        ''verifica se a data informada é valida
+        'If IsDate(dpValidade.Value) Then
+        '    Try
+        '        'chama a função para calcular o numero de dias e exibe o resultado na label do formulário
+        '        MsgBox(calculaNumeroDiasVividos())
+        '    Catch exc As Exception
+        '        MsgBox(exc.Message)
+        '    End Try
+        'Else
+        '    MessageBox.Show("Informe uma data válida", "Data Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        'End If
 
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        CalculaValidade()
     End Sub
 
     Private Sub cboPaisOrigem_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cboPaisOrigem.KeyPress
