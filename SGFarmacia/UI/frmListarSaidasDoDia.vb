@@ -169,6 +169,18 @@
 
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        dgListaVendas.Rows.Clear()
+        mskData.Text = Format(Now(), "yyyy-MM-dd")
+        ListarSaidaDeProdutos()
+        ColorirGrid()
+        saida_id = Nothing
+    End Sub
+
     Private Sub GetIdByDate(ByRef data As String)
         Try
             tbl = vendaBLL.BuscaIDSaida(mskData.Text)

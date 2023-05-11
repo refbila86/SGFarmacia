@@ -22,7 +22,15 @@ Partial Class frmCaixaDiario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCaixaDiario))
         Me.dgListaVendas = New System.Windows.Forms.DataGridView()
+        Me.nrvenda = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nuit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.contacto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.valortotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDetalhes = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnRegistar = New System.Windows.Forms.Button()
@@ -31,19 +39,20 @@ Partial Class frmCaixaDiario
         Me.mskData = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.nrvenda = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nuit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.contacto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.valortotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colDetalhes = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.txtTotalGeral = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtTotalGeral = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblEstadoCaixa = New System.Windows.Forms.Label()
+        Me.btnReset = New System.Windows.Forms.Button()
         CType(Me.dgListaVendas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgListaVendas
@@ -62,95 +71,8 @@ Partial Class frmCaixaDiario
         Me.dgListaVendas.ReadOnly = True
         Me.dgListaVendas.RowHeadersVisible = False
         Me.dgListaVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgListaVendas.Size = New System.Drawing.Size(846, 418)
+        Me.dgListaVendas.Size = New System.Drawing.Size(846, 378)
         Me.dgListaVendas.TabIndex = 27
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.ForestGreen
-        Me.Panel2.Controls.Add(Me.dgListaVendas)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 54)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(846, 418)
-        Me.Panel2.TabIndex = 24
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.ForestGreen
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 472)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(846, 32)
-        Me.Panel3.TabIndex = 26
-        '
-        'btnRegistar
-        '
-        Me.btnRegistar.BackColor = System.Drawing.Color.ForestGreen
-        Me.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRegistar.FlatAppearance.BorderSize = 0
-        Me.btnRegistar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
-        Me.btnRegistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegistar.ForeColor = System.Drawing.Color.White
-        Me.btnRegistar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegistar.Location = New System.Drawing.Point(8, 17)
-        Me.btnRegistar.Name = "btnRegistar"
-        Me.btnRegistar.Size = New System.Drawing.Size(76, 29)
-        Me.btnRegistar.TabIndex = 10
-        Me.btnRegistar.Text = "Novo"
-        Me.btnRegistar.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Location = New System.Drawing.Point(166, 18)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 30
-        Me.Button1.Text = "Pesquisar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.Blue
-        Me.Label3.Location = New System.Drawing.Point(6, 20)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(33, 13)
-        Me.Label3.TabIndex = 28
-        Me.Label3.Text = "Data:"
-        '
-        'mskData
-        '
-        Me.mskData.Location = New System.Drawing.Point(45, 20)
-        Me.mskData.Mask = "####-##-##"
-        Me.mskData.Name = "mskData"
-        Me.mskData.Size = New System.Drawing.Size(115, 20)
-        Me.mskData.TabIndex = 29
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.mskData)
-        Me.GroupBox1.Location = New System.Drawing.Point(89, 6)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(252, 46)
-        Me.GroupBox1.TabIndex = 31
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Filtrar vendas do dia"
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.Label1)
-        Me.Panel4.Controls.Add(Me.GroupBox1)
-        Me.Panel4.Controls.Add(Me.txtTotalGeral)
-        Me.Panel4.Controls.Add(Me.btnRegistar)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(846, 54)
-        Me.Panel4.TabIndex = 25
         '
         'nrvenda
         '
@@ -204,30 +126,197 @@ Partial Class frmCaixaDiario
         Me.colRemover.ReadOnly = True
         Me.colRemover.Text = "Remover"
         Me.colRemover.Visible = False
-        Me.colRemover.Width = 5
         '
-        'txtTotalGeral
+        'Panel2
         '
-        Me.txtTotalGeral.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtTotalGeral.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalGeral.Location = New System.Drawing.Point(618, 24)
-        Me.txtTotalGeral.Name = "txtTotalGeral"
-        Me.txtTotalGeral.ReadOnly = True
-        Me.txtTotalGeral.Size = New System.Drawing.Size(162, 22)
-        Me.txtTotalGeral.TabIndex = 0
-        Me.txtTotalGeral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Panel2.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel2.Controls.Add(Me.dgListaVendas)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(0, 86)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(846, 378)
+        Me.Panel2.TabIndex = 24
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.Teal
+        Me.Panel3.Controls.Add(Me.txtTotalGeral)
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(0, 464)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(846, 40)
+        Me.Panel3.TabIndex = 26
+        '
+        'btnRegistar
+        '
+        Me.btnRegistar.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRegistar.FlatAppearance.BorderSize = 0
+        Me.btnRegistar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
+        Me.btnRegistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegistar.ForeColor = System.Drawing.Color.White
+        Me.btnRegistar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRegistar.Location = New System.Drawing.Point(8, 42)
+        Me.btnRegistar.Name = "btnRegistar"
+        Me.btnRegistar.Size = New System.Drawing.Size(76, 29)
+        Me.btnRegistar.TabIndex = 10
+        Me.btnRegistar.Text = "Novo"
+        Me.btnRegistar.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Location = New System.Drawing.Point(166, 18)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 30
+        Me.Button1.Text = "Pesquisar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.Blue
+        Me.Label3.Location = New System.Drawing.Point(6, 20)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(33, 13)
+        Me.Label3.TabIndex = 28
+        Me.Label3.Text = "Data:"
+        '
+        'mskData
+        '
+        Me.mskData.Location = New System.Drawing.Point(45, 20)
+        Me.mskData.Mask = "####-##-##"
+        Me.mskData.Name = "mskData"
+        Me.mskData.Size = New System.Drawing.Size(115, 20)
+        Me.mskData.TabIndex = 29
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.btnReset)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.mskData)
+        Me.GroupBox1.Location = New System.Drawing.Point(89, 31)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(349, 46)
+        Me.GroupBox1.TabIndex = 31
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Filtrar vendas do dia"
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Button2)
+        Me.Panel4.Controls.Add(Me.lblEstadoCaixa)
+        Me.Panel4.Controls.Add(Me.Label2)
+        Me.Panel4.Controls.Add(Me.Panel1)
+        Me.Panel4.Controls.Add(Me.GroupBox1)
+        Me.Panel4.Controls.Add(Me.btnRegistar)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(846, 86)
+        Me.Panel4.TabIndex = 25
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Teal
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(846, 28)
+        Me.Panel1.TabIndex = 33
         '
         'Label1
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(623, 1)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(516, 7)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(151, 20)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "Valor total do dia:"
+        '
+        'txtTotalGeral
+        '
+        Me.txtTotalGeral.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTotalGeral.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalGeral.Location = New System.Drawing.Point(673, 6)
+        Me.txtTotalGeral.Name = "txtTotalGeral"
+        Me.txtTotalGeral.ReadOnly = True
+        Me.txtTotalGeral.Size = New System.Drawing.Size(170, 22)
+        Me.txtTotalGeral.TabIndex = 0
+        Me.txtTotalGeral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(444, 46)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(132, 29)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Fechar o caixa diario"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.BackColor = System.Drawing.Color.Teal
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(821, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(22, 25)
+        Me.Button3.TabIndex = 7
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(582, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(196, 20)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = "Estado do caixa do dia:"
+        '
+        'lblEstadoCaixa
+        '
+        Me.lblEstadoCaixa.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblEstadoCaixa.AutoSize = True
+        Me.lblEstadoCaixa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEstadoCaixa.ForeColor = System.Drawing.Color.Blue
+        Me.lblEstadoCaixa.Location = New System.Drawing.Point(780, 49)
+        Me.lblEstadoCaixa.Name = "lblEstadoCaixa"
+        Me.lblEstadoCaixa.Size = New System.Drawing.Size(63, 20)
+        Me.lblEstadoCaixa.TabIndex = 32
+        Me.lblEstadoCaixa.Text = "Aberto"
+        '
+        'btnReset
+        '
+        Me.btnReset.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnReset.Location = New System.Drawing.Point(247, 17)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnReset.TabIndex = 30
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
         '
         'frmCaixaDiario
         '
@@ -242,10 +331,13 @@ Partial Class frmCaixaDiario
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgListaVendas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -267,4 +359,10 @@ Partial Class frmCaixaDiario
     Friend WithEvents colRemover As DataGridViewButtonColumn
     Friend WithEvents Label1 As Label
     Friend WithEvents txtTotalGeral As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents lblEstadoCaixa As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnReset As Button
 End Class

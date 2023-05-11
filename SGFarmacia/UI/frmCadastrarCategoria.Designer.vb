@@ -44,7 +44,7 @@ Partial Class frmCadastrarCategoria
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.LimeGreen
+        Me.Panel1.BackColor = System.Drawing.Color.ForestGreen
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -68,7 +68,7 @@ Partial Class frmCadastrarCategoria
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackColor = System.Drawing.Color.ForestGreen
+        Me.Button3.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
@@ -83,7 +83,7 @@ Partial Class frmCadastrarCategoria
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel2.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"

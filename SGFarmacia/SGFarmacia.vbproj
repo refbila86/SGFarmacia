@@ -87,6 +87,7 @@
     <Compile Include="CODE\BLL\VendaBLL.vb" />
     <Compile Include="CODE\BLL\VendaItensBLL.vb" />
     <Compile Include="CODE\DAL\AcessoDados.vb" />
+    <Compile Include="CODE\DTO\CaixaDTO.vb" />
     <Compile Include="CODE\DTO\CategoriaDTO.vb" />
     <Compile Include="CODE\DTO\EntradaDTO.vb" />
     <Compile Include="CODE\DTO\Nota_CreditoDTO.vb" />
@@ -187,6 +188,12 @@
     <Compile Include="UI\frmSplash.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\frmRelatorioVendas.Designer.vb">
+      <DependentUpon>frmRelatorioVendas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmRelatorioVendas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\mdiPrincipal.Designer.vb">
       <DependentUpon>mdiPrincipal.vb</DependentUpon>
     </Compile>
@@ -237,6 +244,9 @@
     <EmbeddedResource Include="UI\frmSplash.resx">
       <DependentUpon>frmSplash.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmRelatorioVendas.resx">
+      <DependentUpon>frmRelatorioVendas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\mdiPrincipal.resx">
       <DependentUpon>mdiPrincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +292,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mintxo logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-shopping-cart-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estoque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estoque %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estoque %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estoque %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\farmacai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrative-tools-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock in icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\record_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

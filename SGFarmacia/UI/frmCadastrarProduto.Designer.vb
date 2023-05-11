@@ -24,6 +24,7 @@ Partial Class frmCadastrarProduto
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCadastrarProduto))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.lblRegistar = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -57,7 +58,6 @@ Partial Class frmCadastrarProduto
         Me.txtCodigoBarras = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtResultado = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,15 +73,25 @@ Partial Class frmCadastrarProduto
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(672, 69)
+        Me.Panel1.Size = New System.Drawing.Size(673, 69)
         Me.Panel1.TabIndex = 1
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(16, 43)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 7
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Visible = False
         '
         'lblRegistar
         '
         Me.lblRegistar.AutoSize = True
         Me.lblRegistar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRegistar.ForeColor = System.Drawing.Color.White
-        Me.lblRegistar.Location = New System.Drawing.Point(279, 36)
+        Me.lblRegistar.Location = New System.Drawing.Point(240, 36)
         Me.lblRegistar.Name = "lblRegistar"
         Me.lblRegistar.Size = New System.Drawing.Size(175, 24)
         Me.lblRegistar.TabIndex = 6
@@ -97,7 +107,7 @@ Partial Class frmCadastrarProduto
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(647, 3)
+        Me.Button3.Location = New System.Drawing.Point(648, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(22, 25)
         Me.Button3.TabIndex = 5
@@ -109,7 +119,7 @@ Partial Class frmCadastrarProduto
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(672, 33)
+        Me.Panel2.Size = New System.Drawing.Size(673, 33)
         Me.Panel2.TabIndex = 1
         '
         'txtDesignacao
@@ -221,7 +231,7 @@ Partial Class frmCadastrarProduto
         '
         Me.dpValidade.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.dpValidade.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dpValidade.Location = New System.Drawing.Point(382, 91)
+        Me.dpValidade.Location = New System.Drawing.Point(381, 90)
         Me.dpValidade.Name = "dpValidade"
         Me.dpValidade.Size = New System.Drawing.Size(84, 20)
         Me.dpValidade.TabIndex = 8
@@ -263,9 +273,9 @@ Partial Class frmCadastrarProduto
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.White
         Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.medico
-        Me.PictureBox1.Location = New System.Drawing.Point(8, 16)
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 19)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(186, 225)
+        Me.PictureBox1.Size = New System.Drawing.Size(188, 222)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -315,7 +325,7 @@ Partial Class frmCadastrarProduto
         Me.cboUnidadeMedida.Items.AddRange(New Object() {"l", "ml", "un"})
         Me.cboUnidadeMedida.Location = New System.Drawing.Point(154, 324)
         Me.cboUnidadeMedida.Name = "cboUnidadeMedida"
-        Me.cboUnidadeMedida.Size = New System.Drawing.Size(189, 21)
+        Me.cboUnidadeMedida.Size = New System.Drawing.Size(154, 21)
         Me.cboUnidadeMedida.TabIndex = 7
         '
         'btnNovo
@@ -352,7 +362,7 @@ Partial Class frmCadastrarProduto
         '
         'txtIDCategoria
         '
-        Me.txtIDCategoria.Location = New System.Drawing.Point(548, 90)
+        Me.txtIDCategoria.Location = New System.Drawing.Point(552, 68)
         Me.txtIDCategoria.Name = "txtIDCategoria"
         Me.txtIDCategoria.ReadOnly = True
         Me.txtIDCategoria.Size = New System.Drawing.Size(117, 20)
@@ -413,21 +423,11 @@ Partial Class frmCadastrarProduto
         Me.txtResultado.TabIndex = 12
         Me.txtResultado.Visible = False
         '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(105, 46)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 7
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        Me.Button4.Visible = False
-        '
         'frmCadastrarProduto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(672, 398)
+        Me.ClientSize = New System.Drawing.Size(673, 398)
         Me.Controls.Add(Me.txtResultado)
         Me.Controls.Add(Me.cboPaisOrigem)
         Me.Controls.Add(Me.btnRegistar)

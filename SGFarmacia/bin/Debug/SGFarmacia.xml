@@ -27,6 +27,11 @@ SGFarmacia
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SGFarmacia.My.Resources.Resources.add_stock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SGFarmacia.My.Resources.Resources.CAR">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -38,6 +43,46 @@ SGFarmacia
 </summary>
 </member>
 <member name="P:SGFarmacia.My.Resources.Resources.cb">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.Database">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.estoque">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.estoque__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.estoque__1_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.estoque__3_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.farmacai">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.icons8_add_shopping_cart_100">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.icons8_administrative_tools_100">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -57,6 +102,26 @@ SGFarmacia
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SGFarmacia.My.Resources.Resources.Product">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.Product1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.record_512">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.reports">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SGFarmacia.My.Resources.Resources.Shopping_Cart">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -68,6 +133,16 @@ SGFarmacia
 </summary>
 </member>
 <member name="P:SGFarmacia.My.Resources.Resources.Shopping_Cart2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.stock_in_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.supplier">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

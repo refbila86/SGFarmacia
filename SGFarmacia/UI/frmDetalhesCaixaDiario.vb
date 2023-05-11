@@ -430,16 +430,18 @@
         On Error Resume Next
         Dim Total As Double = 0 'Uma variavel para cada coluna a ser calculada
         Dim TotalGeral As Double = 0
-        Dim desconto As Double = 0
+        Dim lucro As Double = 0
+        Dim preco_lucro As Double = 0
 
         Dim Multa As Double = 0
         For I As Integer = 0 To Me.dgVendaItens.Rows.Count - 1
             Total += CDbl(dgVendaItens.Rows(I).Cells(5).Value) 'Cells() indica qual célula o valor vai ser pego
-            'desconto += CDbl(dgVendaItens.Rows(I).Cells(5).Value)
+            lucro += CDbl(dgVendaItens.Rows(I).Cells(8).Value)
+            preco_lucro += CDbl(dgVendaItens.Rows(I).Cells(7).Value)
         Next
-        Me.txtTotal.Text = Total.ToString("C")
-        'Me.txtTotalDesconto.Text = desconto.ToString("C")
-        Me.txtTotalGeral.Text = (Total + desconto).ToString("C")
+        Me.txtTotalVenda.Text = Total.ToString("C")
+        Me.txtPrecoLucro.Text = preco_lucro.ToString("C")
+        Me.txtTotalLucro.Text = lucro.ToString("C")
     End Sub
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
 
@@ -491,7 +493,7 @@
     '    End Try
     'End Sub
 
-    Private Sub txtDesconto_TextChanged(sender As Object, e As EventArgs) Handles txtDesconto.TextChanged
+    Private Sub txtDesconto_TextChanged(sender As Object, e As EventArgs) Handles txtDesconto.TextChanged, txtTotalVenda.TextChanged, txtTotalLucro.TextChanged, txtPrecoLucro.TextChanged, TextBox2.TextChanged
 
     End Sub
 
@@ -499,7 +501,7 @@
         'ListarFolhaSalarioMes()
     End Sub
 
-    Private Sub txtDesconto_DoubleClick(sender As Object, e As EventArgs) Handles txtDesconto.DoubleClick
+    Private Sub txtDesconto_DoubleClick(sender As Object, e As EventArgs) Handles txtDesconto.DoubleClick, txtTotalVenda.DoubleClick, txtTotalLucro.DoubleClick, txtPrecoLucro.DoubleClick, TextBox2.DoubleClick
         Me.txtDesconto.Enabled = False
     End Sub
     Private Sub ListarDetalhesVenda()
@@ -638,7 +640,7 @@
         GravarItensNotaCredito()
     End Sub
 
-    Private Sub txtDesconto_MouseMove(sender As Object, e As MouseEventArgs) Handles txtDesconto.MouseMove
+    Private Sub txtDesconto_MouseMove(sender As Object, e As MouseEventArgs) Handles txtDesconto.MouseMove, txtTotalVenda.MouseMove, txtTotalLucro.MouseMove, txtPrecoLucro.MouseMove, TextBox2.MouseMove
         Me.txtDesconto.Enabled = True
     End Sub
 

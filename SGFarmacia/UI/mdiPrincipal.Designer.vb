@@ -27,38 +27,21 @@ Partial Class mdiPrincipal
         Me.sBarraMenus = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel19 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripDropDownButton7 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel8 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel9 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel22 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel24 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel10 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.lblNomeUsuario = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnGuia = New System.Windows.Forms.Button()
-        Me.btnRecibo = New System.Windows.Forms.Button()
-        Me.btnSaida = New System.Windows.Forms.Button()
-        Me.btnEntrada = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ToolStripDropDownButton2 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnPeriodicidade = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripDropDownButton3 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.btnCategoria = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnProdutos = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnConfigurarDataHora = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btnContabilidade = New System.Windows.Forms.ToolStripDropDownButton()
         Me.mnPettyCashGeral = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnContasBancarias = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnFluxoCaixa = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripDropDownButton7 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btnRH = New System.Windows.Forms.ToolStripDropDownButton()
         Me.mnColaboradores = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripSeparator()
@@ -69,14 +52,20 @@ Partial Class mdiPrincipal
         Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnFuncao = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnGerarFolhaDeSalario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripStatusLabel8 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btnConsultas = New System.Windows.Forms.ToolStripDropDownButton()
         Me.AlunosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CursosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripStatusLabel9 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripDropDownButton5 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.btnSobreSistema = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnVersaoSistema = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnRegistrarSoftware = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripStatusLabel22 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblImagemUsuario = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel24 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel10 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblNomeUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripDropDownButton6 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.btnTrocarSenha = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnConfigurarEmail = New System.Windows.Forms.ToolStripMenuItem()
@@ -84,15 +73,33 @@ Partial Class mdiPrincipal
         Me.btnBloquearRecursos = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SairToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnVenda = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnValorCaixa = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnGuia = New System.Windows.Forms.Button()
+        Me.btnRecibo = New System.Windows.Forms.Button()
+        Me.btnSaida = New System.Windows.Forms.Button()
+        Me.btnEntrada = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblHora = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.sBarraMenus.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'sBarraMenus
         '
-        Me.sBarraMenus.BackColor = System.Drawing.Color.Green
+        Me.sBarraMenus.BackColor = System.Drawing.Color.DarkSlateGray
         Me.sBarraMenus.Dock = System.Windows.Forms.DockStyle.Top
         Me.sBarraMenus.ImageScalingSize = New System.Drawing.Size(74, 74)
         Me.sBarraMenus.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel19, Me.ToolStripStatusLabel5, Me.ToolStripDropDownButton2, Me.ToolStripStatusLabel6, Me.ToolStripDropDownButton3, Me.ToolStripStatusLabel7, Me.btnContabilidade, Me.ToolStripDropDownButton7, Me.btnRH, Me.ToolStripStatusLabel8, Me.btnConsultas, Me.ToolStripStatusLabel9, Me.ToolStripDropDownButton5, Me.ToolStripStatusLabel22, Me.lblImagemUsuario, Me.ToolStripStatusLabel24, Me.ToolStripStatusLabel10, Me.lblNomeUsuario, Me.ToolStripDropDownButton6})
@@ -116,256 +123,6 @@ Partial Class mdiPrincipal
         Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(13, 90)
         Me.ToolStripStatusLabel5.Text = "  "
         Me.ToolStripStatusLabel5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ToolStripStatusLabel6
-        '
-        Me.ToolStripStatusLabel6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.White
-        Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(13, 90)
-        Me.ToolStripStatusLabel6.Text = "  "
-        Me.ToolStripStatusLabel6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ToolStripStatusLabel7
-        '
-        Me.ToolStripStatusLabel7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripStatusLabel7.ForeColor = System.Drawing.Color.White
-        Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
-        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(13, 90)
-        Me.ToolStripStatusLabel7.Text = "  "
-        Me.ToolStripStatusLabel7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ToolStripDropDownButton7
-        '
-        Me.ToolStripDropDownButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripDropDownButton7.ForeColor = System.Drawing.Color.White
-        Me.ToolStripDropDownButton7.Name = "ToolStripDropDownButton7"
-        Me.ToolStripDropDownButton7.Size = New System.Drawing.Size(13, 90)
-        Me.ToolStripDropDownButton7.Text = "  "
-        Me.ToolStripDropDownButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ToolStripStatusLabel8
-        '
-        Me.ToolStripStatusLabel8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripStatusLabel8.ForeColor = System.Drawing.Color.White
-        Me.ToolStripStatusLabel8.Name = "ToolStripStatusLabel8"
-        Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(13, 90)
-        Me.ToolStripStatusLabel8.Text = "  "
-        Me.ToolStripStatusLabel8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ToolStripStatusLabel9
-        '
-        Me.ToolStripStatusLabel9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripStatusLabel9.ForeColor = System.Drawing.Color.White
-        Me.ToolStripStatusLabel9.Name = "ToolStripStatusLabel9"
-        Me.ToolStripStatusLabel9.Size = New System.Drawing.Size(13, 90)
-        Me.ToolStripStatusLabel9.Text = "  "
-        Me.ToolStripStatusLabel9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ToolStripStatusLabel22
-        '
-        Me.ToolStripStatusLabel22.Name = "ToolStripStatusLabel22"
-        Me.ToolStripStatusLabel22.Size = New System.Drawing.Size(1, 90)
-        Me.ToolStripStatusLabel22.Spring = True
-        '
-        'ToolStripStatusLabel24
-        '
-        Me.ToolStripStatusLabel24.Name = "ToolStripStatusLabel24"
-        Me.ToolStripStatusLabel24.Size = New System.Drawing.Size(0, 90)
-        '
-        'ToolStripStatusLabel10
-        '
-        Me.ToolStripStatusLabel10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.ToolStripStatusLabel10.ForeColor = System.Drawing.Color.White
-        Me.ToolStripStatusLabel10.Name = "ToolStripStatusLabel10"
-        Me.ToolStripStatusLabel10.Size = New System.Drawing.Size(25, 90)
-        Me.ToolStripStatusLabel10.Text = "Olá"
-        '
-        'lblNomeUsuario
-        '
-        Me.lblNomeUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.lblNomeUsuario.ForeColor = System.Drawing.Color.White
-        Me.lblNomeUsuario.Name = "lblNomeUsuario"
-        Me.lblNomeUsuario.Size = New System.Drawing.Size(80, 90)
-        Me.lblNomeUsuario.Text = "Refinado Bila"
-        '
-        'NotifyIcon1
-        '
-        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon1.Text = "NotifyIcon1"
-        Me.NotifyIcon1.Visible = True
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Green
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.btnGuia)
-        Me.Panel2.Controls.Add(Me.btnRecibo)
-        Me.Panel2.Controls.Add(Me.btnSaida)
-        Me.Panel2.Controls.Add(Me.btnEntrada)
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.Panel5)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 95)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(190, 545)
-        Me.Panel2.TabIndex = 10
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Green
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(0, 450)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(190, 42)
-        Me.Button3.TabIndex = 9
-        Me.Button3.Text = "Diario"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 392)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(190, 58)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "CAIXA"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'btnGuia
-        '
-        Me.btnGuia.BackColor = System.Drawing.Color.Green
-        Me.btnGuia.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnGuia.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnGuia.Enabled = False
-        Me.btnGuia.FlatAppearance.BorderSize = 0
-        Me.btnGuia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnGuia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnGuia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuia.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuia.ForeColor = System.Drawing.Color.White
-        Me.btnGuia.Location = New System.Drawing.Point(0, 350)
-        Me.btnGuia.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnGuia.Name = "btnGuia"
-        Me.btnGuia.Size = New System.Drawing.Size(190, 42)
-        Me.btnGuia.TabIndex = 7
-        Me.btnGuia.Text = "Guia de Entrega"
-        Me.btnGuia.UseVisualStyleBackColor = False
-        '
-        'btnRecibo
-        '
-        Me.btnRecibo.BackColor = System.Drawing.Color.Green
-        Me.btnRecibo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRecibo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnRecibo.FlatAppearance.BorderSize = 0
-        Me.btnRecibo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnRecibo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRecibo.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRecibo.ForeColor = System.Drawing.Color.White
-        Me.btnRecibo.Location = New System.Drawing.Point(0, 308)
-        Me.btnRecibo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnRecibo.Name = "btnRecibo"
-        Me.btnRecibo.Size = New System.Drawing.Size(190, 42)
-        Me.btnRecibo.TabIndex = 6
-        Me.btnRecibo.Text = "Notas credito"
-        Me.btnRecibo.UseVisualStyleBackColor = False
-        '
-        'btnSaida
-        '
-        Me.btnSaida.BackColor = System.Drawing.Color.Green
-        Me.btnSaida.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSaida.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnSaida.FlatAppearance.BorderSize = 0
-        Me.btnSaida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnSaida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnSaida.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSaida.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSaida.ForeColor = System.Drawing.Color.White
-        Me.btnSaida.Location = New System.Drawing.Point(0, 266)
-        Me.btnSaida.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnSaida.Name = "btnSaida"
-        Me.btnSaida.Size = New System.Drawing.Size(190, 42)
-        Me.btnSaida.TabIndex = 5
-        Me.btnSaida.Text = "Saida"
-        Me.btnSaida.UseVisualStyleBackColor = False
-        '
-        'btnEntrada
-        '
-        Me.btnEntrada.BackColor = System.Drawing.Color.Green
-        Me.btnEntrada.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEntrada.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnEntrada.FlatAppearance.BorderSize = 0
-        Me.btnEntrada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnEntrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEntrada.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEntrada.ForeColor = System.Drawing.Color.White
-        Me.btnEntrada.Location = New System.Drawing.Point(0, 224)
-        Me.btnEntrada.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnEntrada.Name = "btnEntrada"
-        Me.btnEntrada.Size = New System.Drawing.Size(190, 42)
-        Me.btnEntrada.TabIndex = 4
-        Me.btnEntrada.Text = "Entrada"
-        Me.btnEntrada.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(0, 167)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(190, 57)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "PRODUTOS"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.Green
-        Me.Panel5.Controls.Add(Me.PictureBox2)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(0, 0)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(190, 167)
-        Me.Panel5.TabIndex = 0
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.SGFarmacia.My.Resources.Resources.mintxo_logo
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(190, 167)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 0
-        Me.PictureBox2.TabStop = False
         '
         'ToolStripDropDownButton2
         '
@@ -392,11 +149,20 @@ Partial Class mdiPrincipal
         Me.btnPeriodicidade.Size = New System.Drawing.Size(183, 22)
         Me.btnPeriodicidade.Text = "&Periodicidade"
         '
+        'ToolStripStatusLabel6
+        '
+        Me.ToolStripStatusLabel6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.White
+        Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(13, 90)
+        Me.ToolStripStatusLabel6.Text = "  "
+        Me.ToolStripStatusLabel6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
         'ToolStripDropDownButton3
         '
         Me.ToolStripDropDownButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCategoria, Me.mnProdutos, Me.ToolStripSeparator3, Me.btnConfigurarDataHora})
         Me.ToolStripDropDownButton3.ForeColor = System.Drawing.Color.White
-        Me.ToolStripDropDownButton3.Image = CType(resources.GetObject("ToolStripDropDownButton3.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton3.Image = Global.SGFarmacia.My.Resources.Resources.estoque__1_
         Me.ToolStripDropDownButton3.Name = "ToolStripDropDownButton3"
         Me.ToolStripDropDownButton3.ShowDropDownArrow = False
         Me.ToolStripDropDownButton3.Size = New System.Drawing.Size(78, 93)
@@ -426,6 +192,15 @@ Partial Class mdiPrincipal
         Me.btnConfigurarDataHora.Size = New System.Drawing.Size(176, 22)
         Me.btnConfigurarDataHora.Text = "Controlo de stoque"
         '
+        'ToolStripStatusLabel7
+        '
+        Me.ToolStripStatusLabel7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripStatusLabel7.ForeColor = System.Drawing.Color.White
+        Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
+        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(13, 90)
+        Me.ToolStripStatusLabel7.Text = "  "
+        Me.ToolStripStatusLabel7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
         'btnContabilidade
         '
         Me.btnContabilidade.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnPettyCashGeral, Me.mnContasBancarias, Me.mnFluxoCaixa})
@@ -454,6 +229,15 @@ Partial Class mdiPrincipal
         Me.mnFluxoCaixa.Name = "mnFluxoCaixa"
         Me.mnFluxoCaixa.Size = New System.Drawing.Size(152, 22)
         Me.mnFluxoCaixa.Text = "Fluxo de Caixa"
+        '
+        'ToolStripDropDownButton7
+        '
+        Me.ToolStripDropDownButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripDropDownButton7.ForeColor = System.Drawing.Color.White
+        Me.ToolStripDropDownButton7.Name = "ToolStripDropDownButton7"
+        Me.ToolStripDropDownButton7.Size = New System.Drawing.Size(13, 90)
+        Me.ToolStripDropDownButton7.Text = "  "
+        Me.ToolStripDropDownButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'btnRH
         '
@@ -523,6 +307,15 @@ Partial Class mdiPrincipal
         Me.mnGerarFolhaDeSalario.Size = New System.Drawing.Size(224, 22)
         Me.mnGerarFolhaDeSalario.Text = "Gerar Folha de Salário"
         '
+        'ToolStripStatusLabel8
+        '
+        Me.ToolStripStatusLabel8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripStatusLabel8.ForeColor = System.Drawing.Color.White
+        Me.ToolStripStatusLabel8.Name = "ToolStripStatusLabel8"
+        Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(13, 90)
+        Me.ToolStripStatusLabel8.Text = "  "
+        Me.ToolStripStatusLabel8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
         'btnConsultas
         '
         Me.btnConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlunosToolStripMenuItem, Me.CursosToolStripMenuItem})
@@ -545,6 +338,15 @@ Partial Class mdiPrincipal
         Me.CursosToolStripMenuItem.Name = "CursosToolStripMenuItem"
         Me.CursosToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.CursosToolStripMenuItem.Text = "Cadastro"
+        '
+        'ToolStripStatusLabel9
+        '
+        Me.ToolStripStatusLabel9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripStatusLabel9.ForeColor = System.Drawing.Color.White
+        Me.ToolStripStatusLabel9.Name = "ToolStripStatusLabel9"
+        Me.ToolStripStatusLabel9.Size = New System.Drawing.Size(13, 90)
+        Me.ToolStripStatusLabel9.Text = "  "
+        Me.ToolStripStatusLabel9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripDropDownButton5
         '
@@ -575,24 +377,51 @@ Partial Class mdiPrincipal
         Me.btnRegistrarSoftware.Size = New System.Drawing.Size(169, 22)
         Me.btnRegistrarSoftware.Text = "Registrar Software"
         '
+        'ToolStripStatusLabel22
+        '
+        Me.ToolStripStatusLabel22.Name = "ToolStripStatusLabel22"
+        Me.ToolStripStatusLabel22.Size = New System.Drawing.Size(1, 90)
+        Me.ToolStripStatusLabel22.Spring = True
+        '
         'lblImagemUsuario
         '
         Me.lblImagemUsuario.AutoToolTip = True
         Me.lblImagemUsuario.Image = CType(resources.GetObject("lblImagemUsuario.Image"), System.Drawing.Image)
         Me.lblImagemUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.lblImagemUsuario.Name = "lblImagemUsuario"
-        Me.lblImagemUsuario.Size = New System.Drawing.Size(1, 74)
+        Me.lblImagemUsuario.Size = New System.Drawing.Size(1, 90)
         Me.lblImagemUsuario.Spring = True
         Me.lblImagemUsuario.ToolTipText = "Clique aqui para adicionar uma imagem..."
+        '
+        'ToolStripStatusLabel24
+        '
+        Me.ToolStripStatusLabel24.Name = "ToolStripStatusLabel24"
+        Me.ToolStripStatusLabel24.Size = New System.Drawing.Size(0, 90)
+        '
+        'ToolStripStatusLabel10
+        '
+        Me.ToolStripStatusLabel10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ToolStripStatusLabel10.ForeColor = System.Drawing.Color.White
+        Me.ToolStripStatusLabel10.Name = "ToolStripStatusLabel10"
+        Me.ToolStripStatusLabel10.Size = New System.Drawing.Size(25, 90)
+        Me.ToolStripStatusLabel10.Text = "Olá"
+        '
+        'lblNomeUsuario
+        '
+        Me.lblNomeUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.lblNomeUsuario.ForeColor = System.Drawing.Color.White
+        Me.lblNomeUsuario.Name = "lblNomeUsuario"
+        Me.lblNomeUsuario.Size = New System.Drawing.Size(80, 90)
+        Me.lblNomeUsuario.Text = "Refinado Bila"
         '
         'ToolStripDropDownButton6
         '
         Me.ToolStripDropDownButton6.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnTrocarSenha, Me.btnConfigurarEmail, Me.ToolStripMenuItem4, Me.btnBloquearRecursos, Me.ToolStripMenuItem1, Me.SairToolStripMenuItem})
         Me.ToolStripDropDownButton6.ForeColor = System.Drawing.Color.White
-        Me.ToolStripDropDownButton6.Image = Global.SGFarmacia.My.Resources.Resources.mintxo_logo
+        Me.ToolStripDropDownButton6.Image = Global.SGFarmacia.My.Resources.Resources.icons8_administrative_tools_100
         Me.ToolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton6.Name = "ToolStripDropDownButton6"
-        Me.ToolStripDropDownButton6.Size = New System.Drawing.Size(171, 78)
+        Me.ToolStripDropDownButton6.Size = New System.Drawing.Size(171, 93)
         Me.ToolStripDropDownButton6.Text = "Configurações"
         '
         'btnTrocarSenha
@@ -629,13 +458,295 @@ Partial Class mdiPrincipal
         Me.SairToolStripMenuItem.Size = New System.Drawing.Size(256, 22)
         Me.SairToolStripMenuItem.Text = "Sair"
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Panel2.Controls.Add(Me.btnVenda)
+        Me.Panel2.Controls.Add(Me.Button4)
+        Me.Panel2.Controls.Add(Me.btnValorCaixa)
+        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.btnGuia)
+        Me.Panel2.Controls.Add(Me.btnRecibo)
+        Me.Panel2.Controls.Add(Me.btnSaida)
+        Me.Panel2.Controls.Add(Me.btnEntrada)
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Panel5)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel2.Location = New System.Drawing.Point(0, 95)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(190, 629)
+        Me.Panel2.TabIndex = 10
+        '
+        'btnVenda
+        '
+        Me.btnVenda.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnVenda.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnVenda.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnVenda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnVenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVenda.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVenda.ForeColor = System.Drawing.Color.White
+        Me.btnVenda.Image = Global.SGFarmacia.My.Resources.Resources.reports
+        Me.btnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnVenda.Location = New System.Drawing.Point(0, 513)
+        Me.btnVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnVenda.Name = "btnVenda"
+        Me.btnVenda.Size = New System.Drawing.Size(190, 42)
+        Me.btnVenda.TabIndex = 12
+        Me.btnVenda.Text = "Vendas"
+        Me.btnVenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnVenda.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Teal
+        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button4.Enabled = False
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(0, 476)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(190, 37)
+        Me.Button4.TabIndex = 11
+        Me.Button4.Text = "RELATORIOS"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'btnValorCaixa
+        '
+        Me.btnValorCaixa.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnValorCaixa.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnValorCaixa.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnValorCaixa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnValorCaixa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnValorCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnValorCaixa.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnValorCaixa.ForeColor = System.Drawing.Color.White
+        Me.btnValorCaixa.Image = Global.SGFarmacia.My.Resources.Resources.Database
+        Me.btnValorCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnValorCaixa.Location = New System.Drawing.Point(0, 434)
+        Me.btnValorCaixa.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnValorCaixa.Name = "btnValorCaixa"
+        Me.btnValorCaixa.Size = New System.Drawing.Size(190, 42)
+        Me.btnValorCaixa.TabIndex = 10
+        Me.btnValorCaixa.Text = "Valor do caixa"
+        Me.btnValorCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnValorCaixa.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Image = Global.SGFarmacia.My.Resources.Resources.supplier
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(0, 392)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(190, 42)
+        Me.Button3.TabIndex = 9
+        Me.Button3.Text = "Fecho de caixa"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Teal
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button1.Enabled = False
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(0, 352)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(190, 40)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "CAIXA"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'btnGuia
+        '
+        Me.btnGuia.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnGuia.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnGuia.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnGuia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGuia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGuia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuia.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuia.ForeColor = System.Drawing.Color.White
+        Me.btnGuia.Image = Global.SGFarmacia.My.Resources.Resources.stock_in_icon
+        Me.btnGuia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuia.Location = New System.Drawing.Point(0, 310)
+        Me.btnGuia.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnGuia.Name = "btnGuia"
+        Me.btnGuia.Size = New System.Drawing.Size(190, 42)
+        Me.btnGuia.TabIndex = 7
+        Me.btnGuia.Text = "Stock"
+        Me.btnGuia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGuia.UseVisualStyleBackColor = False
+        '
+        'btnRecibo
+        '
+        Me.btnRecibo.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnRecibo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRecibo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnRecibo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRecibo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRecibo.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRecibo.ForeColor = System.Drawing.Color.White
+        Me.btnRecibo.Image = Global.SGFarmacia.My.Resources.Resources.record_512
+        Me.btnRecibo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRecibo.Location = New System.Drawing.Point(0, 268)
+        Me.btnRecibo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnRecibo.Name = "btnRecibo"
+        Me.btnRecibo.Size = New System.Drawing.Size(190, 42)
+        Me.btnRecibo.TabIndex = 6
+        Me.btnRecibo.Text = "Notas credito"
+        Me.btnRecibo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnRecibo.UseVisualStyleBackColor = False
+        '
+        'btnSaida
+        '
+        Me.btnSaida.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnSaida.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSaida.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnSaida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnSaida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnSaida.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSaida.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSaida.ForeColor = System.Drawing.Color.White
+        Me.btnSaida.Image = Global.SGFarmacia.My.Resources.Resources.Product1
+        Me.btnSaida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSaida.Location = New System.Drawing.Point(0, 226)
+        Me.btnSaida.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnSaida.Name = "btnSaida"
+        Me.btnSaida.Size = New System.Drawing.Size(190, 42)
+        Me.btnSaida.TabIndex = 5
+        Me.btnSaida.Text = "Vendas"
+        Me.btnSaida.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSaida.UseVisualStyleBackColor = False
+        '
+        'btnEntrada
+        '
+        Me.btnEntrada.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnEntrada.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEntrada.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnEntrada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnEntrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEntrada.Font = New System.Drawing.Font("Trebuchet MS", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEntrada.ForeColor = System.Drawing.Color.White
+        Me.btnEntrada.Image = Global.SGFarmacia.My.Resources.Resources.add_stock
+        Me.btnEntrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEntrada.Location = New System.Drawing.Point(0, 184)
+        Me.btnEntrada.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnEntrada.Name = "btnEntrada"
+        Me.btnEntrada.Size = New System.Drawing.Size(190, 42)
+        Me.btnEntrada.TabIndex = 4
+        Me.btnEntrada.Text = "Entrada"
+        Me.btnEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEntrada.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Teal
+        Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button2.Enabled = False
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(0, 146)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(190, 38)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "PRODUTOS"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Panel5.Controls.Add(Me.PictureBox2)
+        Me.Panel5.Controls.Add(Me.PictureBox1)
+        Me.Panel5.Controls.Add(Me.lblHora)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(190, 146)
+        Me.Panel5.TabIndex = 0
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.SGFarmacia.My.Resources.Resources.mintxo_logo
+        Me.PictureBox2.Location = New System.Drawing.Point(26, 4)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(137, 116)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 0
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(139, 51)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(24, 23)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
+        'lblHora
+        '
+        Me.lblHora.AutoSize = True
+        Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHora.ForeColor = System.Drawing.Color.White
+        Me.lblHora.Location = New System.Drawing.Point(3, 124)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(38, 15)
+        Me.lblHora.TabIndex = 8
+        Me.lblHora.Text = "Hora"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1000
+        '
         'mdiPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.SGFarmacia.My.Resources.Resources.estoque__3_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(800, 640)
+        Me.ClientSize = New System.Drawing.Size(800, 724)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.sBarraMenus)
         Me.DoubleBuffered = True
@@ -650,7 +761,9 @@ Partial Class mdiPrincipal
         Me.sBarraMenus.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -716,4 +829,10 @@ Partial Class mdiPrincipal
     Friend WithEvents Button1 As Button
     Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
     Friend WithEvents SairToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblHora As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents btnValorCaixa As Button
+    Friend WithEvents btnVenda As Button
+    Friend WithEvents Button4 As Button
 End Class

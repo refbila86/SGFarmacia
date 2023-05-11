@@ -9,31 +9,52 @@
 
     End Sub
     Sub ColorirGrid()
+        Dim diasrestantes As Integer = 1
         ' On Error Resume Next
         Dim dt As String
         'Dim valor As Integer
         For i As Integer = 0 To dgListaFuncionarios.Rows.Count - 1
             dt = dgListaFuncionarios.Rows(i).Cells("stockactual").Value.ToString
             If dt = "" Or dt = "0" Then
-                dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Red
+                dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Black
             Else
                 dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.DarkGreen
             End If
         Next
 
-        'For i As Integer = 0 To dgListaFuncionarios.Rows.Count - 1
-        '    valor = dgListaFuncionarios.Rows(i).Cells("stockactual").Value.ToString
-        '    If valor = 0 Then
-        '        dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Red
-        '    Else
-        '        dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Black
-        '    End If
-        'Next
+        For i As Integer = 0 To dgListaFuncionarios.Rows.Count - 1
+            diasrestantes = dgListaFuncionarios.Rows(i).Cells("diasrestantes").Value.ToString
+            If diasrestantes <= 0 Then
+                dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Red
+            ElseIf diasrestantes > 0 And diasrestantes <= 10 Then
+                dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.HotPink
+            Else
+                dgListaFuncionarios.Rows(i).DefaultCellStyle.ForeColor = Color.Black
 
+            End If
+        Next
+
+    End Sub
+    Sub calculadiferenca()
+        Static t_inicio As DateTime
+        Static t_fim As DateTime
+        Dim t_diferenca As TimeSpan
+
+        'If btnMedir.Text = "Iniciar" Then
+        '    lblDiferenca.Text = ""
+        '    t_inicio = Now
+        '    btnMedir.Text = "Parar"
+        'Else
+        '    t_fim = Now
+        '    t_diferenca = t_fim.Subtract(t_inicio)
+        '    lblDiferenca.Text = t_diferenca.TotalSeconds.ToString("0.000000") & " segundos"
+        '    btnMedir.Text = "Iniciar"
+        'End If
     End Sub
     Private Sub frmListarProdutos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListarProdutos()
         ColorirGrid()
+        'txtResultado2.Text += DateDiff(DateInterval.Day, dtini, dtfim).ToString + "  Dias" + vbCrLf
     End Sub
     Public Sub ListarProdutos()
         Try

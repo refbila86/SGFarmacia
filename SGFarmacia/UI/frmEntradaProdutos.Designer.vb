@@ -24,7 +24,6 @@ Partial Class frmEntradaProdutos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEntradaProdutos))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -56,7 +55,6 @@ Partial Class frmEntradaProdutos
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtStockActual = New System.Windows.Forms.TextBox()
         Me.btnAdicionaar = New System.Windows.Forms.Button()
         Me.cboTipoEntrada = New System.Windows.Forms.ComboBox()
@@ -86,6 +84,8 @@ Partial Class frmEntradaProdutos
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dpValidade = New System.Windows.Forms.DateTimePicker()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.dgEntradaProdutos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,25 +107,9 @@ Partial Class frmEntradaProdutos
         Me.Panel1.Size = New System.Drawing.Size(654, 33)
         Me.Panel1.TabIndex = 2
         '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(628, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(22, 25)
-        Me.Button3.TabIndex = 5
-        Me.Button3.UseVisualStyleBackColor = False
-        '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -145,7 +129,7 @@ Partial Class frmEntradaProdutos
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.LimeGreen
+        Me.Panel4.BackColor = System.Drawing.Color.Teal
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 33)
@@ -374,16 +358,17 @@ Partial Class frmEntradaProdutos
         '
         'btnRegistar
         '
-        Me.btnRegistar.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnRegistar.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegistar.FlatAppearance.BorderSize = 0
         Me.btnRegistar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
         Me.btnRegistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegistar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegistar.ForeColor = System.Drawing.Color.White
         Me.btnRegistar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegistar.Location = New System.Drawing.Point(237, 250)
+        Me.btnRegistar.Location = New System.Drawing.Point(254, 255)
         Me.btnRegistar.Name = "btnRegistar"
-        Me.btnRegistar.Size = New System.Drawing.Size(261, 29)
+        Me.btnRegistar.Size = New System.Drawing.Size(197, 29)
         Me.btnRegistar.TabIndex = 27
         Me.btnRegistar.Text = "Registar entrada"
         Me.btnRegistar.UseVisualStyleBackColor = False
@@ -419,17 +404,6 @@ Partial Class frmEntradaProdutos
         Me.Button4.TabIndex = 8
         Me.Button4.Text = "BROWSE"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.White
-        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.medico
-        Me.PictureBox1.Location = New System.Drawing.Point(8, 16)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(153, 156)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'txtStockActual
         '
@@ -712,6 +686,33 @@ Partial Class frmEntradaProdutos
         Me.Label15.Size = New System.Drawing.Size(51, 13)
         Me.Label15.TabIndex = 27
         Me.Label15.Text = "Validade:"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
+        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.medico
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 16)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(153, 156)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(628, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(22, 25)
+        Me.Button3.TabIndex = 5
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'frmEntradaProdutos
         '

@@ -482,6 +482,7 @@
                 End If
             ElseIf colName = "colEditar" Then
                 Me.txtID.Text = Me.dgVendaItens.Rows(e.RowIndex).Cells(1).Value.ToString
+                GetPriceByProdutID(Me.txtID.Text)
                 Me.txtProduto.Text = Me.dgVendaItens.Rows(e.RowIndex).Cells(2).Value.ToString
                 Me.txtPrecoUnitario.Text = Me.dgVendaItens.Rows(e.RowIndex).Cells(3).Value.ToString
                 Me.txtQtd.Text = Me.dgVendaItens.Rows(e.RowIndex).Cells(4).Value.ToString

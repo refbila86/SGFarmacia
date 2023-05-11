@@ -23,8 +23,8 @@ Partial Class frmDetalhesCaixaDiario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDetalhesCaixaDiario))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtCodigoBarras = New System.Windows.Forms.TextBox()
         Me.txtStockActual = New System.Windows.Forms.TextBox()
         Me.btnRegistar = New System.Windows.Forms.Button()
@@ -70,10 +70,10 @@ Partial Class frmDetalhesCaixaDiario
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNrVD = New System.Windows.Forms.TextBox()
-        Me.dgVendaItens = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.dgVendaItens = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnAdicionar = New System.Windows.Forms.Button()
+        Me.txtNVenda = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtTotal = New System.Windows.Forms.TextBox()
@@ -82,9 +82,15 @@ Partial Class frmDetalhesCaixaDiario
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtTotalGeral = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnPesquisar = New System.Windows.Forms.Panel()
-        Me.txtNVenda = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnAdicionar = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtTotalVenda = New System.Windows.Forms.TextBox()
+        Me.txtTotalLucro = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtPrecoLucro = New System.Windows.Forms.TextBox()
         Me.artigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.produto_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.produto = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -100,8 +106,9 @@ Partial Class frmDetalhesCaixaDiario
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnPesquisar.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtCodigoBarras
@@ -567,7 +574,7 @@ Partial Class frmDetalhesCaixaDiario
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel4.BackColor = System.Drawing.Color.Teal
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.txtNrVD)
         Me.Panel4.Controls.Add(Me.PictureBox1)
@@ -606,6 +613,18 @@ Partial Class frmDetalhesCaixaDiario
         Me.txtNrVD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtNrVD.Visible = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Silver
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(43, -1)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(112, 24)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Cod. barras:"
+        Me.Label2.Visible = False
+        '
         'dgVendaItens
         '
         Me.dgVendaItens.AllowUserToAddRows = False
@@ -624,18 +643,6 @@ Partial Class frmDetalhesCaixaDiario
         Me.dgVendaItens.Size = New System.Drawing.Size(754, 208)
         Me.dgVendaItens.TabIndex = 42
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Silver
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(43, -1)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(112, 24)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Cod. barras:"
-        Me.Label2.Visible = False
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.txtNVenda)
@@ -652,20 +659,17 @@ Partial Class frmDetalhesCaixaDiario
         Me.GroupBox1.TabIndex = 43
         Me.GroupBox1.TabStop = False
         '
-        'btnAdicionar
+        'txtNVenda
         '
-        Me.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAdicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdicionar.Image = CType(resources.GetObject("btnAdicionar.Image"), System.Drawing.Image)
-        Me.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdicionar.Location = New System.Drawing.Point(468, 130)
-        Me.btnAdicionar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnAdicionar.Name = "btnAdicionar"
-        Me.btnAdicionar.Size = New System.Drawing.Size(285, 40)
-        Me.btnAdicionar.TabIndex = 5
-        Me.btnAdicionar.Text = "ADICIONAR A LISTA"
-        Me.btnAdicionar.UseVisualStyleBackColor = True
-        Me.btnAdicionar.Visible = False
+        Me.txtNVenda.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNVenda.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNVenda.ForeColor = System.Drawing.Color.Maroon
+        Me.txtNVenda.Location = New System.Drawing.Point(123, 17)
+        Me.txtNVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtNVenda.Multiline = True
+        Me.txtNVenda.Name = "txtNVenda"
+        Me.txtNVenda.Size = New System.Drawing.Size(91, 26)
+        Me.txtNVenda.TabIndex = 30
         '
         'GroupBox2
         '
@@ -691,13 +695,13 @@ Partial Class frmDetalhesCaixaDiario
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox2.Size = New System.Drawing.Size(455, 122)
+        Me.GroupBox2.Size = New System.Drawing.Size(746, 122)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel1.BackColor = System.Drawing.Color.Teal
         Me.Panel1.Controls.Add(Me.txtTotal)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.txtTotalDesconto)
@@ -709,6 +713,7 @@ Partial Class frmDetalhesCaixaDiario
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(283, 112)
         Me.Panel1.TabIndex = 3
+        Me.Panel1.Visible = False
         '
         'txtTotal
         '
@@ -779,6 +784,16 @@ Partial Class frmDetalhesCaixaDiario
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "TOTAL GERAL:"
         '
+        'pnPesquisar
+        '
+        Me.pnPesquisar.Controls.Add(Me.dgPesquisar)
+        Me.pnPesquisar.Location = New System.Drawing.Point(810, 215)
+        Me.pnPesquisar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.pnPesquisar.Name = "pnPesquisar"
+        Me.pnPesquisar.Size = New System.Drawing.Size(614, 209)
+        Me.pnPesquisar.TabIndex = 48
+        Me.pnPesquisar.Visible = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.cb
@@ -791,27 +806,89 @@ Partial Class frmDetalhesCaixaDiario
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False
         '
-        'pnPesquisar
+        'btnAdicionar
         '
-        Me.pnPesquisar.Controls.Add(Me.dgPesquisar)
-        Me.pnPesquisar.Location = New System.Drawing.Point(810, 215)
-        Me.pnPesquisar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.pnPesquisar.Name = "pnPesquisar"
-        Me.pnPesquisar.Size = New System.Drawing.Size(614, 209)
-        Me.pnPesquisar.TabIndex = 48
-        Me.pnPesquisar.Visible = False
+        Me.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAdicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdicionar.Image = CType(resources.GetObject("btnAdicionar.Image"), System.Drawing.Image)
+        Me.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdicionar.Location = New System.Drawing.Point(468, 130)
+        Me.btnAdicionar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnAdicionar.Name = "btnAdicionar"
+        Me.btnAdicionar.Size = New System.Drawing.Size(285, 40)
+        Me.btnAdicionar.TabIndex = 5
+        Me.btnAdicionar.Text = "ADICIONAR A LISTA"
+        Me.btnAdicionar.UseVisualStyleBackColor = True
+        Me.btnAdicionar.Visible = False
         '
-        'txtNVenda
+        'Panel2
         '
-        Me.txtNVenda.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtNVenda.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNVenda.ForeColor = System.Drawing.Color.Maroon
-        Me.txtNVenda.Location = New System.Drawing.Point(123, 17)
-        Me.txtNVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtNVenda.Multiline = True
-        Me.txtNVenda.Name = "txtNVenda"
-        Me.txtNVenda.Size = New System.Drawing.Size(91, 26)
-        Me.txtNVenda.TabIndex = 30
+        Me.Panel2.BackColor = System.Drawing.Color.Teal
+        Me.Panel2.Controls.Add(Me.Label15)
+        Me.Panel2.Controls.Add(Me.txtTotalLucro)
+        Me.Panel2.Controls.Add(Me.txtPrecoLucro)
+        Me.Panel2.Controls.Add(Me.TextBox2)
+        Me.Panel2.Controls.Add(Me.txtTotalVenda)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 460)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(772, 33)
+        Me.Panel2.TabIndex = 51
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label15.Location = New System.Drawing.Point(322, 6)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(54, 20)
+        Me.Label15.TabIndex = 6
+        Me.Label15.Text = "Total:"
+        '
+        'txtTotalVenda
+        '
+        Me.txtTotalVenda.Location = New System.Drawing.Point(398, 5)
+        Me.txtTotalVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTotalVenda.Name = "txtTotalVenda"
+        Me.txtTotalVenda.ReadOnly = True
+        Me.txtTotalVenda.Size = New System.Drawing.Size(76, 20)
+        Me.txtTotalVenda.TabIndex = 3
+        Me.txtTotalVenda.Text = "0.0 Mtn"
+        Me.txtTotalVenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtTotalLucro
+        '
+        Me.txtTotalLucro.Location = New System.Drawing.Point(654, 6)
+        Me.txtTotalLucro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTotalLucro.Name = "txtTotalLucro"
+        Me.txtTotalLucro.ReadOnly = True
+        Me.txtTotalLucro.Size = New System.Drawing.Size(104, 20)
+        Me.txtTotalLucro.TabIndex = 3
+        Me.txtTotalLucro.Text = "0.0 Mtn"
+        Me.txtTotalLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(480, 6)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(76, 20)
+        Me.TextBox2.TabIndex = 3
+        Me.TextBox2.Text = "0.0 Mtn"
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtPrecoLucro
+        '
+        Me.txtPrecoLucro.Location = New System.Drawing.Point(567, 5)
+        Me.txtPrecoLucro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtPrecoLucro.Name = "txtPrecoLucro"
+        Me.txtPrecoLucro.ReadOnly = True
+        Me.txtPrecoLucro.Size = New System.Drawing.Size(76, 20)
+        Me.txtPrecoLucro.TabIndex = 3
+        Me.txtPrecoLucro.Text = "0.0 Mtn"
+        Me.txtPrecoLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'artigo
         '
@@ -850,12 +927,13 @@ Partial Class frmDetalhesCaixaDiario
         '
         'subtotal
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Navy
-        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Navy
+        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle3
         Me.subtotal.HeaderText = "Total venda"
         Me.subtotal.Name = "subtotal"
         Me.subtotal.ReadOnly = True
@@ -876,11 +954,12 @@ Partial Class frmDetalhesCaixaDiario
         '
         'lucrototal
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        Me.lucrototal.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Red
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
+        Me.lucrototal.DefaultCellStyle = DataGridViewCellStyle4
         Me.lucrototal.HeaderText = "Lucro total"
         Me.lucrototal.Name = "lucrototal"
         Me.lucrototal.ReadOnly = True
@@ -889,7 +968,8 @@ Partial Class frmDetalhesCaixaDiario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(772, 458)
+        Me.ClientSize = New System.Drawing.Size(772, 493)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.txtStockActual)
         Me.Controls.Add(Me.btnRegistar)
         Me.Controls.Add(Me.pnPesquisar)
@@ -920,8 +1000,10 @@ Partial Class frmDetalhesCaixaDiario
         Me.GroupBox2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnPesquisar.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -987,6 +1069,12 @@ Partial Class frmDetalhesCaixaDiario
     Friend WithEvents Label4 As Label
     Friend WithEvents pnPesquisar As Panel
     Friend WithEvents txtNVenda As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents txtTotalLucro As TextBox
+    Friend WithEvents txtTotalVenda As TextBox
+    Friend WithEvents txtPrecoLucro As TextBox
+    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents artigo As DataGridViewTextBoxColumn
     Friend WithEvents produto_id As DataGridViewTextBoxColumn
     Friend WithEvents produto As DataGridViewTextBoxColumn

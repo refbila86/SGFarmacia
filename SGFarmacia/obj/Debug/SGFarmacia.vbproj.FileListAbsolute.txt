@@ -32,3 +32,4 @@ C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmListarNotasCredito.resources
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmCaixaDiario.resources
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmDetalhesCaixaDiario.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmRelatorioVendas.resources

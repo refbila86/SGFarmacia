@@ -22,6 +22,7 @@ Partial Class frmListarNotasCredito
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListarNotasCredito))
         Me.dgListaNotasVendas = New System.Windows.Forms.DataGridView()
         Me.nrvenda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,9 +40,11 @@ Partial Class frmListarNotasCredito
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.dgListaNotasVendas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgListaNotasVendas
@@ -60,7 +63,7 @@ Partial Class frmListarNotasCredito
         Me.dgListaNotasVendas.ReadOnly = True
         Me.dgListaNotasVendas.RowHeadersVisible = False
         Me.dgListaNotasVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgListaNotasVendas.Size = New System.Drawing.Size(800, 340)
+        Me.dgListaNotasVendas.Size = New System.Drawing.Size(800, 354)
         Me.dgListaNotasVendas.TabIndex = 27
         '
         'nrvenda
@@ -116,7 +119,7 @@ Partial Class frmListarNotasCredito
         '
         'btnRegistar
         '
-        Me.btnRegistar.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnRegistar.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegistar.FlatAppearance.BorderSize = 0
         Me.btnRegistar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
@@ -182,7 +185,8 @@ Partial Class frmListarNotasCredito
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel2.BackColor = System.Drawing.Color.Teal
+        Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -191,12 +195,29 @@ Partial Class frmListarNotasCredito
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel3.BackColor = System.Drawing.Color.Teal
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 426)
+        Me.Panel3.Location = New System.Drawing.Point(0, 440)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(800, 24)
+        Me.Panel3.Size = New System.Drawing.Size(800, 10)
         Me.Panel3.TabIndex = 26
+        Me.Panel3.Visible = False
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.BackColor = System.Drawing.Color.Teal
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(775, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(22, 25)
+        Me.Button3.TabIndex = 6
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'frmListarNotasCredito
         '
@@ -209,10 +230,12 @@ Partial Class frmListarNotasCredito
         Me.Controls.Add(Me.Panel3)
         Me.Name = "frmListarNotasCredito"
         Me.Text = "frmListarNotasCredito"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgListaNotasVendas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel4.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -233,4 +256,5 @@ Partial Class frmListarNotasCredito
     Friend WithEvents vdreferencia As DataGridViewTextBoxColumn
     Friend WithEvents motivo As DataGridViewTextBoxColumn
     Friend WithEvents colVisualizar As DataGridViewButtonColumn
+    Friend WithEvents Button3 As Button
 End Class

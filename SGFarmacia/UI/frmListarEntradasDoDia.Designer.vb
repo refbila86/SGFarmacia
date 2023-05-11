@@ -22,25 +22,26 @@ Partial Class frmListarEntradasDoDia
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListarEntradasDoDia))
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.txtTotalVenda = New System.Windows.Forms.TextBox()
         Me.txtTotalCompra = New System.Windows.Forms.TextBox()
+        Me.btnStock = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnRegistar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.mskData = New System.Windows.Forms.MaskedTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.mskData = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.btnStock = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgEntradaProdutos = New System.Windows.Forms.DataGridView()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,11 +54,15 @@ Partial Class frmListarEntradasDoDia
         Me.precovendas = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colEditar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         CType(Me.dgEntradaProdutos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel3
@@ -69,15 +74,16 @@ Partial Class frmListarEntradasDoDia
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 490)
+        Me.Panel3.Location = New System.Drawing.Point(0, 538)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(835, 58)
+        Me.Panel3.Size = New System.Drawing.Size(835, 10)
         Me.Panel3.TabIndex = 14
+        Me.Panel3.Visible = False
         '
         'txtTotalVenda
         '
         Me.txtTotalVenda.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtTotalVenda.Location = New System.Drawing.Point(665, 26)
+        Me.txtTotalVenda.Location = New System.Drawing.Point(665, -22)
         Me.txtTotalVenda.Name = "txtTotalVenda"
         Me.txtTotalVenda.ReadOnly = True
         Me.txtTotalVenda.Size = New System.Drawing.Size(152, 20)
@@ -88,7 +94,7 @@ Partial Class frmListarEntradasDoDia
         'txtTotalCompra
         '
         Me.txtTotalCompra.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtTotalCompra.Location = New System.Drawing.Point(665, 2)
+        Me.txtTotalCompra.Location = New System.Drawing.Point(665, -46)
         Me.txtTotalCompra.Name = "txtTotalCompra"
         Me.txtTotalCompra.ReadOnly = True
         Me.txtTotalCompra.Size = New System.Drawing.Size(152, 20)
@@ -96,11 +102,28 @@ Partial Class frmListarEntradasDoDia
         Me.txtTotalCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtTotalCompra.Visible = False
         '
+        'btnStock
+        '
+        Me.btnStock.BackColor = System.Drawing.Color.Blue
+        Me.btnStock.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnStock.FlatAppearance.BorderSize = 0
+        Me.btnStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
+        Me.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStock.ForeColor = System.Drawing.Color.White
+        Me.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnStock.Location = New System.Drawing.Point(22, 13)
+        Me.btnStock.Name = "btnStock"
+        Me.btnStock.Size = New System.Drawing.Size(142, 33)
+        Me.btnStock.TabIndex = 10
+        Me.btnStock.Text = "Verificar stock"
+        Me.btnStock.UseVisualStyleBackColor = False
+        Me.btnStock.Visible = False
+        '
         'Label2
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(592, 29)
+        Me.Label2.Location = New System.Drawing.Point(592, -19)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 13)
         Me.Label2.TabIndex = 1
@@ -111,7 +134,7 @@ Partial Class frmListarEntradasDoDia
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(587, 5)
+        Me.Label1.Location = New System.Drawing.Point(587, -43)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 13)
         Me.Label1.TabIndex = 0
@@ -120,7 +143,7 @@ Partial Class frmListarEntradasDoDia
         '
         'btnRegistar
         '
-        Me.btnRegistar.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnRegistar.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegistar.FlatAppearance.BorderSize = 0
         Me.btnRegistar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
@@ -146,13 +169,15 @@ Partial Class frmListarEntradasDoDia
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtrar entradas do dia"
         '
-        'mskData
+        'Button1
         '
-        Me.mskData.Location = New System.Drawing.Point(45, 20)
-        Me.mskData.Mask = "####-##-##"
-        Me.mskData.Name = "mskData"
-        Me.mskData.Size = New System.Drawing.Size(115, 20)
-        Me.mskData.TabIndex = 29
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Location = New System.Drawing.Point(166, 18)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 30
+        Me.Button1.Text = "Pesquisar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -164,18 +189,17 @@ Partial Class frmListarEntradasDoDia
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "Data:"
         '
-        'Button1
+        'mskData
         '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Location = New System.Drawing.Point(166, 18)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 30
-        Me.Button1.Text = "Pesquisar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.mskData.Location = New System.Drawing.Point(45, 20)
+        Me.mskData.Mask = "####-##-##"
+        Me.mskData.Name = "mskData"
+        Me.mskData.Size = New System.Drawing.Size(115, 20)
+        Me.mskData.TabIndex = 29
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.PictureBox1)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Label6)
@@ -190,41 +214,14 @@ Partial Class frmListarEntradasDoDia
         Me.GroupBox2.Text = "Filtrar entradas entre datas "
         Me.GroupBox2.Visible = False
         '
-        'MaskedTextBox1
+        'Label5
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(45, 20)
-        Me.MaskedTextBox1.Mask = "####-##-##"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(115, 20)
-        Me.MaskedTextBox1.TabIndex = 29
-        '
-        'MaskedTextBox2
-        '
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(227, 19)
-        Me.MaskedTextBox2.Mask = "####-##-##"
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(115, 20)
-        Me.MaskedTextBox2.TabIndex = 29
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.Blue
-        Me.Label4.Location = New System.Drawing.Point(6, 19)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(35, 13)
-        Me.Label4.TabIndex = 28
-        Me.Label4.Text = "Inicio:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.ForeColor = System.Drawing.Color.Blue
-        Me.Label6.Location = New System.Drawing.Point(198, 20)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 13)
-        Me.Label6.TabIndex = 28
-        Me.Label6.Text = "Fim:"
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(166, 23)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(14, 13)
+        Me.Label5.TabIndex = 31
+        Me.Label5.Text = "A"
         '
         'Button2
         '
@@ -236,14 +233,41 @@ Partial Class frmListarEntradasDoDia
         Me.Button2.Text = "Pesquisar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label5
+        'Label6
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(166, 23)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(14, 13)
-        Me.Label5.TabIndex = 31
-        Me.Label5.Text = "A"
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.Blue
+        Me.Label6.Location = New System.Drawing.Point(198, 20)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.TabIndex = 28
+        Me.Label6.Text = "Fim:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.Blue
+        Me.Label4.Location = New System.Drawing.Point(6, 19)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(35, 13)
+        Me.Label4.TabIndex = 28
+        Me.Label4.Text = "Inicio:"
+        '
+        'MaskedTextBox2
+        '
+        Me.MaskedTextBox2.Location = New System.Drawing.Point(227, 19)
+        Me.MaskedTextBox2.Mask = "####-##-##"
+        Me.MaskedTextBox2.Name = "MaskedTextBox2"
+        Me.MaskedTextBox2.Size = New System.Drawing.Size(115, 20)
+        Me.MaskedTextBox2.TabIndex = 29
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(45, 20)
+        Me.MaskedTextBox1.Mask = "####-##-##"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(115, 20)
+        Me.MaskedTextBox1.TabIndex = 29
         '
         'Panel4
         '
@@ -257,28 +281,14 @@ Partial Class frmListarEntradasDoDia
         Me.Panel4.Size = New System.Drawing.Size(835, 103)
         Me.Panel4.TabIndex = 13
         '
-        'btnStock
-        '
-        Me.btnStock.BackColor = System.Drawing.Color.Blue
-        Me.btnStock.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnStock.FlatAppearance.BorderSize = 0
-        Me.btnStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
-        Me.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnStock.ForeColor = System.Drawing.Color.White
-        Me.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnStock.Location = New System.Drawing.Point(22, 13)
-        Me.btnStock.Name = "btnStock"
-        Me.btnStock.Size = New System.Drawing.Size(142, 33)
-        Me.btnStock.TabIndex = 10
-        Me.btnStock.Text = "Verificar stock"
-        Me.btnStock.UseVisualStyleBackColor = False
-        '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Teal
+        Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(835, 31)
+        Me.Panel1.Size = New System.Drawing.Size(835, 25)
         Me.Panel1.TabIndex = 31
         '
         'dgEntradaProdutos
@@ -297,7 +307,7 @@ Partial Class frmListarEntradasDoDia
         Me.dgEntradaProdutos.ReadOnly = True
         Me.dgEntradaProdutos.RowHeadersVisible = False
         Me.dgEntradaProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgEntradaProdutos.Size = New System.Drawing.Size(835, 387)
+        Me.dgEntradaProdutos.Size = New System.Drawing.Size(835, 435)
         Me.dgEntradaProdutos.TabIndex = 20
         '
         'id
@@ -360,6 +370,33 @@ Partial Class frmListarEntradasDoDia
         Me.colRemover.Name = "colRemover"
         Me.colRemover.ReadOnly = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.add_stock
+        Me.PictureBox1.Location = New System.Drawing.Point(405, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 33
+        Me.PictureBox1.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.BackColor = System.Drawing.Color.Teal
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(810, 0)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(22, 25)
+        Me.Button3.TabIndex = 6
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'frmListarEntradasDoDia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -381,7 +418,9 @@ Partial Class frmListarEntradasDoDia
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
         CType(Me.dgEntradaProdutos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -416,4 +455,6 @@ Partial Class frmListarEntradasDoDia
     Friend WithEvents precovendas As DataGridViewTextBoxColumn
     Friend WithEvents colEditar As DataGridViewButtonColumn
     Friend WithEvents colRemover As DataGridViewButtonColumn
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button3 As Button
 End Class

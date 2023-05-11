@@ -29,6 +29,10 @@
         saida_id = Nothing
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+    End Sub
+
     Public Sub ListarNotasCreditoSaidaDeProdutos()
         dgListaNotasVendas.Rows.Clear()
         Try

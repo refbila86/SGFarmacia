@@ -22,14 +22,20 @@ Partial Class frmListarSaidasDoDia
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListarSaidasDoDia))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnReset = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.mskData = New System.Windows.Forms.MaskedTextBox()
         Me.btnRegistar = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.dgListaVendas = New System.Windows.Forms.DataGridView()
         Me.nrvenda = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,12 +47,16 @@ Partial Class frmListarSaidasDoDia
         Me.colCancelar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         CType(Me.dgListaVendas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.PictureBox1)
         Me.Panel4.Controls.Add(Me.GroupBox1)
         Me.Panel4.Controls.Add(Me.btnRegistar)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
@@ -55,17 +65,39 @@ Partial Class frmListarSaidasDoDia
         Me.Panel4.Size = New System.Drawing.Size(800, 61)
         Me.Panel4.TabIndex = 21
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.Product
+        Me.PictureBox1.Location = New System.Drawing.Point(738, 6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 32
+        Me.PictureBox1.TabStop = False
+        '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnReset)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.mskData)
         Me.GroupBox1.Location = New System.Drawing.Point(89, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(252, 46)
+        Me.GroupBox1.Size = New System.Drawing.Size(332, 46)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtrar vendas do dia"
+        '
+        'btnReset
+        '
+        Me.btnReset.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnReset.Location = New System.Drawing.Point(247, 17)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnReset.TabIndex = 30
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -97,7 +129,7 @@ Partial Class frmListarSaidasDoDia
         '
         'btnRegistar
         '
-        Me.btnRegistar.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnRegistar.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegistar.FlatAppearance.BorderSize = 0
         Me.btnRegistar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
@@ -113,21 +145,55 @@ Partial Class frmListarSaidasDoDia
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel2.BackColor = System.Drawing.Color.Teal
+        Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(800, 25)
         Me.Panel2.TabIndex = 20
         '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.BackColor = System.Drawing.Color.Teal
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(775, 0)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(22, 25)
+        Me.Button3.TabIndex = 6
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel3.BackColor = System.Drawing.Color.Teal
+        Me.Panel3.Controls.Add(Me.btnImprimir)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 426)
+        Me.Panel3.Location = New System.Drawing.Point(0, 414)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(800, 24)
+        Me.Panel3.Size = New System.Drawing.Size(800, 36)
         Me.Panel3.TabIndex = 22
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnImprimir.FlatAppearance.BorderSize = 0
+        Me.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.ForeColor = System.Drawing.Color.White
+        Me.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnImprimir.Location = New System.Drawing.Point(3, 3)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(76, 29)
+        Me.btnImprimir.TabIndex = 10
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.UseVisualStyleBackColor = False
         '
         'dgListaVendas
         '
@@ -145,7 +211,7 @@ Partial Class frmListarSaidasDoDia
         Me.dgListaVendas.ReadOnly = True
         Me.dgListaVendas.RowHeadersVisible = False
         Me.dgListaVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgListaVendas.Size = New System.Drawing.Size(800, 340)
+        Me.dgListaVendas.Size = New System.Drawing.Size(800, 328)
         Me.dgListaVendas.TabIndex = 23
         '
         'nrvenda
@@ -178,6 +244,9 @@ Partial Class frmListarSaidasDoDia
         '
         'valortotal
         '
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.valortotal.DefaultCellStyle = DataGridViewCellStyle1
         Me.valortotal.FillWeight = 106.8817!
         Me.valortotal.HeaderText = "Valor Total"
         Me.valortotal.Name = "valortotal"
@@ -217,6 +286,7 @@ Partial Class frmListarSaidasDoDia
         Me.colRemover.ReadOnly = True
         Me.colRemover.Text = "Remover"
         Me.colRemover.Visible = False
+        Me.colRemover.Width = 5
         '
         'frmListarSaidasDoDia
         '
@@ -232,8 +302,12 @@ Partial Class frmListarSaidasDoDia
         Me.Text = "Listar vendas do dia"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
         CType(Me.dgListaVendas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -247,6 +321,10 @@ Partial Class frmListarSaidasDoDia
     Friend WithEvents Button1 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents mskData As MaskedTextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents btnReset As Button
+    Friend WithEvents btnImprimir As Button
     Friend WithEvents nrvenda As DataGridViewTextBoxColumn
     Friend WithEvents total As DataGridViewTextBoxColumn
     Friend WithEvents nuit As DataGridViewTextBoxColumn

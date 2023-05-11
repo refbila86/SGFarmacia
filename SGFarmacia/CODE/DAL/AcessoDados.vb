@@ -143,9 +143,10 @@ Public Class AcessoDados
             dr = cmd.ExecuteReader
             While dr.Read
                 i += i
-                frmListarProdutos.dgListaFuncionarios.Rows.Add(dr.Item("id").ToString, dr.Item("designacao").ToString, dr.Item("nome_generico").ToString, dr.Item("categoria").ToString, dr.Item("stock actual").ToString, dr.Item("preco compra").ToString, dr.Item("preco venda").ToString, dr.Item("qtd_cx").ToString, dr.Item("validade").ToString, dr.Item("pais_origem").ToString, "Editar", "Remover")
+                frmListarProdutos.dgListaFuncionarios.Rows.Add(dr.Item("id").ToString, dr.Item("designacao").ToString, dr.Item("nome_generico").ToString, dr.Item("categoria").ToString, dr.Item("stock actual").ToString, dr.Item("preco compra").ToString, dr.Item("preco venda").ToString, dr.Item("qtd_cx").ToString, dr.Item("validade").ToString, dr.Item("pais_origem").ToString, dr.Item("diasrestantes").ToString, "Editar", "Remover")
             End While
         Catch ex As Exception
+            MessageBox.Show("Ocorreu um erro: " + ex.Message)
             dr.Close()
             con.Close()
             MsgBox(ex.Message, vbCritical)

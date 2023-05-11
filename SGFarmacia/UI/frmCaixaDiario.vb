@@ -50,7 +50,7 @@
         SomaTotais()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, btnReset.Click
         dgListaVendas.Rows.Clear()
         ListarVendasDoDia()
     End Sub
@@ -84,6 +84,18 @@
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
+
+    Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
     End Sub
 

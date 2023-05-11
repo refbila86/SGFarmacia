@@ -103,7 +103,7 @@ Partial Class frmSaidaProdutos
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel4.BackColor = System.Drawing.Color.Teal
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.txtNrVD)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
@@ -458,7 +458,7 @@ Partial Class frmSaidaProdutos
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel1.BackColor = System.Drawing.Color.Teal
         Me.Panel1.Controls.Add(Me.txtTotal)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.txtTotalDesconto)
@@ -618,7 +618,6 @@ Partial Class frmSaidaProdutos
         'lblNrVenda
         '
         Me.lblNrVenda.AutoSize = True
-        Me.lblNrVenda.BackColor = System.Drawing.Color.Red
         Me.lblNrVenda.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNrVenda.Location = New System.Drawing.Point(19, 88)
         Me.lblNrVenda.Name = "lblNrVenda"
@@ -642,7 +641,7 @@ Partial Class frmSaidaProdutos
         '
         'btnRegistar
         '
-        Me.btnRegistar.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnRegistar.BackColor = System.Drawing.Color.Teal
         Me.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegistar.FlatAppearance.BorderSize = 0
         Me.btnRegistar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
@@ -732,7 +731,6 @@ Partial Class frmSaidaProdutos
         'lblNotaCredito
         '
         Me.lblNotaCredito.AutoSize = True
-        Me.lblNotaCredito.BackColor = System.Drawing.Color.Red
         Me.lblNotaCredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNotaCredito.Location = New System.Drawing.Point(484, 92)
         Me.lblNotaCredito.Name = "lblNotaCredito"
