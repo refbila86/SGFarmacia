@@ -202,7 +202,7 @@ Public Class AcessoDados
             dr = cmd.ExecuteReader
             While dr.Read
                 i += i
-                frmCaixaDiario.dgListaVendas.Rows.Add(dr.Item("nrvenda").ToString, dr.Item("cliente").ToString, dr.Item("nuit").ToString, dr.Item("contacto").ToString, dr.Item("totalgeral").ToString, "Detalhes", "Remover")
+                frmCaixaDiario.dgListaVendas.Rows.Add(dr.Item("nrvenda").ToString, dr.Item("cliente").ToString, dr.Item("nuit").ToString, dr.Item("contacto").ToString, dr.Item("totalgeral").ToString, dr.Item("lucrovd").ToString, "Detalhes", "Remover")
             End While
         Catch ex As Exception
             MessageBox.Show("Ocorreu um erro: " + ex.Message)

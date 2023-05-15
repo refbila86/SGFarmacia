@@ -1,6 +1,6 @@
 ﻿Public Class VendaBLL
     Dim sql As String
-    Dim ds As New DataSet
+    Dim ds, dst As New DataSet
     Dim con As New AcessoDados
     Dim tbl As New DataTable
 
@@ -36,13 +36,27 @@
         sql = "SELECT COUNT(*) FROM venda WHERE criado LIKE '%" & data & "%'"
         con.VerificaSeProduto(sql)
         If existe >= 1 Then
-            sql = "SELECT v.cod_venda AS Nrvenda, v.nome_cliente Cliente, v.nuit Nuit, v.contacto Contacto, v.total_geral 'totalgeral' FROM venda v WHERE v.criado LIKE '%" & data & "%' ORDER BY v.cod_venda DESC"
-            'sql = ""
+            'sql = "SELECT v.cod_venda AS Nrvenda, v.nome_cliente Cliente, v.nuit Nuit, v.contacto Contacto, v.total_geral 'totalgeral' FROM venda v WHERE v.criado LIKE '%" & data & "%' ORDER BY v.cod_venda DESC"
+            sql = "SELECT v.cod_venda AS Nrvenda, v.nome_cliente Cliente, v.nuit Nuit, v.contacto Contacto, v.total_geral 'totalgeral', (select  sum(vi.qtd *(p.preco_venda - p.preco_compra)) as 'Lucro' from venda_itens vi inner join produto p on p.id=vi.produto_id)  as lucrovd  FROM venda v WHERE v.criado LIKE '%" & data & "%' ORDER BY v.cod_venda DESC;
+"
             con.ListarVendasProdutoCaixa(sql)
         Else
             frmCaixaDiario.dgListaVendas.Rows.Clear()
         End If
         Return ds
+    End Function
+    Public Function ListarVendasProdutoCaixaLucro(data As String, nr_vd As String)
+        sql = "SELECT COUNT(*) FROM venda WHERE criado LIKE '%" & data & "%'"
+        con.VerificaSeProduto(sql)
+        If existe >= 1 Then
+            'sql = "SELECT v.cod_venda AS Nrvenda, v.nome_cliente Cliente, v.nuit Nuit, v.contacto Contacto, v.total_geral 'totalgeral' FROM venda v WHERE v.criado LIKE '%" & data & "%' ORDER BY v.cod_venda DESC"
+            sql = "SELECT v.cod_venda AS Nrvenda, v.nome_cliente Cliente, v.nuit Nuit, v.contacto Contacto, v.total_geral 'totalgeral', (select  sum(vi.qtd *(p.preco_venda - p.preco_compra)) as 'Lucro' from venda_itens vi inner join produto p on p.id=vi.produto_id where vi.cod_venda = '" & nr_vd & "')  as lucrovd  FROM venda v WHERE v.criado LIKE '%" & data & "%' ORDER BY v.cod_venda DESC;
+"
+            con.ListarVendasProdutoCaixa(sql)
+        Else
+            frmCaixaDiario.dgListaVendas.Rows.Clear()
+        End If
+        Return dst
     End Function
     Public Function SelecionaUltimoRegisto()
         sql = "SELECT cod_venda FROM venda order by id desc limit 1"

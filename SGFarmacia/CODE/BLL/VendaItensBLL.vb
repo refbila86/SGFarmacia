@@ -48,4 +48,16 @@
         ds = con.Listar(sql)
         Return ds
     End Function
+    Public Function CalculaLucroDia(ByRef data As String)
+        sql = "SELECT vi.data AS 'data', sum((vi.qtd * (p.preco_venda - p.preco_compra))) AS lucro
+                FROM
+                    venda_itens vi
+                        INNER JOIN
+                    produto p ON p.id = vi.produto_id
+                WHERE
+                    vi.data LIKE '%" & data & "%'
+                GROUP BY date(vi.data)"
+        tbl = con.ListarEspecifico(sql)
+        Return tbl
+    End Function
 End Class

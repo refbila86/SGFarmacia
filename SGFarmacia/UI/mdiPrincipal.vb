@@ -25,6 +25,12 @@ Public Class mdiPrincipal
         '    Me.BackColor = color.Color
         'End If
         'sBarraMenus.Visible = False
+        'frmListarProdutos.MdiParent = Me
+        'frmListarProdutos.Show()
+        'acao = "Novo"
+        frmResumo.MdiParent = Me
+        frmResumo.Show()
+        acao = "Novo"
     End Sub
 
     Private Sub btnConsultas_Click(sender As Object, e As EventArgs) Handles btnConsultas.Click

@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property backups() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("backups", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property CAR() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("CAR", resourceCulture)
@@ -296,6 +306,16 @@ Namespace My.Resources
         Friend ReadOnly Property stock_in_icon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("stock in icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Summary() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Summary", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

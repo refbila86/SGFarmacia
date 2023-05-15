@@ -24,35 +24,41 @@ Partial Class frmCaixaDiario
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCaixaDiario))
         Me.dgListaVendas = New System.Windows.Forms.DataGridView()
-        Me.nrvenda = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nuit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.contacto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.valortotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colDetalhes = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtTotalGeral = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnRegistar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.mskData = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtTotalGeral = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblEstadoCaixa = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.lblEstadoCaixa = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.nrvenda = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nuit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.contacto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.valortotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lucrovd = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDetalhes = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.btnLucroDoDia = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblLucro = New System.Windows.Forms.Label()
+        Me.pnLucro = New System.Windows.Forms.Panel()
         CType(Me.dgListaVendas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.pnLucro.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgListaVendas
@@ -62,7 +68,7 @@ Partial Class frmCaixaDiario
         Me.dgListaVendas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgListaVendas.BackgroundColor = System.Drawing.Color.White
         Me.dgListaVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgListaVendas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nrvenda, Me.total, Me.nuit, Me.contacto, Me.valortotal, Me.colDetalhes, Me.colRemover})
+        Me.dgListaVendas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nrvenda, Me.total, Me.nuit, Me.contacto, Me.valortotal, Me.lucrovd, Me.colDetalhes, Me.colRemover})
         Me.dgListaVendas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgListaVendas.EnableHeadersVisualStyles = False
         Me.dgListaVendas.GridColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(251, Byte), Integer))
@@ -73,59 +79,6 @@ Partial Class frmCaixaDiario
         Me.dgListaVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgListaVendas.Size = New System.Drawing.Size(846, 378)
         Me.dgListaVendas.TabIndex = 27
-        '
-        'nrvenda
-        '
-        Me.nrvenda.FillWeight = 106.8817!
-        Me.nrvenda.HeaderText = "Nº Venda"
-        Me.nrvenda.Name = "nrvenda"
-        Me.nrvenda.ReadOnly = True
-        '
-        'total
-        '
-        Me.total.FillWeight = 106.8817!
-        Me.total.HeaderText = "Cliente"
-        Me.total.Name = "total"
-        Me.total.ReadOnly = True
-        '
-        'nuit
-        '
-        Me.nuit.FillWeight = 106.8817!
-        Me.nuit.HeaderText = "Nuit"
-        Me.nuit.Name = "nuit"
-        Me.nuit.ReadOnly = True
-        '
-        'contacto
-        '
-        Me.contacto.FillWeight = 106.8817!
-        Me.contacto.HeaderText = "Contacto"
-        Me.contacto.Name = "contacto"
-        Me.contacto.ReadOnly = True
-        '
-        'valortotal
-        '
-        Me.valortotal.FillWeight = 106.8817!
-        Me.valortotal.HeaderText = "Valor da VD"
-        Me.valortotal.Name = "valortotal"
-        Me.valortotal.ReadOnly = True
-        '
-        'colDetalhes
-        '
-        Me.colDetalhes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.colDetalhes.HeaderText = ""
-        Me.colDetalhes.Name = "colDetalhes"
-        Me.colDetalhes.ReadOnly = True
-        Me.colDetalhes.Text = ""
-        Me.colDetalhes.Width = 5
-        '
-        'colRemover
-        '
-        Me.colRemover.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.colRemover.HeaderText = ""
-        Me.colRemover.Name = "colRemover"
-        Me.colRemover.ReadOnly = True
-        Me.colRemover.Text = "Remover"
-        Me.colRemover.Visible = False
         '
         'Panel2
         '
@@ -147,6 +100,29 @@ Partial Class frmCaixaDiario
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(846, 40)
         Me.Panel3.TabIndex = 26
+        '
+        'txtTotalGeral
+        '
+        Me.txtTotalGeral.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTotalGeral.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalGeral.Location = New System.Drawing.Point(673, 6)
+        Me.txtTotalGeral.Name = "txtTotalGeral"
+        Me.txtTotalGeral.ReadOnly = True
+        Me.txtTotalGeral.Size = New System.Drawing.Size(170, 22)
+        Me.txtTotalGeral.TabIndex = 0
+        Me.txtTotalGeral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(516, 7)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(151, 20)
+        Me.Label1.TabIndex = 32
+        Me.Label1.Text = "Valor total do dia:"
         '
         'btnRegistar
         '
@@ -205,8 +181,20 @@ Partial Class frmCaixaDiario
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtrar vendas do dia"
         '
+        'btnReset
+        '
+        Me.btnReset.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnReset.Location = New System.Drawing.Point(247, 17)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnReset.TabIndex = 30
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
+        '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.pnLucro)
+        Me.Panel4.Controls.Add(Me.btnLucroDoDia)
         Me.Panel4.Controls.Add(Me.Button2)
         Me.Panel4.Controls.Add(Me.lblEstadoCaixa)
         Me.Panel4.Controls.Add(Me.Label2)
@@ -219,39 +207,6 @@ Partial Class frmCaixaDiario
         Me.Panel4.Size = New System.Drawing.Size(846, 86)
         Me.Panel4.TabIndex = 25
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Teal
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(846, 28)
-        Me.Panel1.TabIndex = 33
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(516, 7)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(151, 20)
-        Me.Label1.TabIndex = 32
-        Me.Label1.Text = "Valor total do dia:"
-        '
-        'txtTotalGeral
-        '
-        Me.txtTotalGeral.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtTotalGeral.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalGeral.Location = New System.Drawing.Point(673, 6)
-        Me.txtTotalGeral.Name = "txtTotalGeral"
-        Me.txtTotalGeral.ReadOnly = True
-        Me.txtTotalGeral.Size = New System.Drawing.Size(170, 22)
-        Me.txtTotalGeral.TabIndex = 0
-        Me.txtTotalGeral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.DarkSlateGray
@@ -261,12 +216,46 @@ Partial Class frmCaixaDiario
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(444, 46)
+        Me.Button2.Location = New System.Drawing.Point(444, 42)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(132, 29)
         Me.Button2.TabIndex = 10
         Me.Button2.Text = "Fechar o caixa diario"
         Me.Button2.UseVisualStyleBackColor = False
+        '
+        'lblEstadoCaixa
+        '
+        Me.lblEstadoCaixa.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblEstadoCaixa.AutoSize = True
+        Me.lblEstadoCaixa.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEstadoCaixa.ForeColor = System.Drawing.Color.Blue
+        Me.lblEstadoCaixa.Location = New System.Drawing.Point(789, 31)
+        Me.lblEstadoCaixa.Name = "lblEstadoCaixa"
+        Me.lblEstadoCaixa.Size = New System.Drawing.Size(54, 16)
+        Me.lblEstadoCaixa.TabIndex = 32
+        Me.lblEstadoCaixa.Text = "Aberto"
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(621, 31)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(172, 16)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = "Estado do caixa do dia:"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Teal
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(846, 28)
+        Me.Panel1.TabIndex = 33
         '
         'Button3
         '
@@ -284,39 +273,118 @@ Partial Class frmCaixaDiario
         Me.Button3.TabIndex = 7
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'Label2
+        'nrvenda
         '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(582, 49)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(196, 20)
-        Me.Label2.TabIndex = 32
-        Me.Label2.Text = "Estado do caixa do dia:"
+        Me.nrvenda.FillWeight = 106.8817!
+        Me.nrvenda.HeaderText = "Nº Venda"
+        Me.nrvenda.Name = "nrvenda"
+        Me.nrvenda.ReadOnly = True
         '
-        'lblEstadoCaixa
+        'total
         '
-        Me.lblEstadoCaixa.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblEstadoCaixa.AutoSize = True
-        Me.lblEstadoCaixa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEstadoCaixa.ForeColor = System.Drawing.Color.Blue
-        Me.lblEstadoCaixa.Location = New System.Drawing.Point(780, 49)
-        Me.lblEstadoCaixa.Name = "lblEstadoCaixa"
-        Me.lblEstadoCaixa.Size = New System.Drawing.Size(63, 20)
-        Me.lblEstadoCaixa.TabIndex = 32
-        Me.lblEstadoCaixa.Text = "Aberto"
+        Me.total.FillWeight = 106.8817!
+        Me.total.HeaderText = "Cliente"
+        Me.total.Name = "total"
+        Me.total.ReadOnly = True
         '
-        'btnReset
+        'nuit
         '
-        Me.btnReset.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnReset.Location = New System.Drawing.Point(247, 17)
-        Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(75, 23)
-        Me.btnReset.TabIndex = 30
-        Me.btnReset.Text = "Reset"
-        Me.btnReset.UseVisualStyleBackColor = True
+        Me.nuit.FillWeight = 106.8817!
+        Me.nuit.HeaderText = "Nuit"
+        Me.nuit.Name = "nuit"
+        Me.nuit.ReadOnly = True
+        '
+        'contacto
+        '
+        Me.contacto.FillWeight = 106.8817!
+        Me.contacto.HeaderText = "Contacto"
+        Me.contacto.Name = "contacto"
+        Me.contacto.ReadOnly = True
+        '
+        'valortotal
+        '
+        Me.valortotal.FillWeight = 106.8817!
+        Me.valortotal.HeaderText = "Valor da VD"
+        Me.valortotal.Name = "valortotal"
+        Me.valortotal.ReadOnly = True
+        '
+        'lucrovd
+        '
+        Me.lucrovd.HeaderText = "Lucro na VD"
+        Me.lucrovd.Name = "lucrovd"
+        Me.lucrovd.ReadOnly = True
+        Me.lucrovd.Visible = False
+        '
+        'colDetalhes
+        '
+        Me.colDetalhes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.colDetalhes.HeaderText = ""
+        Me.colDetalhes.Name = "colDetalhes"
+        Me.colDetalhes.ReadOnly = True
+        Me.colDetalhes.Text = ""
+        Me.colDetalhes.Width = 5
+        '
+        'colRemover
+        '
+        Me.colRemover.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.colRemover.HeaderText = ""
+        Me.colRemover.Name = "colRemover"
+        Me.colRemover.ReadOnly = True
+        Me.colRemover.Text = "Remover"
+        Me.colRemover.Visible = False
+        Me.colRemover.Width = 5
+        '
+        'btnLucroDoDia
+        '
+        Me.btnLucroDoDia.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnLucroDoDia.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLucroDoDia.FlatAppearance.BorderSize = 0
+        Me.btnLucroDoDia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
+        Me.btnLucroDoDia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLucroDoDia.ForeColor = System.Drawing.Color.White
+        Me.btnLucroDoDia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLucroDoDia.Location = New System.Drawing.Point(582, 43)
+        Me.btnLucroDoDia.Name = "btnLucroDoDia"
+        Me.btnLucroDoDia.Size = New System.Drawing.Size(132, 29)
+        Me.btnLucroDoDia.TabIndex = 10
+        Me.btnLucroDoDia.Text = "Verificar lucro do dia"
+        Me.btnLucroDoDia.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(3, 2)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(100, 20)
+        Me.Label4.TabIndex = 32
+        Me.Label4.Text = "Lucro do dia:"
+        '
+        'lblLucro
+        '
+        Me.lblLucro.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblLucro.AutoSize = True
+        Me.lblLucro.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLucro.ForeColor = System.Drawing.Color.White
+        Me.lblLucro.Location = New System.Drawing.Point(150, 1)
+        Me.lblLucro.Name = "lblLucro"
+        Me.lblLucro.Size = New System.Drawing.Size(21, 20)
+        Me.lblLucro.TabIndex = 32
+        Me.lblLucro.Text = "..."
+        '
+        'pnLucro
+        '
+        Me.pnLucro.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnLucro.BackColor = System.Drawing.Color.Teal
+        Me.pnLucro.Controls.Add(Me.Label4)
+        Me.pnLucro.Controls.Add(Me.lblLucro)
+        Me.pnLucro.Location = New System.Drawing.Point(627, 49)
+        Me.pnLucro.Name = "pnLucro"
+        Me.pnLucro.Size = New System.Drawing.Size(210, 25)
+        Me.pnLucro.TabIndex = 28
+        Me.pnLucro.Visible = False
         '
         'frmCaixaDiario
         '
@@ -338,6 +406,8 @@ Partial Class frmCaixaDiario
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.pnLucro.ResumeLayout(False)
+        Me.pnLucro.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -350,13 +420,6 @@ Partial Class frmCaixaDiario
     Friend WithEvents mskData As MaskedTextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents nrvenda As DataGridViewTextBoxColumn
-    Friend WithEvents total As DataGridViewTextBoxColumn
-    Friend WithEvents nuit As DataGridViewTextBoxColumn
-    Friend WithEvents contacto As DataGridViewTextBoxColumn
-    Friend WithEvents valortotal As DataGridViewTextBoxColumn
-    Friend WithEvents colDetalhes As DataGridViewButtonColumn
-    Friend WithEvents colRemover As DataGridViewButtonColumn
     Friend WithEvents Label1 As Label
     Friend WithEvents txtTotalGeral As TextBox
     Friend WithEvents Panel1 As Panel
@@ -365,4 +428,16 @@ Partial Class frmCaixaDiario
     Friend WithEvents lblEstadoCaixa As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnReset As Button
+    Friend WithEvents nrvenda As DataGridViewTextBoxColumn
+    Friend WithEvents total As DataGridViewTextBoxColumn
+    Friend WithEvents nuit As DataGridViewTextBoxColumn
+    Friend WithEvents contacto As DataGridViewTextBoxColumn
+    Friend WithEvents valortotal As DataGridViewTextBoxColumn
+    Friend WithEvents lucrovd As DataGridViewTextBoxColumn
+    Friend WithEvents colDetalhes As DataGridViewButtonColumn
+    Friend WithEvents colRemover As DataGridViewButtonColumn
+    Friend WithEvents pnLucro As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents lblLucro As Label
+    Friend WithEvents btnLucroDoDia As Button
 End Class

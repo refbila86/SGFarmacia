@@ -57,6 +57,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -176,6 +177,12 @@
     <Compile Include="UI\frmListarSaidasDoDia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\frmResumo.Designer.vb">
+      <DependentUpon>frmResumo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmResumo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\frmSaidaProdutos.Designer.vb">
       <DependentUpon>frmSaidaProdutos.vb</DependentUpon>
     </Compile>
@@ -237,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmListarSaidasDoDia.resx">
       <DependentUpon>frmListarSaidasDoDia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmResumo.resx">
+      <DependentUpon>frmResumo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmSaidaProdutos.resx">
       <DependentUpon>frmSaidaProdutos.vb</DependentUpon>
@@ -340,6 +350,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Summary.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

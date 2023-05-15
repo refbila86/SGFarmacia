@@ -22,9 +22,9 @@ Partial Class frmDetalhesCaixaDiario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDetalhesCaixaDiario))
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDetalhesCaixaDiario))
         Me.txtCodigoBarras = New System.Windows.Forms.TextBox()
         Me.txtStockActual = New System.Windows.Forms.TextBox()
         Me.btnRegistar = New System.Windows.Forms.Button()
@@ -70,27 +70,9 @@ Partial Class frmDetalhesCaixaDiario
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNrVD = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgVendaItens = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtNVenda = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtTotalDesconto = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtTotalGeral = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.pnPesquisar = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnAdicionar = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtTotalVenda = New System.Windows.Forms.TextBox()
-        Me.txtTotalLucro = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.txtPrecoLucro = New System.Windows.Forms.TextBox()
         Me.artigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.produto_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.produto = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -100,14 +82,31 @@ Partial Class frmDetalhesCaixaDiario
         Me.desconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lucro = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lucrototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtNVenda = New System.Windows.Forms.TextBox()
+        Me.btnAdicionar = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.txtTotalDesconto = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtTotalGeral = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.pnPesquisar = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtTotalLucro = New System.Windows.Forms.TextBox()
+        Me.txtPrecoLucro = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtTotalVenda = New System.Windows.Forms.TextBox()
         CType(Me.dgPesquisar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgVendaItens, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.pnPesquisar.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -613,6 +612,18 @@ Partial Class frmDetalhesCaixaDiario
         Me.txtNrVD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtNrVD.Visible = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.cb
+        Me.PictureBox1.Location = New System.Drawing.Point(413, -6)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(73, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -642,253 +653,6 @@ Partial Class frmDetalhesCaixaDiario
         Me.dgVendaItens.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgVendaItens.Size = New System.Drawing.Size(754, 208)
         Me.dgVendaItens.TabIndex = 42
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtNVenda)
-        Me.GroupBox1.Controls.Add(Me.btnAdicionar)
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Controls.Add(Me.Panel1)
-        Me.GroupBox1.Controls.Add(Me.txtNrVenda)
-        Me.GroupBox1.Controls.Add(Me.lblNrVenda)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 57)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(753, 180)
-        Me.GroupBox1.TabIndex = 43
-        Me.GroupBox1.TabStop = False
-        '
-        'txtNVenda
-        '
-        Me.txtNVenda.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtNVenda.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNVenda.ForeColor = System.Drawing.Color.Maroon
-        Me.txtNVenda.Location = New System.Drawing.Point(123, 17)
-        Me.txtNVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtNVenda.Multiline = True
-        Me.txtNVenda.Name = "txtNVenda"
-        Me.txtNVenda.Size = New System.Drawing.Size(91, 26)
-        Me.txtNVenda.TabIndex = 30
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Controls.Add(Me.chkIncluirCliente)
-        Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.lblEndereco)
-        Me.GroupBox2.Controls.Add(Me.lblContacto)
-        Me.GroupBox2.Controls.Add(Me.lblCliente)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.txtTotalUnitario)
-        Me.GroupBox2.Controls.Add(Me.txtDesconto)
-        Me.GroupBox2.Controls.Add(Me.txtQtd)
-        Me.GroupBox2.Controls.Add(Me.txtPrecoUnitario)
-        Me.GroupBox2.Controls.Add(Me.txtContacto)
-        Me.GroupBox2.Controls.Add(Me.txtNuit)
-        Me.GroupBox2.Controls.Add(Me.txtCliente)
-        Me.GroupBox2.Controls.Add(Me.txtProduto)
-        Me.GroupBox2.Location = New System.Drawing.Point(7, 48)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox2.Size = New System.Drawing.Size(746, 122)
-        Me.GroupBox2.TabIndex = 4
-        Me.GroupBox2.TabStop = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Teal
-        Me.Panel1.Controls.Add(Me.txtTotal)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.txtTotalDesconto)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.txtTotalGeral)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Location = New System.Drawing.Point(468, 10)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(283, 112)
-        Me.Panel1.TabIndex = 3
-        Me.Panel1.Visible = False
-        '
-        'txtTotal
-        '
-        Me.txtTotal.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotal.Location = New System.Drawing.Point(153, 7)
-        Me.txtTotal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtTotal.Multiline = True
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(125, 30)
-        Me.txtTotal.TabIndex = 7
-        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Label6.Location = New System.Drawing.Point(77, 9)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(74, 20)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "TOTAL:"
-        '
-        'txtTotalDesconto
-        '
-        Me.txtTotalDesconto.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalDesconto.Location = New System.Drawing.Point(153, 39)
-        Me.txtTotalDesconto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtTotalDesconto.Multiline = True
-        Me.txtTotalDesconto.Name = "txtTotalDesconto"
-        Me.txtTotalDesconto.ReadOnly = True
-        Me.txtTotalDesconto.Size = New System.Drawing.Size(125, 30)
-        Me.txtTotalDesconto.TabIndex = 7
-        Me.txtTotalDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Label5.Location = New System.Drawing.Point(29, 41)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(118, 20)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "DESCONTO:"
-        '
-        'txtTotalGeral
-        '
-        Me.txtTotalGeral.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalGeral.Location = New System.Drawing.Point(153, 71)
-        Me.txtTotalGeral.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtTotalGeral.Multiline = True
-        Me.txtTotalGeral.Name = "txtTotalGeral"
-        Me.txtTotalGeral.ReadOnly = True
-        Me.txtTotalGeral.Size = New System.Drawing.Size(125, 30)
-        Me.txtTotalGeral.TabIndex = 7
-        Me.txtTotalGeral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Label4.Location = New System.Drawing.Point(3, 72)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(142, 20)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "TOTAL GERAL:"
-        '
-        'pnPesquisar
-        '
-        Me.pnPesquisar.Controls.Add(Me.dgPesquisar)
-        Me.pnPesquisar.Location = New System.Drawing.Point(810, 215)
-        Me.pnPesquisar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.pnPesquisar.Name = "pnPesquisar"
-        Me.pnPesquisar.Size = New System.Drawing.Size(614, 209)
-        Me.pnPesquisar.TabIndex = 48
-        Me.pnPesquisar.Visible = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.cb
-        Me.PictureBox1.Location = New System.Drawing.Point(413, -6)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(73, 34)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        Me.PictureBox1.Visible = False
-        '
-        'btnAdicionar
-        '
-        Me.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAdicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdicionar.Image = CType(resources.GetObject("btnAdicionar.Image"), System.Drawing.Image)
-        Me.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdicionar.Location = New System.Drawing.Point(468, 130)
-        Me.btnAdicionar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnAdicionar.Name = "btnAdicionar"
-        Me.btnAdicionar.Size = New System.Drawing.Size(285, 40)
-        Me.btnAdicionar.TabIndex = 5
-        Me.btnAdicionar.Text = "ADICIONAR A LISTA"
-        Me.btnAdicionar.UseVisualStyleBackColor = True
-        Me.btnAdicionar.Visible = False
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Teal
-        Me.Panel2.Controls.Add(Me.Label15)
-        Me.Panel2.Controls.Add(Me.txtTotalLucro)
-        Me.Panel2.Controls.Add(Me.txtPrecoLucro)
-        Me.Panel2.Controls.Add(Me.TextBox2)
-        Me.Panel2.Controls.Add(Me.txtTotalVenda)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 460)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(772, 33)
-        Me.Panel2.TabIndex = 51
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Label15.Location = New System.Drawing.Point(322, 6)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(54, 20)
-        Me.Label15.TabIndex = 6
-        Me.Label15.Text = "Total:"
-        '
-        'txtTotalVenda
-        '
-        Me.txtTotalVenda.Location = New System.Drawing.Point(398, 5)
-        Me.txtTotalVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtTotalVenda.Name = "txtTotalVenda"
-        Me.txtTotalVenda.ReadOnly = True
-        Me.txtTotalVenda.Size = New System.Drawing.Size(76, 20)
-        Me.txtTotalVenda.TabIndex = 3
-        Me.txtTotalVenda.Text = "0.0 Mtn"
-        Me.txtTotalVenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'txtTotalLucro
-        '
-        Me.txtTotalLucro.Location = New System.Drawing.Point(654, 6)
-        Me.txtTotalLucro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtTotalLucro.Name = "txtTotalLucro"
-        Me.txtTotalLucro.ReadOnly = True
-        Me.txtTotalLucro.Size = New System.Drawing.Size(104, 20)
-        Me.txtTotalLucro.TabIndex = 3
-        Me.txtTotalLucro.Text = "0.0 Mtn"
-        Me.txtTotalLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(480, 6)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox2.TabIndex = 3
-        Me.TextBox2.Text = "0.0 Mtn"
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'txtPrecoLucro
-        '
-        Me.txtPrecoLucro.Location = New System.Drawing.Point(567, 5)
-        Me.txtPrecoLucro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtPrecoLucro.Name = "txtPrecoLucro"
-        Me.txtPrecoLucro.ReadOnly = True
-        Me.txtPrecoLucro.Size = New System.Drawing.Size(76, 20)
-        Me.txtPrecoLucro.TabIndex = 3
-        Me.txtPrecoLucro.Text = "0.0 Mtn"
-        Me.txtPrecoLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'artigo
         '
@@ -964,6 +728,229 @@ Partial Class frmDetalhesCaixaDiario
         Me.lucrototal.Name = "lucrototal"
         Me.lucrototal.ReadOnly = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.txtNVenda)
+        Me.GroupBox1.Controls.Add(Me.btnAdicionar)
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.txtNrVenda)
+        Me.GroupBox1.Controls.Add(Me.lblNrVenda)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 57)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(753, 180)
+        Me.GroupBox1.TabIndex = 43
+        Me.GroupBox1.TabStop = False
+        '
+        'txtNVenda
+        '
+        Me.txtNVenda.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNVenda.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNVenda.ForeColor = System.Drawing.Color.Maroon
+        Me.txtNVenda.Location = New System.Drawing.Point(123, 17)
+        Me.txtNVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtNVenda.Multiline = True
+        Me.txtNVenda.Name = "txtNVenda"
+        Me.txtNVenda.Size = New System.Drawing.Size(91, 26)
+        Me.txtNVenda.TabIndex = 30
+        '
+        'btnAdicionar
+        '
+        Me.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAdicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdicionar.Image = CType(resources.GetObject("btnAdicionar.Image"), System.Drawing.Image)
+        Me.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdicionar.Location = New System.Drawing.Point(468, 130)
+        Me.btnAdicionar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnAdicionar.Name = "btnAdicionar"
+        Me.btnAdicionar.Size = New System.Drawing.Size(285, 40)
+        Me.btnAdicionar.TabIndex = 5
+        Me.btnAdicionar.Text = "ADICIONAR A LISTA"
+        Me.btnAdicionar.UseVisualStyleBackColor = True
+        Me.btnAdicionar.Visible = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.chkIncluirCliente)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.Label14)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.lblEndereco)
+        Me.GroupBox2.Controls.Add(Me.lblContacto)
+        Me.GroupBox2.Controls.Add(Me.lblCliente)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.txtTotalUnitario)
+        Me.GroupBox2.Controls.Add(Me.txtDesconto)
+        Me.GroupBox2.Controls.Add(Me.txtQtd)
+        Me.GroupBox2.Controls.Add(Me.txtPrecoUnitario)
+        Me.GroupBox2.Controls.Add(Me.txtContacto)
+        Me.GroupBox2.Controls.Add(Me.txtNuit)
+        Me.GroupBox2.Controls.Add(Me.txtCliente)
+        Me.GroupBox2.Controls.Add(Me.txtProduto)
+        Me.GroupBox2.Location = New System.Drawing.Point(7, 48)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(746, 122)
+        Me.GroupBox2.TabIndex = 4
+        Me.GroupBox2.TabStop = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Teal
+        Me.Panel1.Controls.Add(Me.txtTotal)
+        Me.Panel1.Controls.Add(Me.txtTotalDesconto)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.txtTotalGeral)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Location = New System.Drawing.Point(135, 6)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(203, 112)
+        Me.Panel1.TabIndex = 3
+        Me.Panel1.Visible = False
+        '
+        'txtTotal
+        '
+        Me.txtTotal.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotal.Location = New System.Drawing.Point(153, 7)
+        Me.txtTotal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTotal.Multiline = True
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.ReadOnly = True
+        Me.txtTotal.Size = New System.Drawing.Size(125, 30)
+        Me.txtTotal.TabIndex = 7
+        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtTotalDesconto
+        '
+        Me.txtTotalDesconto.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalDesconto.Location = New System.Drawing.Point(153, 39)
+        Me.txtTotalDesconto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTotalDesconto.Multiline = True
+        Me.txtTotalDesconto.Name = "txtTotalDesconto"
+        Me.txtTotalDesconto.ReadOnly = True
+        Me.txtTotalDesconto.Size = New System.Drawing.Size(125, 30)
+        Me.txtTotalDesconto.TabIndex = 7
+        Me.txtTotalDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label5.Location = New System.Drawing.Point(29, 41)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(118, 20)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "DESCONTO:"
+        '
+        'txtTotalGeral
+        '
+        Me.txtTotalGeral.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalGeral.Location = New System.Drawing.Point(153, 71)
+        Me.txtTotalGeral.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTotalGeral.Multiline = True
+        Me.txtTotalGeral.Name = "txtTotalGeral"
+        Me.txtTotalGeral.ReadOnly = True
+        Me.txtTotalGeral.Size = New System.Drawing.Size(125, 30)
+        Me.txtTotalGeral.TabIndex = 7
+        Me.txtTotalGeral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label4.Location = New System.Drawing.Point(3, 72)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(142, 20)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "TOTAL GERAL:"
+        '
+        'pnPesquisar
+        '
+        Me.pnPesquisar.Controls.Add(Me.dgPesquisar)
+        Me.pnPesquisar.Location = New System.Drawing.Point(810, 215)
+        Me.pnPesquisar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.pnPesquisar.Name = "pnPesquisar"
+        Me.pnPesquisar.Size = New System.Drawing.Size(614, 209)
+        Me.pnPesquisar.TabIndex = 48
+        Me.pnPesquisar.Visible = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Teal
+        Me.Panel2.Controls.Add(Me.Label15)
+        Me.Panel2.Controls.Add(Me.txtTotalLucro)
+        Me.Panel2.Controls.Add(Me.txtPrecoLucro)
+        Me.Panel2.Controls.Add(Me.TextBox2)
+        Me.Panel2.Controls.Add(Me.Panel1)
+        Me.Panel2.Controls.Add(Me.txtTotalVenda)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 460)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(772, 33)
+        Me.Panel2.TabIndex = 51
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label15.Location = New System.Drawing.Point(322, 6)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(54, 20)
+        Me.Label15.TabIndex = 6
+        Me.Label15.Text = "Total:"
+        '
+        'txtTotalLucro
+        '
+        Me.txtTotalLucro.Location = New System.Drawing.Point(654, 6)
+        Me.txtTotalLucro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTotalLucro.Name = "txtTotalLucro"
+        Me.txtTotalLucro.ReadOnly = True
+        Me.txtTotalLucro.Size = New System.Drawing.Size(104, 20)
+        Me.txtTotalLucro.TabIndex = 3
+        Me.txtTotalLucro.Text = "0.0 Mtn"
+        Me.txtTotalLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtPrecoLucro
+        '
+        Me.txtPrecoLucro.Location = New System.Drawing.Point(567, 5)
+        Me.txtPrecoLucro.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtPrecoLucro.Name = "txtPrecoLucro"
+        Me.txtPrecoLucro.ReadOnly = True
+        Me.txtPrecoLucro.Size = New System.Drawing.Size(76, 20)
+        Me.txtPrecoLucro.TabIndex = 3
+        Me.txtPrecoLucro.Text = "0.0 Mtn"
+        Me.txtPrecoLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(480, 6)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(76, 20)
+        Me.TextBox2.TabIndex = 3
+        Me.TextBox2.Text = "0.0 Mtn"
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtTotalVenda
+        '
+        Me.txtTotalVenda.Location = New System.Drawing.Point(398, 5)
+        Me.txtTotalVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTotalVenda.Name = "txtTotalVenda"
+        Me.txtTotalVenda.ReadOnly = True
+        Me.txtTotalVenda.Size = New System.Drawing.Size(76, 20)
+        Me.txtTotalVenda.TabIndex = 3
+        Me.txtTotalVenda.Text = "0.0 Mtn"
+        Me.txtTotalVenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'frmDetalhesCaixaDiario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -993,6 +980,7 @@ Partial Class frmDetalhesCaixaDiario
         CType(Me.dgPesquisar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgVendaItens, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -1001,7 +989,6 @@ Partial Class frmDetalhesCaixaDiario
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.pnPesquisar.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -1062,7 +1049,6 @@ Partial Class frmDetalhesCaixaDiario
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents txtTotal As TextBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents txtTotalDesconto As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtTotalGeral As TextBox

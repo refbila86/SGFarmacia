@@ -32,6 +32,11 @@ SGFarmacia
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SGFarmacia.My.Resources.Resources.backups">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SGFarmacia.My.Resources.Resources.CAR">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -138,6 +143,11 @@ SGFarmacia
 </summary>
 </member>
 <member name="P:SGFarmacia.My.Resources.Resources.stock_in_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SGFarmacia.My.Resources.Resources.Summary">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
