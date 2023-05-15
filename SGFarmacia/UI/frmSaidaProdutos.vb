@@ -239,22 +239,28 @@
 
 
     Private Sub btnNovaVenda_Click(sender As Object, e As EventArgs) Handles btnNovaVenda.Click
-        acao = "Novo"
-        IncrementaCodigo()
-        Me.dgVendaItens.Rows.Clear()
-        Me.txtCliente.Enabled = False
-        Me.txtNuit.Enabled = False
-        Me.txtContacto.Enabled = False
-        Me.lblCliente.Enabled = False
-        Me.lblContacto.Enabled = False
-        Me.lblEndereco.Enabled = False
-        Me.txtCliente.Text = ""
-        Me.txtNuit.Text = ""
-        Me.txtContacto.Text = ""
-        Me.txtTotal.Text = ""
-        Me.txtTotalDesconto.Text = ""
-        Me.txtTotalGeral.Text = ""
-        Me.txtProduto.Focus()
+        'acao = "Novo"
+        'IncrementaCodigo()
+        'Me.dgVendaItens.Rows.Clear()
+        'Me.txtCliente.Enabled = False
+        'Me.txtNuit.Enabled = False
+        'Me.txtContacto.Enabled = False
+        'Me.lblCliente.Enabled = False
+        'Me.lblContacto.Enabled = False
+        'Me.lblEndereco.Enabled = False
+        'Me.txtCliente.Text = ""
+        'Me.txtNuit.Text = ""
+        'Me.txtContacto.Text = ""
+        'Me.txtTotal.Text = ""
+        'Me.txtTotalDesconto.Text = ""
+        'Me.txtTotalGeral.Text = ""
+        'Me.txtProduto.Focus()
+        frmVendaDinherio.CrystalReportViewer1.Enabled = True
+        frmVendaDinherio.CrystalReportViewer1.ReportSource = "C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\UI\Reports\relVD.rpt"
+        frmVendaDinherio.CrystalReportViewer1.SelectionFormula = "{Command.cod_venda} =  " & Me.txtNrVenda.Text & ""
+        frmVendaDinherio.CrystalReportViewer1.Refresh()
+        frmVendaDinherio.CrystalReportViewer1.RefreshReport() '" & Me.txtNumFct.Text & "'"
+        frmVendaDinherio.ShowDialog()
     End Sub
     Public Sub VerificaStock()
         On Error Resume Next
@@ -332,34 +338,6 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAdicionar.Click
-        'Dim data As String
-        'data = Format(Now, "ss")
-
-        'For Each items As DataGridViewRow In dgVendaItens.Rows
-
-        '    If items.Cells(1).Value = txtID.Text Then
-        '        'MsgBox(" O produto: " & Me.txtProduto.Text & " ja foi incluido na lista!", vbCritical, "Duplicação")
-        '        items.Cells(4).Value = CInt(items.Cells(4).Value) + CInt(txtQtd.Text)
-        '        items.Cells(6).Value = CInt(items.Cells(3).Value) * CInt(items.Cells(4).Value)
-        '        SomaTotais()
-        '        Exit Sub
-        '    End If
-        'Next
-
-        'If Me.txtProduto.Text = "" Then
-        '    MsgBox("Digite o produto", vbCritical, "Produto")
-        '    Me.txtProduto.Focus()
-        '    Exit Sub
-        'Else
-        '    Me.dgVendaItens.Rows.Add("Art- " & data, txtID.Text, Me.txtProduto.Text, Me.txtPrecoUnitario.Text, Me.txtQtd.Text, Me.txtDesconto.Text, Me.txtTotalUnitario.Text, "Editar", "Remover")
-        '    SomaTotais()
-        '    Me.txtProduto.Text = ""
-        '    Me.txtPrecoUnitario.Text = ""
-        '    Me.txtQtd.Text = ""
-        '    Me.TextBox1.Text = ""
-        '    Me.txtTotalUnitario.Text = ""
-        '    Me.txtProduto.Focus()
-        'End If
         VerificaStock()
     End Sub
 

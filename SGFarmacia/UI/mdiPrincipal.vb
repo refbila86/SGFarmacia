@@ -87,6 +87,10 @@ Public Class mdiPrincipal
     End Sub
 
     Private Sub btnVenda_Click(sender As Object, e As EventArgs) Handles btnVenda.Click
+
+    End Sub
+
+    Private Sub btnValorCaixa_Click(sender As Object, e As EventArgs) Handles btnValorCaixa.Click
         frmRelatorioVendas.MdiParent = Me
         frmRelatorioVendas.Show()
     End Sub

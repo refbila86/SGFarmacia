@@ -32,6 +32,11 @@
         End If
         Return ds
     End Function
+    Public Function ListarSaidaProdutoEntreDatas(dataInicial As String, dataFinal As String)
+        sql = "SELECT v.cod_venda AS nrvenda, v.nome_cliente cliente, v.nuit nuit, v.contacto contacto, v.total_geral totalgeral, v.cancelado FROM venda v WHERE v.criado >='" & dataInicial & "' AND v.criado <='" & dataFinal & "' ORDER BY v.cod_venda DESC"
+        con.ListarSaidaProduto(sql)
+        Return ds
+    End Function
     Public Function ListarVendasProdutoCaixa(data As String)
         sql = "SELECT COUNT(*) FROM venda WHERE criado LIKE '%" & data & "%'"
         con.VerificaSeProduto(sql)

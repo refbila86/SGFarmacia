@@ -22,8 +22,9 @@ Partial Class frmRelatorioVendas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dgCaixa = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dtpDateTo = New System.Windows.Forms.DateTimePicker()
@@ -36,23 +37,29 @@ Partial Class frmRelatorioVendas
         Me.btnReset = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.dgListaVendas = New System.Windows.Forms.DataGridView()
+        Me.txtLucroTotal = New System.Windows.Forms.TextBox()
+        Me.txtSaldoTotal = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.data = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valorcaixa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lucrodia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fechado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colDetalhes = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel1.SuspendLayout()
+        CType(Me.dgCaixa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.dgListaVendas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.dgListaVendas)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.txtSaldoTotal)
+        Me.Panel1.Controls.Add(Me.txtLucroTotal)
+        Me.Panel1.Controls.Add(Me.dgCaixa)
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -60,6 +67,24 @@ Partial Class frmRelatorioVendas
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(589, 442)
         Me.Panel1.TabIndex = 3
+        '
+        'dgCaixa
+        '
+        Me.dgCaixa.AllowUserToAddRows = False
+        Me.dgCaixa.AllowUserToDeleteRows = False
+        Me.dgCaixa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgCaixa.BackgroundColor = System.Drawing.Color.White
+        Me.dgCaixa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgCaixa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.data, Me.valorcaixa, Me.lucrodia, Me.fechado, Me.colDetalhes})
+        Me.dgCaixa.EnableHeadersVisualStyles = False
+        Me.dgCaixa.GridColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.dgCaixa.Location = New System.Drawing.Point(9, 156)
+        Me.dgCaixa.Name = "dgCaixa"
+        Me.dgCaixa.ReadOnly = True
+        Me.dgCaixa.RowHeadersVisible = False
+        Me.dgCaixa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgCaixa.Size = New System.Drawing.Size(563, 247)
+        Me.dgCaixa.TabIndex = 51
         '
         'GroupBox2
         '
@@ -74,7 +99,7 @@ Partial Class frmRelatorioVendas
         Me.GroupBox2.Size = New System.Drawing.Size(469, 75)
         Me.GroupBox2.TabIndex = 50
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Pesquisar pela data de venda"
+        Me.GroupBox2.Text = "Pesquisar pela data"
         '
         'Button1
         '
@@ -192,29 +217,39 @@ Partial Class frmRelatorioVendas
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Relatorio de vendas"
         '
-        'dgListaVendas
+        'txtLucroTotal
         '
-        Me.dgListaVendas.AllowUserToAddRows = False
-        Me.dgListaVendas.AllowUserToDeleteRows = False
-        Me.dgListaVendas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgListaVendas.BackgroundColor = System.Drawing.Color.White
-        Me.dgListaVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgListaVendas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.data, Me.valorcaixa, Me.lucrodia, Me.colDetalhes})
-        Me.dgListaVendas.EnableHeadersVisualStyles = False
-        Me.dgListaVendas.GridColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.dgListaVendas.Location = New System.Drawing.Point(9, 156)
-        Me.dgListaVendas.Name = "dgListaVendas"
-        Me.dgListaVendas.ReadOnly = True
-        Me.dgListaVendas.RowHeadersVisible = False
-        Me.dgListaVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgListaVendas.Size = New System.Drawing.Size(563, 272)
-        Me.dgListaVendas.TabIndex = 51
+        Me.txtLucroTotal.Location = New System.Drawing.Point(131, 407)
+        Me.txtLucroTotal.Name = "txtLucroTotal"
+        Me.txtLucroTotal.ReadOnly = True
+        Me.txtLucroTotal.Size = New System.Drawing.Size(139, 20)
+        Me.txtLucroTotal.TabIndex = 52
+        '
+        'txtSaldoTotal
+        '
+        Me.txtSaldoTotal.Location = New System.Drawing.Point(268, 407)
+        Me.txtSaldoTotal.Name = "txtSaldoTotal"
+        Me.txtSaldoTotal.ReadOnly = True
+        Me.txtSaldoTotal.Size = New System.Drawing.Size(151, 20)
+        Me.txtSaldoTotal.TabIndex = 53
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(48, 406)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(77, 24)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "TOTAL"
         '
         'data
         '
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.data.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Format = "C2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.data.DefaultCellStyle = DataGridViewCellStyle4
         Me.data.FillWeight = 106.8817!
         Me.data.HeaderText = "Data"
         Me.data.Name = "data"
@@ -233,6 +268,12 @@ Partial Class frmRelatorioVendas
         Me.lucrodia.Name = "lucrodia"
         Me.lucrodia.ReadOnly = True
         '
+        'fechado
+        '
+        Me.fechado.HeaderText = "Fechado"
+        Me.fechado.Name = "fechado"
+        Me.fechado.ReadOnly = True
+        '
         'colDetalhes
         '
         Me.colDetalhes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
@@ -250,16 +291,18 @@ Partial Class frmRelatorioVendas
         Me.BackColor = System.Drawing.Color.DarkSlateGray
         Me.ClientSize = New System.Drawing.Size(611, 466)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmRelatorioVendas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmVendas"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.dgCaixa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.dgListaVendas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -277,9 +320,13 @@ Partial Class frmRelatorioVendas
     Friend WithEvents btnReset As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents dgListaVendas As DataGridView
+    Friend WithEvents dgCaixa As DataGridView
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtSaldoTotal As TextBox
+    Friend WithEvents txtLucroTotal As TextBox
     Friend WithEvents data As DataGridViewTextBoxColumn
     Friend WithEvents valorcaixa As DataGridViewTextBoxColumn
     Friend WithEvents lucrodia As DataGridViewTextBoxColumn
+    Friend WithEvents fechado As DataGridViewTextBoxColumn
     Friend WithEvents colDetalhes As DataGridViewButtonColumn
 End Class

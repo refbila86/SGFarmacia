@@ -17,10 +17,13 @@
     Dim vendas_itensDTO As New VendaItensDTO
     Dim nota_creditoBLL As New Nota_CreditoBLL
     Dim nota_creditoDTO As New Nota_CreditoDTO
+    Dim caixaDTO As New CaixaDTO
+    Dim caixaBLL As New CaixaBLL
     Private Sub frmCaixaDiario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dgListaVendas.Rows.Clear()
         mskData.Text = Format(Now(), "yyyy-MM-dd")
         ListarVendasDoDia()
+        GetEstadoCaixa()
         SomaTotais()
         'ColorirGrid()
         saida_id = Nothing
@@ -43,10 +46,6 @@
         dgListaVendas.Rows.Clear()
         Try
             ds = vendaBLL.ListarVendasProdutoCaixa(mskData.Text)
-            'For i = 0 To Me.dgListaVendas.Rows.Count - 1
-            '    nr_venda = Me.dgListaVendas.Item("nrvenda", i).Value
-            '    ds = vendaBLL.ListarVendasProdutoCaixaLucro(mskData.Text, nr_venda)
-            'Next
         Catch ex As Exception
             MsgBox("Ocorreu um erro ao trazer as vendas do dia: " + ex.Message, MsgBoxStyle.Critical, "ERRO")
         Finally
@@ -59,10 +58,13 @@
 
         dgListaVendas.Rows.Clear()
         'mskData.Text = Format(Now(), "yyyy-MM-dd")
+        GetEstadoCaixa()
+        GetLucroDia()
+        pnLucro.Visible = False
         ListarVendasDoDia()
         SomaTotais()
         Me.pnLucro.Visible = True
-        GetLucroDia()
+        ' GetLucroDia()
 
     End Sub
 
@@ -109,10 +111,7 @@
         End Try
         tbl = Nothing
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click, btnLucroDoDia.Click
-        Me.pnLucro.Visible = True
-        GetLucroDia()
-    End Sub
+
 
     Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click
 
@@ -124,6 +123,7 @@
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         dgListaVendas.Rows.Clear()
+        pnLucro.Visible = False
         mskData.Text = Format(Now(), "yyyy-MM-dd")
         ListarVendasDoDia()
         SomaTotais()
@@ -143,6 +143,50 @@
 
         Next
     End Sub
+
+    Private Sub btnLucroDoDia_Click(sender As Object, e As EventArgs) Handles btnLucroDoDia.Click
+        Me.pnLucro.Visible = True
+        GetLucroDia()
+    End Sub
+    Private Sub GetEstadoCaixa()
+        lblEstadoCaixa.Text = "Aberto"
+        Try
+            tbl = caixaBLL.BuscaEstadoCaixa(Me.mskData.Text)
+            If tbl.Rows.Count > 0 Then
+                estado_caixa = tbl.Rows(0)(4).ToString()
+                'lblLucro.Text = Str(lucro_dia).ToString()
+                If estado_caixa = "Sim" Then
+                    Me.lblEstadoCaixa.Text = "Fechado"
+                    'Me.lblEstadoCaixa.ForeColor = red
+                Else
+                    Me.lblEstadoCaixa.Text = "Aberto"
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox("Erro ao trazer o codigo da categoria - " & ex.Message, MsgBoxStyle.Critical, "ERRO")
+        End Try
+        tbl = Nothing
+    End Sub
+    Private Sub btnFecharCaixa_Click(sender As Object, e As EventArgs) Handles btnFecharCaixa.Click
+        If MsgBox("Confirma o fecho para o dia: " & Me.mskData.Text & "?", vbQuestion + vbYesNo, "Confirmação") = MsgBoxResult.Yes Then
+            GetLucroDia()
+            pnLucro.Visible = False
+            Try
+                caixaDTO.Valor_dia = Me.txtTotalGeral.Text
+                caixaDTO.Lucro_Dia = Me.lblLucro.Text
+                caixaDTO.Fechado = "Sim"
+                caixaDTO.Nr_Vendas = Me.dgListaVendas.Rows.Count
+                caixaDTO.Criado = Me.mskData.Text
+                caixaDTO.Utilizador = "admin"
+                caixaBLL.GravarSaldosCaixa(caixaDTO)
+                GetEstadoCaixa()
+            Catch ex As Exception
+                MsgBox("Ocorreu um erro ao gravar. " & ex.Message, vbCritical, "Erro")
+            End Try
+        End If
+
+    End Sub
+
     Sub ColorirGrid()
         Dim dt As String
         For i As Integer = 0 To dgListaVendas.Rows.Count - 1

@@ -152,6 +152,25 @@ Public Class AcessoDados
             MsgBox(ex.Message, vbCritical)
         End Try
     End Sub
+    Public Sub ListarCaixa(sql As String)
+        frmRelatorioVendas.dgCaixa.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmRelatorioVendas.dgCaixa.Rows.Add(dr.Item("criado").ToString, dr.Item("valor_dia").ToString, dr.Item("lucro_dia").ToString, dr.Item("fechado").ToString, "Remover")
+            End While
+        Catch ex As Exception
+            MessageBox.Show("Ocorreu um erro: " + ex.Message)
+            dr.Close()
+            con.Close()
+            MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
     Public Sub ListarEntradaProduto(sql As String)
         frmListarEntradasDoDia.dgEntradaProdutos.Rows.Clear()
         Dim i As Integer

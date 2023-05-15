@@ -665,14 +665,13 @@ Partial Class frmSaidaProdutos
         Me.btnNovaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNovaVenda.ForeColor = System.Drawing.Color.White
         Me.btnNovaVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovaVenda.Location = New System.Drawing.Point(10, 521)
+        Me.btnNovaVenda.Location = New System.Drawing.Point(103, 521)
         Me.btnNovaVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnNovaVenda.Name = "btnNovaVenda"
         Me.btnNovaVenda.Size = New System.Drawing.Size(171, 36)
         Me.btnNovaVenda.TabIndex = 28
-        Me.btnNovaVenda.Text = "NOVA VENDA"
+        Me.btnNovaVenda.Text = "IMPRIMIR"
         Me.btnNovaVenda.UseVisualStyleBackColor = False
-        Me.btnNovaVenda.Visible = False
         '
         'txtID
         '

@@ -21,6 +21,8 @@
         ListarSaidaDeProdutos()
         ColorirGrid()
         saida_id = Nothing
+        dataInicial = Format(dtpDateFrom.Value, "yyyy-MM-dd")
+        dataFinal = Format(dtpDateTo.Value, "yyyy-MM-dd")
     End Sub
     Private Sub BuscaVDReferencia(ByRef nvVenda As String)
         Try
@@ -137,7 +139,16 @@
             MsgBox("Ocorreu um erro ao trazer as vendas do dia: " + ex.Message, MsgBoxStyle.Critical, "ERRO")
         Finally
             ds = Nothing
-
+        End Try
+    End Sub
+    Public Sub ListarSaidaDeProdutosPorDatas()
+        dgListaVendas.Rows.Clear()
+        Try
+            ds = vendaBLL.ListarSaidaProdutoEntreDatas(dataInicial, dataFinal)
+        Catch ex As Exception
+            MsgBox("Ocorreu um erro ao trazer as vendas do dia: " + ex.Message, MsgBoxStyle.Critical, "ERRO")
+        Finally
+            ds = Nothing
         End Try
     End Sub
     Sub ColorirGrid()
@@ -179,6 +190,25 @@
         ListarSaidaDeProdutos()
         ColorirGrid()
         saida_id = Nothing
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub btnPesquisaEntreDatas_Click(sender As Object, e As EventArgs) Handles btnPesquisaEntreDatas.Click
+        dgListaVendas.Rows.Clear()
+        ListarSaidaDeProdutosPorDatas()
+        ColorirGrid()
+        saida_id = Nothing
+    End Sub
+
+    Private Sub dtpDateFrom_ValueChanged(sender As Object, e As EventArgs) Handles dtpDateFrom.ValueChanged
+        dataInicial = Format(dtpDateFrom.Value, "yyyy-MM-dd")
+    End Sub
+
+    Private Sub dtpDateTo_ValueChanged(sender As Object, e As EventArgs) Handles dtpDateTo.ValueChanged
+        dataFinal = Format(dtpDateTo.Value, "yyyy-MM-dd")
     End Sub
 
     Private Sub GetIdByDate(ByRef data As String)

@@ -144,20 +144,33 @@
   <metadata name="colRemover.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnAdicionar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAb5JREFUOE9jIBUsX7LUce2qVec3bVgXARViYNi1fdvs7Vs2b9i+dct6fBiobk1y
-        bPRHfw+3/3HhoR+h2hkYnC3NDlgY6v63JISN9P6b6Wj+V5OR+KEoJpQB1c7A8P3Hj6SPHz/9//DhA0H8
-        8dOn/79+/5oC1QoBCxcu5H748OH/27dvE4XfvXs3E6oVAYAGnL1y5cp/YvCzZ88wDXjw4EHpmTNn/hOD
-        7969i2nA/PnzpY4fP/7/0KFDBDHQFZgGgMDZs2cfYtOAji9fvozdAGA4FAAN+Y8Ng5x++PBhMMZpACFw
-        6tSpxRQZANS4EuqFqVAhTACK5wsXL/0/sG/f//MXLvy/ePEiGJ88ceL/5o0b/x87duz/1atXcbvg/Pnz
-        ZgU5WTeigvz/pyXGPT585HDtvr37akID/P5FAsVaGxv2Xb58RQ+qnIFh7dq1Qps3b7bcuHGjD5AdsWTJ
-        kuiKkuIFiuKi/7Mz0vYsXrIkY8nSpWnBPt631OSk/nd1tBcB1bgB1VsA1QswLF68WBYoEArE2UBcDcQN
-        y1es6F63bn3nipUre4D8CSC8avXqjrXr1lUsW7a8AsjPAWKgniUyAIix8JalV03IAAAAAElFTkSuQmCC
-</value>
-  </data>
+  <metadata name="artigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="produto_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="produto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="precounitario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="qtd.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="desconto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="totalunitario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colEditar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colRemover.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="DataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -179,4 +192,39 @@
   <metadata name="colSelecionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="DataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="designacao.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="origem.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="precovenda.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="precodecompra.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="qtdcaixa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colSelecionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAdicionar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAb5JREFUOE9jIBUsX7LUce2qVec3bVgXARViYNi1fdvs7Vs2b9i+dct6fBiobk1y
+        bPRHfw+3/3HhoR+h2hkYnC3NDlgY6v63JISN9P6b6Wj+V5OR+KEoJpQB1c7A8P3Hj6SPHz/9//DhA0H8
+        8dOn/79+/5oC1QoBCxcu5H748OH/27dvE4XfvXs3E6oVAYAGnL1y5cp/YvCzZ88wDXjw4EHpmTNn/hOD
+        7969i2nA/PnzpY4fP/7/0KFDBDHQFZgGgMDZs2cfYtOAji9fvozdAGA4FAAN+Y8Ng5x++PBhMMZpACFw
+        6tSpxRQZANS4EuqFqVAhTACK5wsXL/0/sG/f//MXLvy/ePEiGJ88ceL/5o0b/x87duz/1atXcbvg/Pnz
+        ZgU5WTeigvz/pyXGPT585HDtvr37akID/P5FAsVaGxv2Xb58RQ+qnIFh7dq1Qps3b7bcuHGjD5AdsWTJ
+        kuiKkuIFiuKi/7Mz0vYsXrIkY8nSpWnBPt631OSk/nd1tBcB1bgB1VsA1QswLF68WBYoEArE2UBcDcQN
+        y1es6F63bn3nipUre4D8CSC8avXqjrXr1lUsW7a8AsjPAWKgniUyAIix8JalV03IAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

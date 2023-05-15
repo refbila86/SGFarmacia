@@ -23,8 +23,14 @@ Partial Class frmListarSaidasDoDia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListarSaidasDoDia))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.dtpDateTo = New System.Windows.Forms.DateTimePicker()
+        Me.btnPesquisaEntreDatas = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.dtpDateFrom = New System.Windows.Forms.DateTimePicker()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnReset = New System.Windows.Forms.Button()
@@ -47,6 +53,7 @@ Partial Class frmListarSaidasDoDia
         Me.colCancelar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel4.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -56,20 +63,81 @@ Partial Class frmListarSaidasDoDia
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.GroupBox2)
         Me.Panel4.Controls.Add(Me.PictureBox1)
         Me.Panel4.Controls.Add(Me.GroupBox1)
         Me.Panel4.Controls.Add(Me.btnRegistar)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 25)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(800, 61)
+        Me.Panel4.Size = New System.Drawing.Size(951, 61)
         Me.Panel4.TabIndex = 21
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.dtpDateTo)
+        Me.GroupBox2.Controls.Add(Me.btnPesquisaEntreDatas)
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.dtpDateFrom)
+        Me.GroupBox2.Location = New System.Drawing.Point(427, 8)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(474, 46)
+        Me.GroupBox2.TabIndex = 51
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Pesquisar venda entre datas"
+        '
+        'dtpDateTo
+        '
+        Me.dtpDateTo.CustomFormat = "dd/MM/yyyy"
+        Me.dtpDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpDateTo.Location = New System.Drawing.Point(265, 20)
+        Me.dtpDateTo.Name = "dtpDateTo"
+        Me.dtpDateTo.Size = New System.Drawing.Size(119, 20)
+        Me.dtpDateTo.TabIndex = 14
+        '
+        'btnPesquisaEntreDatas
+        '
+        Me.btnPesquisaEntreDatas.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPesquisaEntreDatas.Location = New System.Drawing.Point(390, 19)
+        Me.btnPesquisaEntreDatas.Name = "btnPesquisaEntreDatas"
+        Me.btnPesquisaEntreDatas.Size = New System.Drawing.Size(75, 23)
+        Me.btnPesquisaEntreDatas.TabIndex = 30
+        Me.btnPesquisaEntreDatas.Text = "Pesquisar"
+        Me.btnPesquisaEntreDatas.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(209, 23)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
+        Me.Label2.TabIndex = 13
+        Me.Label2.Text = "Data final :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(13, 22)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(65, 13)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Data inicial :"
+        '
+        'dtpDateFrom
+        '
+        Me.dtpDateFrom.CustomFormat = "dd/MM/yyyy"
+        Me.dtpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpDateFrom.Location = New System.Drawing.Point(84, 20)
+        Me.dtpDateFrom.Name = "dtpDateFrom"
+        Me.dtpDateFrom.Size = New System.Drawing.Size(119, 20)
+        Me.dtpDateFrom.TabIndex = 11
         '
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.Product
-        Me.PictureBox1.Location = New System.Drawing.Point(738, 6)
+        Me.PictureBox1.Location = New System.Drawing.Point(901, 8)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -150,7 +218,7 @@ Partial Class frmListarSaidasDoDia
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(800, 25)
+        Me.Panel2.Size = New System.Drawing.Size(951, 25)
         Me.Panel2.TabIndex = 20
         '
         'Button3
@@ -163,7 +231,7 @@ Partial Class frmListarSaidasDoDia
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(775, 0)
+        Me.Button3.Location = New System.Drawing.Point(926, 0)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(22, 25)
         Me.Button3.TabIndex = 6
@@ -176,7 +244,7 @@ Partial Class frmListarSaidasDoDia
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 414)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(800, 36)
+        Me.Panel3.Size = New System.Drawing.Size(951, 36)
         Me.Panel3.TabIndex = 22
         '
         'btnImprimir
@@ -211,7 +279,7 @@ Partial Class frmListarSaidasDoDia
         Me.dgListaVendas.ReadOnly = True
         Me.dgListaVendas.RowHeadersVisible = False
         Me.dgListaVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgListaVendas.Size = New System.Drawing.Size(800, 328)
+        Me.dgListaVendas.Size = New System.Drawing.Size(951, 328)
         Me.dgListaVendas.TabIndex = 23
         '
         'nrvenda
@@ -244,9 +312,9 @@ Partial Class frmListarSaidasDoDia
         '
         'valortotal
         '
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.valortotal.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Format = "C2"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.valortotal.DefaultCellStyle = DataGridViewCellStyle5
         Me.valortotal.FillWeight = 106.8817!
         Me.valortotal.HeaderText = "Valor Total"
         Me.valortotal.Name = "valortotal"
@@ -286,13 +354,12 @@ Partial Class frmListarSaidasDoDia
         Me.colRemover.ReadOnly = True
         Me.colRemover.Text = "Remover"
         Me.colRemover.Visible = False
-        Me.colRemover.Width = 5
         '
         'frmListarSaidasDoDia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(951, 450)
         Me.Controls.Add(Me.dgListaVendas)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
@@ -303,6 +370,8 @@ Partial Class frmListarSaidasDoDia
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -334,4 +403,10 @@ Partial Class frmListarSaidasDoDia
     Friend WithEvents colVisualizar As DataGridViewButtonColumn
     Friend WithEvents colCancelar As DataGridViewButtonColumn
     Friend WithEvents colRemover As DataGridViewButtonColumn
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents dtpDateTo As DateTimePicker
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents dtpDateFrom As DateTimePicker
+    Friend WithEvents btnPesquisaEntreDatas As Button
 End Class
