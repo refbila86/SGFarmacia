@@ -23,7 +23,7 @@ Partial Class frmListarSaidasDoDia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListarSaidasDoDia))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dtpDateTo = New System.Windows.Forms.DateTimePicker()
@@ -80,9 +80,10 @@ Partial Class frmListarSaidasDoDia
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.dtpDateFrom)
-        Me.GroupBox2.Location = New System.Drawing.Point(427, 8)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.Blue
+        Me.GroupBox2.Location = New System.Drawing.Point(427, 6)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(474, 46)
+        Me.GroupBox2.Size = New System.Drawing.Size(498, 46)
         Me.GroupBox2.TabIndex = 51
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Pesquisar venda entre datas"
@@ -91,7 +92,7 @@ Partial Class frmListarSaidasDoDia
         '
         Me.dtpDateTo.CustomFormat = "dd/MM/yyyy"
         Me.dtpDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDateTo.Location = New System.Drawing.Point(265, 20)
+        Me.dtpDateTo.Location = New System.Drawing.Point(278, 18)
         Me.dtpDateTo.Name = "dtpDateTo"
         Me.dtpDateTo.Size = New System.Drawing.Size(119, 20)
         Me.dtpDateTo.TabIndex = 14
@@ -99,11 +100,14 @@ Partial Class frmListarSaidasDoDia
         'btnPesquisaEntreDatas
         '
         Me.btnPesquisaEntreDatas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnPesquisaEntreDatas.Location = New System.Drawing.Point(390, 19)
+        Me.btnPesquisaEntreDatas.Image = Global.SGFarmacia.My.Resources.Resources.eye_16px
+        Me.btnPesquisaEntreDatas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPesquisaEntreDatas.Location = New System.Drawing.Point(414, 16)
         Me.btnPesquisaEntreDatas.Name = "btnPesquisaEntreDatas"
         Me.btnPesquisaEntreDatas.Size = New System.Drawing.Size(75, 23)
         Me.btnPesquisaEntreDatas.TabIndex = 30
         Me.btnPesquisaEntreDatas.Text = "Pesquisar"
+        Me.btnPesquisaEntreDatas.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnPesquisaEntreDatas.UseVisualStyleBackColor = True
         '
         'Label2
@@ -128,7 +132,7 @@ Partial Class frmListarSaidasDoDia
         '
         Me.dtpDateFrom.CustomFormat = "dd/MM/yyyy"
         Me.dtpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDateFrom.Location = New System.Drawing.Point(84, 20)
+        Me.dtpDateFrom.Location = New System.Drawing.Point(84, 18)
         Me.dtpDateFrom.Name = "dtpDateFrom"
         Me.dtpDateFrom.Size = New System.Drawing.Size(119, 20)
         Me.dtpDateFrom.TabIndex = 11
@@ -150,6 +154,7 @@ Partial Class frmListarSaidasDoDia
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.mskData)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Blue
         Me.GroupBox1.Location = New System.Drawing.Point(89, 6)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(332, 46)
@@ -160,21 +165,27 @@ Partial Class frmListarSaidasDoDia
         'btnReset
         '
         Me.btnReset.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnReset.Image = Global.SGFarmacia.My.Resources.Resources.services_16px
+        Me.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnReset.Location = New System.Drawing.Point(247, 17)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(75, 23)
         Me.btnReset.TabIndex = 30
         Me.btnReset.Text = "Reset"
+        Me.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnReset.UseVisualStyleBackColor = True
         '
         'Button1
         '
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Image = Global.SGFarmacia.My.Resources.Resources.eye_16px
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(166, 18)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 30
         Me.Button1.Text = "Pesquisar"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label3
@@ -242,9 +253,9 @@ Partial Class frmListarSaidasDoDia
         Me.Panel3.BackColor = System.Drawing.Color.Teal
         Me.Panel3.Controls.Add(Me.btnImprimir)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 414)
+        Me.Panel3.Location = New System.Drawing.Point(0, 420)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(951, 36)
+        Me.Panel3.Size = New System.Drawing.Size(951, 30)
         Me.Panel3.TabIndex = 22
         '
         'btnImprimir
@@ -279,7 +290,7 @@ Partial Class frmListarSaidasDoDia
         Me.dgListaVendas.ReadOnly = True
         Me.dgListaVendas.RowHeadersVisible = False
         Me.dgListaVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgListaVendas.Size = New System.Drawing.Size(951, 328)
+        Me.dgListaVendas.Size = New System.Drawing.Size(951, 334)
         Me.dgListaVendas.TabIndex = 23
         '
         'nrvenda
@@ -312,9 +323,9 @@ Partial Class frmListarSaidasDoDia
         '
         'valortotal
         '
-        DataGridViewCellStyle5.Format = "C2"
-        DataGridViewCellStyle5.NullValue = Nothing
-        Me.valortotal.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.valortotal.DefaultCellStyle = DataGridViewCellStyle1
         Me.valortotal.FillWeight = 106.8817!
         Me.valortotal.HeaderText = "Valor Total"
         Me.valortotal.Name = "valortotal"

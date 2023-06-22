@@ -294,6 +294,10 @@
         CalculaValidade()
     End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
     Private Sub cboPaisOrigem_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cboPaisOrigem.KeyPress
         Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
 

@@ -211,6 +211,10 @@
         dataFinal = Format(dtpDateTo.Value, "yyyy-MM-dd")
     End Sub
 
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+
+    End Sub
+
     Private Sub GetIdByDate(ByRef data As String)
         Try
             tbl = vendaBLL.BuscaIDSaida(mskData.Text)

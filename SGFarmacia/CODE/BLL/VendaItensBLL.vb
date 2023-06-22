@@ -60,4 +60,21 @@
         tbl = con.ListarEspecifico(sql)
         Return tbl
     End Function
+    Public Function CalculaLucrosEntreDatas(dataInicial As String, dataFinal As String)
+        sql = "SELECT vi.data AS 'data', sum((vi.qtd * (p.preco_venda - p.preco_compra))) AS 'lucro_dia'
+                FROM
+                    venda_itens vi
+                        INNER JOIN
+                    produto p ON p.id = vi.produto_id
+                WHERE
+                    vi.data >= '" & dataInicial & "' AND vi.data<='" & dataFinal & "'
+                GROUP BY date(vi.data)"
+        tbl = con.ListarEspecifico(sql)
+        Return tbl
+    End Function
+    Public Function CalculaLucroEntreDatas(dataInicial As String, dataFinal As String)
+        sql = "SELECT criado as 'data', valor_dia as 'total_unitario', lucro_dia from caixa where criado >='" & dataInicial & "' AND criado <='" & dataFinal & "'"
+        con.ListarSaldosEntreData(sql)
+        Return ds
+    End Function
 End Class

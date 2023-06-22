@@ -22,9 +22,13 @@ Partial Class frmRelatorioVendas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtSaldoTotal = New System.Windows.Forms.TextBox()
+        Me.txtLucroTotal = New System.Windows.Forms.TextBox()
         Me.dgCaixa = New System.Windows.Forms.DataGridView()
+        Me.data = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.valordia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lucrodia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dtpDateTo = New System.Windows.Forms.DateTimePicker()
@@ -36,37 +40,53 @@ Partial Class frmRelatorioVendas
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtData = New System.Windows.Forms.TextBox()
+        Me.mskData = New System.Windows.Forms.MaskedTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtLucroTotal = New System.Windows.Forms.TextBox()
-        Me.txtSaldoTotal = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.data = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.valorcaixa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lucrodia = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fechado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colDetalhes = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.dpTo = New System.Windows.Forms.DateTimePicker()
+        Me.dpFrom = New System.Windows.Forms.DateTimePicker()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Panel1.SuspendLayout()
         CType(Me.dgCaixa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtSaldoTotal)
         Me.Panel1.Controls.Add(Me.txtLucroTotal)
         Me.Panel1.Controls.Add(Me.dgCaixa)
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(589, 442)
         Me.Panel1.TabIndex = 3
+        '
+        'txtSaldoTotal
+        '
+        Me.txtSaldoTotal.Location = New System.Drawing.Point(382, 406)
+        Me.txtSaldoTotal.Name = "txtSaldoTotal"
+        Me.txtSaldoTotal.ReadOnly = True
+        Me.txtSaldoTotal.Size = New System.Drawing.Size(190, 20)
+        Me.txtSaldoTotal.TabIndex = 53
+        '
+        'txtLucroTotal
+        '
+        Me.txtLucroTotal.Location = New System.Drawing.Point(197, 406)
+        Me.txtLucroTotal.Name = "txtLucroTotal"
+        Me.txtLucroTotal.ReadOnly = True
+        Me.txtLucroTotal.Size = New System.Drawing.Size(185, 20)
+        Me.txtLucroTotal.TabIndex = 52
         '
         'dgCaixa
         '
@@ -75,7 +95,7 @@ Partial Class frmRelatorioVendas
         Me.dgCaixa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgCaixa.BackgroundColor = System.Drawing.Color.White
         Me.dgCaixa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgCaixa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.data, Me.valorcaixa, Me.lucrodia, Me.fechado, Me.colDetalhes})
+        Me.dgCaixa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.data, Me.valordia, Me.lucrodia})
         Me.dgCaixa.EnableHeadersVisualStyles = False
         Me.dgCaixa.GridColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.dgCaixa.Location = New System.Drawing.Point(9, 156)
@@ -85,6 +105,24 @@ Partial Class frmRelatorioVendas
         Me.dgCaixa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgCaixa.Size = New System.Drawing.Size(563, 247)
         Me.dgCaixa.TabIndex = 51
+        '
+        'data
+        '
+        Me.data.HeaderText = "Data"
+        Me.data.Name = "data"
+        Me.data.ReadOnly = True
+        '
+        'valordia
+        '
+        Me.valordia.HeaderText = "Valor do dia"
+        Me.valordia.Name = "valordia"
+        Me.valordia.ReadOnly = True
+        '
+        'lucrodia
+        '
+        Me.lucrodia.HeaderText = "Lucro do dia"
+        Me.lucrodia.Name = "lucrodia"
+        Me.lucrodia.ReadOnly = True
         '
         'GroupBox2
         '
@@ -199,11 +237,30 @@ Partial Class frmRelatorioVendas
         '
         Me.Panel2.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Controls.Add(Me.txtData)
+        Me.Panel2.Controls.Add(Me.mskData)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Location = New System.Drawing.Point(9, 7)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(570, 62)
         Me.Panel2.TabIndex = 0
+        '
+        'txtData
+        '
+        Me.txtData.Location = New System.Drawing.Point(4, 25)
+        Me.txtData.Name = "txtData"
+        Me.txtData.Size = New System.Drawing.Size(147, 20)
+        Me.txtData.TabIndex = 31
+        Me.txtData.Visible = False
+        '
+        'mskData
+        '
+        Me.mskData.Location = New System.Drawing.Point(452, 39)
+        Me.mskData.Mask = "####-##-##"
+        Me.mskData.Name = "mskData"
+        Me.mskData.Size = New System.Drawing.Size(115, 20)
+        Me.mskData.TabIndex = 30
+        Me.mskData.Visible = False
         '
         'Label1
         '
@@ -217,84 +274,72 @@ Partial Class frmRelatorioVendas
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Relatorio de vendas"
         '
-        'txtLucroTotal
-        '
-        Me.txtLucroTotal.Location = New System.Drawing.Point(131, 407)
-        Me.txtLucroTotal.Name = "txtLucroTotal"
-        Me.txtLucroTotal.ReadOnly = True
-        Me.txtLucroTotal.Size = New System.Drawing.Size(139, 20)
-        Me.txtLucroTotal.TabIndex = 52
-        '
-        'txtSaldoTotal
-        '
-        Me.txtSaldoTotal.Location = New System.Drawing.Point(268, 407)
-        Me.txtSaldoTotal.Name = "txtSaldoTotal"
-        Me.txtSaldoTotal.ReadOnly = True
-        Me.txtSaldoTotal.Size = New System.Drawing.Size(151, 20)
-        Me.txtSaldoTotal.TabIndex = 53
-        '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(48, 406)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(8, 404)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 24)
+        Me.Label3.Size = New System.Drawing.Size(563, 24)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "TOTAL"
+        Me.Label3.Text = "         TOTAL:"
         '
-        'data
+        'Panel3
         '
-        DataGridViewCellStyle4.Format = "C2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.data.DefaultCellStyle = DataGridViewCellStyle4
-        Me.data.FillWeight = 106.8817!
-        Me.data.HeaderText = "Data"
-        Me.data.Name = "data"
-        Me.data.ReadOnly = True
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.dpTo)
+        Me.Panel3.Controls.Add(Me.dpFrom)
+        Me.Panel3.Controls.Add(Me.CrystalReportViewer1)
+        Me.Panel3.Location = New System.Drawing.Point(607, 12)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(589, 442)
+        Me.Panel3.TabIndex = 4
         '
-        'valorcaixa
+        'dpTo
         '
-        Me.valorcaixa.FillWeight = 106.8817!
-        Me.valorcaixa.HeaderText = "Valor do dia"
-        Me.valorcaixa.Name = "valorcaixa"
-        Me.valorcaixa.ReadOnly = True
+        Me.dpTo.CustomFormat = "dd/MM/yyyy"
+        Me.dpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dpTo.Location = New System.Drawing.Point(494, 3)
+        Me.dpTo.Name = "dpTo"
+        Me.dpTo.Size = New System.Drawing.Size(79, 20)
+        Me.dpTo.TabIndex = 2
+        Me.dpTo.Visible = False
         '
-        'lucrodia
+        'dpFrom
         '
-        Me.lucrodia.HeaderText = "Lucro do dia"
-        Me.lucrodia.Name = "lucrodia"
-        Me.lucrodia.ReadOnly = True
+        Me.dpFrom.CustomFormat = "dd/MM/yyyy"
+        Me.dpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dpFrom.Location = New System.Drawing.Point(409, 3)
+        Me.dpFrom.Name = "dpFrom"
+        Me.dpFrom.Size = New System.Drawing.Size(79, 20)
+        Me.dpFrom.TabIndex = 1
+        Me.dpFrom.Visible = False
         '
-        'fechado
+        'CrystalReportViewer1
         '
-        Me.fechado.HeaderText = "Fechado"
-        Me.fechado.Name = "fechado"
-        Me.fechado.ReadOnly = True
-        '
-        'colDetalhes
-        '
-        Me.colDetalhes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.colDetalhes.FillWeight = 58.70967!
-        Me.colDetalhes.HeaderText = ""
-        Me.colDetalhes.Name = "colDetalhes"
-        Me.colDetalhes.ReadOnly = True
-        Me.colDetalhes.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colDetalhes.Width = 5
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(587, 440)
+        Me.CrystalReportViewer1.TabIndex = 0
+        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'frmRelatorioVendas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(611, 466)
+        Me.ClientSize = New System.Drawing.Size(1203, 466)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmRelatorioVendas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmVendas"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgCaixa, System.ComponentModel.ISupportInitialize).EndInit()
@@ -303,6 +348,7 @@ Partial Class frmRelatorioVendas
         Me.GroupBox3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -324,9 +370,13 @@ Partial Class frmRelatorioVendas
     Friend WithEvents Label3 As Label
     Friend WithEvents txtSaldoTotal As TextBox
     Friend WithEvents txtLucroTotal As TextBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents mskData As MaskedTextBox
+    Friend WithEvents txtData As TextBox
     Friend WithEvents data As DataGridViewTextBoxColumn
-    Friend WithEvents valorcaixa As DataGridViewTextBoxColumn
+    Friend WithEvents valordia As DataGridViewTextBoxColumn
     Friend WithEvents lucrodia As DataGridViewTextBoxColumn
-    Friend WithEvents fechado As DataGridViewTextBoxColumn
-    Friend WithEvents colDetalhes As DataGridViewButtonColumn
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents dpTo As DateTimePicker
+    Friend WithEvents dpFrom As DateTimePicker
 End Class

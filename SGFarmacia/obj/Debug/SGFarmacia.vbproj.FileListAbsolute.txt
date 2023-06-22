@@ -51,4 +51,6 @@ C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\bin\Debug\stdole.dll
-C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmVD.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmVendaDinheiro.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmRelProdutos.resources
+C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\obj\Debug\SGFarmacia.frmrelCaixaDiario.resources

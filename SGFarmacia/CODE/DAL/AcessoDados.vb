@@ -35,7 +35,6 @@ Public Class AcessoDados
             Using con
                 con = New MySqlConnection(strCon)
                 con.Open()
-                'MsgBox("Conectado")
             End Using
         Catch ex As Exception
             MsgBox(ex.Message & "Erro ao conectar o sistema com a base de dados")
@@ -152,6 +151,25 @@ Public Class AcessoDados
             MsgBox(ex.Message, vbCritical)
         End Try
     End Sub
+    Public Sub ListarSaldosEntreData(sql As String)
+        frmRelatorioVendas.dgCaixa.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmRelatorioVendas.dgCaixa.Rows.Add(dr.Item("data").ToString, dr.Item("total_unitario").ToString, dr.Item("lucro_dia").ToString)
+            End While
+        Catch ex As Exception
+            MessageBox.Show("Ocorreu um erro: " + ex.Message)
+            dr.Close()
+            con.Close()
+            MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
     Public Sub ListarCaixa(sql As String)
         frmRelatorioVendas.dgCaixa.Rows.Clear()
         Dim i As Integer
@@ -162,7 +180,64 @@ Public Class AcessoDados
             dr = cmd.ExecuteReader
             While dr.Read
                 i += i
-                frmRelatorioVendas.dgCaixa.Rows.Add(dr.Item("criado").ToString, dr.Item("valor_dia").ToString, dr.Item("lucro_dia").ToString, dr.Item("fechado").ToString, "Remover")
+                frmRelatorioVendas.dgCaixa.Rows.Add(dr.Item("criado").ToString, dr.Item("valor_dia").ToString, dr.Item("lucro_dia").ToString, dr.Item("fechado").ToString)
+            End While
+        Catch ex As Exception
+            MessageBox.Show("Ocorreu um erro: " + ex.Message)
+            dr.Close()
+            con.Close()
+            MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
+    Public Sub ListarProdutosComprados(sql As String)
+        frmResumo.dgCaixa.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmResumo.dgCaixa.Rows.Add(dr.Item("designacao").ToString, dr.Item("total").ToString)
+            End While
+        Catch ex As Exception
+            MessageBox.Show("Ocorreu um erro: " + ex.Message)
+            dr.Close()
+            con.Close()
+            MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
+    Public Sub ListarProdutosNuncaComprados(sql As String)
+        frmResumo.dgNunca.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmResumo.dgNunca.Rows.Add(dr.Item("designacao").ToString)
+            End While
+        Catch ex As Exception
+            MessageBox.Show("Ocorreu um erro: " + ex.Message)
+            dr.Close()
+            con.Close()
+            MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
+    Public Sub ListarProdutosMenosComprados(sql As String)
+        frmResumo.dgMenos.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmResumo.dgMenos.Rows.Add(dr.Item("designacao").ToString, dr.Item("total").ToString)
             End While
         Catch ex As Exception
             MessageBox.Show("Ocorreu um erro: " + ex.Message)
@@ -211,6 +286,47 @@ Public Class AcessoDados
 
         End Try
     End Sub
+    Public Sub ListarCaixaEntreDatas(sql As String)
+        frmCaixaDiario.dgListaVendas.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmCaixaDiario.dgListaVendas.Rows.Add(dr.Item("nrvenda").ToString, dr.Item("cliente").ToString, dr.Item("nuit").ToString, dr.Item("contacto").ToString, dr.Item("totalgeral").ToString, dr.Item("lucrovd").ToString, "Detalhes", "Remover")
+            End While
+        Catch ex As Exception
+            MessageBox.Show("Ocorreu um erro: " + ex.Message)
+        Finally
+            dr.Close()
+            con.Close()
+
+        End Try
+    End Sub
+    Public Sub ListaSaidaProduto(sql As String)
+        'frmRelatorioVendas.dgListaVendas.Rows.Clear()
+        Dim i As Integer
+        con = New MySqlConnection(strCon)
+        con.Open()
+        Try
+            cmd = New MySqlCommand(sql, con)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                i += i
+                frmRelatorioVendas.dgCaixa.Rows.Add(dr.Item("nrvenda").ToString, dr.Item("cliente").ToString, dr.Item("nuit").ToString, dr.Item("contacto").ToString, dr.Item("totalgeral").ToString, dr.Item("cancelado").ToString)
+            End While
+        Catch ex As Exception
+            MessageBox.Show("Ocorreu um erro: " + ex.Message)
+        Finally
+            dr.Close()
+            con.Close()
+
+        End Try
+    End Sub
+
     Public Sub ListarVendasProdutoCaixa(sql As String)
         frmCaixaDiario.dgListaVendas.Rows.Clear()
         Dim i As Integer

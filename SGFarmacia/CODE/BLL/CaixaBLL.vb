@@ -28,4 +28,9 @@
         con.ListarCaixa(sql)
         Return ds
     End Function
+    Public Function BuscaIDData(ByRef data As String)
+        sql = "SELECT ID FROM caixa where criado = '" & data & "'"
+        tbl = con.ListarEspecifico(sql)
+        Return tbl
+    End Function
 End Class

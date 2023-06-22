@@ -502,7 +502,7 @@ Partial Class mdiPrincipal
         Me.btnVenda.Name = "btnVenda"
         Me.btnVenda.Size = New System.Drawing.Size(190, 42)
         Me.btnVenda.TabIndex = 12
-        Me.btnVenda.Text = "Vendas"
+        Me.btnVenda.Text = "Resumo"
         Me.btnVenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnVenda.UseVisualStyleBackColor = False
         '

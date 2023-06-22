@@ -22,10 +22,10 @@ Partial Class frmListarProdutos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListarProdutos))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -44,18 +44,29 @@ Partial Class frmListarProdutos
         Me.colEditar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cboFiltro = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnRegistar = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cmdImprimir = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.dpData = New System.Windows.Forms.DateTimePicker()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.dgListaFuncionarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -78,7 +89,7 @@ Partial Class frmListarProdutos
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(0, 81)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(800, 380)
+        Me.Panel5.Size = New System.Drawing.Size(800, 361)
         Me.Panel5.TabIndex = 13
         '
         'dgListaFuncionarios
@@ -96,7 +107,7 @@ Partial Class frmListarProdutos
         Me.dgListaFuncionarios.ReadOnly = True
         Me.dgListaFuncionarios.RowHeadersVisible = False
         Me.dgListaFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgListaFuncionarios.Size = New System.Drawing.Size(800, 380)
+        Me.dgListaFuncionarios.Size = New System.Drawing.Size(800, 361)
         Me.dgListaFuncionarios.TabIndex = 17
         '
         'id
@@ -134,35 +145,35 @@ Partial Class frmListarProdutos
         '
         'stockactual
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.stockactual.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.stockactual.DefaultCellStyle = DataGridViewCellStyle1
         Me.stockactual.HeaderText = "Stock actual"
         Me.stockactual.Name = "stockactual"
         Me.stockactual.ReadOnly = True
         '
         'precocompra
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle6.Format = "C2"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.precocompra.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.precocompra.DefaultCellStyle = DataGridViewCellStyle2
         Me.precocompra.HeaderText = "Preço compra"
         Me.precocompra.Name = "precocompra"
         Me.precocompra.ReadOnly = True
         '
         'valordia
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.valordia.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.valordia.DefaultCellStyle = DataGridViewCellStyle3
         Me.valordia.HeaderText = "Preço venda"
         Me.valordia.Name = "valordia"
         Me.valordia.ReadOnly = True
         '
         'qtdcaixa
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.qtdcaixa.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.qtdcaixa.DefaultCellStyle = DataGridViewCellStyle4
         Me.qtdcaixa.HeaderText = "Qtd por caixa"
         Me.qtdcaixa.Name = "qtdcaixa"
         Me.qtdcaixa.ReadOnly = True
@@ -200,6 +211,11 @@ Partial Class frmListarProdutos
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.GroupBox1)
+        Me.Panel4.Controls.Add(Me.Label2)
+        Me.Panel4.Controls.Add(Me.Label1)
+        Me.Panel4.Controls.Add(Me.Panel7)
+        Me.Panel4.Controls.Add(Me.Panel6)
         Me.Panel4.Controls.Add(Me.PictureBox1)
         Me.Panel4.Controls.Add(Me.btnRegistar)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
@@ -207,6 +223,98 @@ Partial Class frmListarProdutos
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(800, 56)
         Me.Panel4.TabIndex = 12
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.cboFiltro)
+        Me.GroupBox1.Location = New System.Drawing.Point(101, 3)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(380, 47)
+        Me.GroupBox1.TabIndex = 36
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Listar produtos"
+        '
+        'Button1
+        '
+        Me.Button1.Image = Global.SGFarmacia.My.Resources.Resources.eye_16px
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(289, 22)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(85, 20)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Pesquisar"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 24)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(32, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Filtro:"
+        '
+        'cboFiltro
+        '
+        Me.cboFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboFiltro.FormattingEnabled = True
+        Me.cboFiltro.Items.AddRange(New Object() {"Sem stock", "Stock minimo", "Fora do prazo", "Dentro do prazo", "Todos"})
+        Me.cboFiltro.Location = New System.Drawing.Point(82, 21)
+        Me.cboFiltro.Name = "cboFiltro"
+        Me.cboFiltro.Size = New System.Drawing.Size(201, 21)
+        Me.cboFiltro.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(487, 8)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(139, 17)
+        Me.Label2.TabIndex = 35
+        Me.Label2.Text = "Produto fora do prazo"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(507, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(121, 18)
+        Me.Label1.TabIndex = 35
+        Me.Label1.Text = "Produto sem stock"
+        '
+        'Panel7
+        '
+        Me.Panel7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel7.BackColor = System.Drawing.Color.Red
+        Me.Panel7.Location = New System.Drawing.Point(628, 3)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(100, 22)
+        Me.Panel7.TabIndex = 34
+        '
+        'Panel6
+        '
+        Me.Panel6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BackColor = System.Drawing.Color.Yellow
+        Me.Panel6.Location = New System.Drawing.Point(628, 29)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(100, 21)
+        Me.Panel6.TabIndex = 34
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.stock_in_icon
+        Me.PictureBox1.Location = New System.Drawing.Point(747, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 33
+        Me.PictureBox1.TabStop = False
         '
         'btnRegistar
         '
@@ -217,7 +325,7 @@ Partial Class frmListarProdutos
         Me.btnRegistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegistar.ForeColor = System.Drawing.Color.White
         Me.btnRegistar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegistar.Location = New System.Drawing.Point(12, 7)
+        Me.btnRegistar.Location = New System.Drawing.Point(12, 14)
         Me.btnRegistar.Name = "btnRegistar"
         Me.btnRegistar.Size = New System.Drawing.Size(76, 29)
         Me.btnRegistar.TabIndex = 10
@@ -227,12 +335,44 @@ Partial Class frmListarProdutos
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Teal
+        Me.Panel3.Controls.Add(Me.cmdImprimir)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 461)
+        Me.Panel3.Location = New System.Drawing.Point(0, 442)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(800, 15)
+        Me.Panel3.Size = New System.Drawing.Size(800, 34)
         Me.Panel3.TabIndex = 11
-        Me.Panel3.Visible = False
+        '
+        'cmdImprimir
+        '
+        Me.cmdImprimir.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.cmdImprimir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmdImprimir.FlatAppearance.BorderSize = 0
+        Me.cmdImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
+        Me.cmdImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdImprimir.ForeColor = System.Drawing.Color.White
+        Me.cmdImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdImprimir.Location = New System.Drawing.Point(12, 3)
+        Me.cmdImprimir.Name = "cmdImprimir"
+        Me.cmdImprimir.Size = New System.Drawing.Size(76, 29)
+        Me.cmdImprimir.TabIndex = 10
+        Me.cmdImprimir.Text = "Imprimir"
+        Me.cmdImprimir.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.BackColor = System.Drawing.Color.Teal
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(772, 0)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(25, 28)
+        Me.Button3.TabIndex = 5
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -252,50 +392,26 @@ Partial Class frmListarProdutos
         Me.dpData.TabIndex = 23
         Me.dpData.Visible = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.stock_in_icon
-        Me.PictureBox1.Location = New System.Drawing.Point(747, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 33
-        Me.PictureBox1.TabStop = False
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackColor = System.Drawing.Color.Teal
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(775, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(22, 25)
-        Me.Button3.TabIndex = 5
-        Me.Button3.UseVisualStyleBackColor = False
-        '
         'frmListarProdutos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 476)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmListarProdutos"
         Me.ShowIcon = False
-        Me.Text = "frmListarProdutos"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         CType(Me.dgListaFuncionarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -323,4 +439,13 @@ Partial Class frmListarProdutos
     Friend WithEvents colEditar As DataGridViewButtonColumn
     Friend WithEvents colRemover As DataGridViewButtonColumn
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents cboFiltro As ComboBox
+    Friend WithEvents cmdImprimir As Button
 End Class

@@ -138,6 +138,10 @@
                     Me.Close()
                     frmListarSaidasDoDia.ListarSaidaDeProdutos()
                     frmListarSaidasDoDia.ColorirGrid()
+                    frmResumo.GetCountOfCells()
+                    frmResumo.ListaProdutosComprados()
+                    frmResumo.ListaProdutosMenosComprados()
+                    frmResumo.ListarProdutosNuncaComprados()
 
                 End If
             Catch ex As Exception
@@ -239,28 +243,12 @@
 
 
     Private Sub btnNovaVenda_Click(sender As Object, e As EventArgs) Handles btnNovaVenda.Click
-        'acao = "Novo"
-        'IncrementaCodigo()
-        'Me.dgVendaItens.Rows.Clear()
-        'Me.txtCliente.Enabled = False
-        'Me.txtNuit.Enabled = False
-        'Me.txtContacto.Enabled = False
-        'Me.lblCliente.Enabled = False
-        'Me.lblContacto.Enabled = False
-        'Me.lblEndereco.Enabled = False
-        'Me.txtCliente.Text = ""
-        'Me.txtNuit.Text = ""
-        'Me.txtContacto.Text = ""
-        'Me.txtTotal.Text = ""
-        'Me.txtTotalDesconto.Text = ""
-        'Me.txtTotalGeral.Text = ""
-        'Me.txtProduto.Focus()
-        frmVendaDinherio.CrystalReportViewer1.Enabled = True
-        frmVendaDinherio.CrystalReportViewer1.ReportSource = "C:\Users\USER\Documents\Projectos\VB.NET\TRUNK\SGFarmacia\SGFarmacia\SGFarmacia\UI\Reports\relVD.rpt"
-        frmVendaDinherio.CrystalReportViewer1.SelectionFormula = "{Command.cod_venda} =  " & Me.txtNrVenda.Text & ""
-        frmVendaDinherio.CrystalReportViewer1.Refresh()
-        frmVendaDinherio.CrystalReportViewer1.RefreshReport() '" & Me.txtNumFct.Text & "'"
-        frmVendaDinherio.ShowDialog()
+        frmVendaDinheiro.CrystalReportViewer1.Enabled = True
+        frmVendaDinheiro.CrystalReportViewer1.ReportSource = "C:\Dados\Relatorios\relVendaDinheiro.rpt"
+        frmVendaDinheiro.CrystalReportViewer1.SelectionFormula = "{Command.cod_venda} =  '" & Me.txtNrVenda.Text & "'"
+        frmVendaDinheiro.CrystalReportViewer1.Refresh()
+        frmVendaDinheiro.CrystalReportViewer1.RefreshReport() '" & Me.txtNumFct.Text & "'"
+        frmVendaDinheiro.ShowDialog()
     End Sub
     Public Sub VerificaStock()
         On Error Resume Next

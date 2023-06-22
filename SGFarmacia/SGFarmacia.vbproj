@@ -11,7 +11,7 @@
     <AssemblyName>SGFarmacia</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -46,6 +46,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Estoque.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -85,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CODE\BLL\CaixaBLL.vb" />
+    <Compile Include="CODE\BLL\Caixa_DetalhesBLL.vb" />
     <Compile Include="CODE\BLL\CategoriaBLL.vb" />
     <Compile Include="CODE\BLL\EntradaBLL.vb" />
     <Compile Include="CODE\BLL\Nota_CreditoBLL.vb" />
@@ -96,6 +100,7 @@
     <Compile Include="CODE\BLL\VendaItensBLL.vb" />
     <Compile Include="CODE\DAL\AcessoDados.vb" />
     <Compile Include="CODE\DTO\CaixaDTO.vb" />
+    <Compile Include="CODE\DTO\Caixa_DetalhesDTO.vb" />
     <Compile Include="CODE\DTO\CategoriaDTO.vb" />
     <Compile Include="CODE\DTO\EntradaDTO.vb" />
     <Compile Include="CODE\DTO\Nota_CreditoDTO.vb" />
@@ -214,10 +219,46 @@
     <Compile Include="UI\mdiPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Reports\relVD.vb">
+    <Compile Include="UI\Reports\frmrelCaixaDiario.Designer.vb">
+      <DependentUpon>frmrelCaixaDiario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\frmrelCaixaDiario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\frmRelProdutos.Designer.vb">
+      <DependentUpon>frmRelProdutos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\frmRelProdutos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\frmVendaDinheiro.Designer.vb">
+      <DependentUpon>frmVendaDinheiro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\frmVendaDinheiro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\relCaixaDiario.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>relVD.rpt</DependentUpon>
+      <DependentUpon>relCaixaDiario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\relProdutos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>relProdutos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\relVendaDinheiro.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>relVendaDinheiro.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\relVendas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>relVendas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -273,9 +314,30 @@
     <EmbeddedResource Include="UI\mdiPrincipal.resx">
       <DependentUpon>mdiPrincipal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Reports\relVD.rpt">
+    <EmbeddedResource Include="UI\Reports\frmrelCaixaDiario.resx">
+      <DependentUpon>frmrelCaixaDiario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\frmRelProdutos.resx">
+      <DependentUpon>frmRelProdutos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\frmVendaDinheiro.resx">
+      <DependentUpon>frmVendaDinheiro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\relCaixaDiario.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>relVD.vb</LastGenOutput>
+      <LastGenOutput>relCaixaDiario.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\relProdutos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>relProdutos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\relVendaDinheiro.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>relVendaDinheiro.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\relVendas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>relVendas.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -376,6 +438,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Database1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\services_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_16px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Estoque.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -33,14 +33,14 @@ Partial Class frmListarNotasCredito
         Me.motivo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colVisualizar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.btnRegistar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.mskData = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         CType(Me.dgListaNotasVendas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -133,16 +133,6 @@ Partial Class frmListarNotasCredito
         Me.btnRegistar.Text = "Novo"
         Me.btnRegistar.UseVisualStyleBackColor = False
         '
-        'Button1
-        '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Location = New System.Drawing.Point(166, 18)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 30
-        Me.Button1.Text = "Pesquisar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -166,12 +156,25 @@ Partial Class frmListarNotasCredito
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.mskData)
-        Me.GroupBox1.Location = New System.Drawing.Point(89, 6)
+        Me.GroupBox1.Location = New System.Drawing.Point(7, 5)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(252, 46)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtrar vendas do dia"
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Image = Global.SGFarmacia.My.Resources.Resources.eye_16px1
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(166, 18)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 30
+        Me.Button1.Text = "Pesquisar"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel4
         '
@@ -193,16 +196,6 @@ Partial Class frmListarNotasCredito
         Me.Panel2.Size = New System.Drawing.Size(800, 25)
         Me.Panel2.TabIndex = 24
         '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.Teal
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 440)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(800, 10)
-        Me.Panel3.TabIndex = 26
-        Me.Panel3.Visible = False
-        '
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -219,6 +212,16 @@ Partial Class frmListarNotasCredito
         Me.Button3.TabIndex = 6
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.Teal
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(0, 440)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(800, 10)
+        Me.Panel3.TabIndex = 26
+        Me.Panel3.Visible = False
+        '
         'frmListarNotasCredito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -228,8 +231,8 @@ Partial Class frmListarNotasCredito
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmListarNotasCredito"
-        Me.Text = "frmListarNotasCredito"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgListaNotasVendas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

@@ -22,9 +22,13 @@ Partial Class frmDetalhesCaixaDiario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDetalhesCaixaDiario))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDetalhesCaixaDiario))
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtCodigoBarras = New System.Windows.Forms.TextBox()
         Me.txtStockActual = New System.Windows.Forms.TextBox()
         Me.btnRegistar = New System.Windows.Forms.Button()
@@ -73,15 +77,6 @@ Partial Class frmDetalhesCaixaDiario
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgVendaItens = New System.Windows.Forms.DataGridView()
-        Me.artigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.produto_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.produto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precounitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.qtd = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.desconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lucro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lucrototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtNVenda = New System.Windows.Forms.TextBox()
         Me.btnAdicionar = New System.Windows.Forms.Button()
@@ -99,6 +94,15 @@ Partial Class frmDetalhesCaixaDiario
         Me.txtPrecoLucro = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.txtTotalVenda = New System.Windows.Forms.TextBox()
+        Me.artigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.produto_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.produto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precounitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.qtd = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.desconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lucro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lucrototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgPesquisar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -654,80 +658,6 @@ Partial Class frmDetalhesCaixaDiario
         Me.dgVendaItens.Size = New System.Drawing.Size(754, 208)
         Me.dgVendaItens.TabIndex = 42
         '
-        'artigo
-        '
-        Me.artigo.HeaderText = "Artigo"
-        Me.artigo.Name = "artigo"
-        Me.artigo.ReadOnly = True
-        Me.artigo.Width = 65
-        '
-        'produto_id
-        '
-        Me.produto_id.HeaderText = "produto_id"
-        Me.produto_id.Name = "produto_id"
-        Me.produto_id.ReadOnly = True
-        Me.produto_id.Visible = False
-        '
-        'produto
-        '
-        Me.produto.HeaderText = "Designação"
-        Me.produto.Name = "produto"
-        Me.produto.ReadOnly = True
-        Me.produto.Width = 160
-        '
-        'precounitario
-        '
-        Me.precounitario.HeaderText = "Preço venda"
-        Me.precounitario.Name = "precounitario"
-        Me.precounitario.ReadOnly = True
-        Me.precounitario.Width = 80
-        '
-        'qtd
-        '
-        Me.qtd.HeaderText = "Qtd"
-        Me.qtd.Name = "qtd"
-        Me.qtd.ReadOnly = True
-        Me.qtd.Width = 80
-        '
-        'subtotal
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Navy
-        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle3
-        Me.subtotal.HeaderText = "Total venda"
-        Me.subtotal.Name = "subtotal"
-        Me.subtotal.ReadOnly = True
-        Me.subtotal.Width = 80
-        '
-        'desconto
-        '
-        Me.desconto.HeaderText = "Preço compra"
-        Me.desconto.Name = "desconto"
-        Me.desconto.ReadOnly = True
-        Me.desconto.Width = 80
-        '
-        'lucro
-        '
-        Me.lucro.HeaderText = "Lucro por produto"
-        Me.lucro.Name = "lucro"
-        Me.lucro.ReadOnly = True
-        '
-        'lucrototal
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Red
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
-        Me.lucrototal.DefaultCellStyle = DataGridViewCellStyle4
-        Me.lucrototal.HeaderText = "Lucro total"
-        Me.lucrototal.Name = "lucrototal"
-        Me.lucrototal.ReadOnly = True
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.txtNVenda)
@@ -950,6 +880,88 @@ Partial Class frmDetalhesCaixaDiario
         Me.txtTotalVenda.TabIndex = 3
         Me.txtTotalVenda.Text = "0.0 Mtn"
         Me.txtTotalVenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'artigo
+        '
+        Me.artigo.HeaderText = "Artigo"
+        Me.artigo.Name = "artigo"
+        Me.artigo.ReadOnly = True
+        Me.artigo.Width = 65
+        '
+        'produto_id
+        '
+        Me.produto_id.HeaderText = "produto_id"
+        Me.produto_id.Name = "produto_id"
+        Me.produto_id.ReadOnly = True
+        Me.produto_id.Visible = False
+        '
+        'produto
+        '
+        Me.produto.HeaderText = "Designação"
+        Me.produto.Name = "produto"
+        Me.produto.ReadOnly = True
+        Me.produto.Width = 160
+        '
+        'precounitario
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.precounitario.DefaultCellStyle = DataGridViewCellStyle1
+        Me.precounitario.HeaderText = "Preço venda"
+        Me.precounitario.Name = "precounitario"
+        Me.precounitario.ReadOnly = True
+        Me.precounitario.Width = 80
+        '
+        'qtd
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.qtd.DefaultCellStyle = DataGridViewCellStyle2
+        Me.qtd.HeaderText = "Qtd"
+        Me.qtd.Name = "qtd"
+        Me.qtd.ReadOnly = True
+        Me.qtd.Width = 80
+        '
+        'subtotal
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Navy
+        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle3
+        Me.subtotal.HeaderText = "Total venda"
+        Me.subtotal.Name = "subtotal"
+        Me.subtotal.ReadOnly = True
+        Me.subtotal.Width = 80
+        '
+        'desconto
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.desconto.DefaultCellStyle = DataGridViewCellStyle4
+        Me.desconto.HeaderText = "Preço compra"
+        Me.desconto.Name = "desconto"
+        Me.desconto.ReadOnly = True
+        Me.desconto.Width = 80
+        '
+        'lucro
+        '
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.lucro.DefaultCellStyle = DataGridViewCellStyle5
+        Me.lucro.HeaderText = "Lucro por produto"
+        Me.lucro.Name = "lucro"
+        Me.lucro.ReadOnly = True
+        '
+        'lucrototal
+        '
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Red
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        Me.lucrototal.DefaultCellStyle = DataGridViewCellStyle6
+        Me.lucrototal.HeaderText = "Lucro total"
+        Me.lucrototal.Name = "lucrototal"
+        Me.lucrototal.ReadOnly = True
         '
         'frmDetalhesCaixaDiario
         '

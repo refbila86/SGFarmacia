@@ -65,7 +65,7 @@ Partial Class frmCadastrarProduto
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.LimeGreen
+        Me.Panel1.BackColor = System.Drawing.Color.Teal
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.lblRegistar)
         Me.Panel1.Controls.Add(Me.Button3)
@@ -100,7 +100,7 @@ Partial Class frmCadastrarProduto
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button3.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
@@ -115,7 +115,7 @@ Partial Class frmCadastrarProduto
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -330,32 +330,32 @@ Partial Class frmCadastrarProduto
         '
         'btnNovo
         '
-        Me.btnNovo.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnNovo.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNovo.FlatAppearance.BorderSize = 0
         Me.btnNovo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
         Me.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNovo.ForeColor = System.Drawing.Color.White
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovo.Location = New System.Drawing.Point(180, 360)
+        Me.btnNovo.Location = New System.Drawing.Point(223, 360)
         Me.btnNovo.Name = "btnNovo"
-        Me.btnNovo.Size = New System.Drawing.Size(261, 29)
+        Me.btnNovo.Size = New System.Drawing.Size(173, 29)
         Me.btnNovo.TabIndex = 10
         Me.btnNovo.Text = "&Novo produto"
         Me.btnNovo.UseVisualStyleBackColor = False
         '
         'btnRegistar
         '
-        Me.btnRegistar.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnRegistar.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegistar.FlatAppearance.BorderSize = 0
         Me.btnRegistar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
         Me.btnRegistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegistar.ForeColor = System.Drawing.Color.White
         Me.btnRegistar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegistar.Location = New System.Drawing.Point(180, 360)
+        Me.btnRegistar.Location = New System.Drawing.Point(223, 360)
         Me.btnRegistar.Name = "btnRegistar"
-        Me.btnRegistar.Size = New System.Drawing.Size(261, 29)
+        Me.btnRegistar.Size = New System.Drawing.Size(173, 29)
         Me.btnRegistar.TabIndex = 11
         Me.btnRegistar.Text = "Registar produto"
         Me.btnRegistar.UseVisualStyleBackColor = False

@@ -37,6 +37,7 @@ Partial Class frmSaidaProdutos
         Me.colEditar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemover = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnAdicionar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.chkIncluirCliente = New System.Windows.Forms.CheckBox()
@@ -63,6 +64,7 @@ Partial Class frmSaidaProdutos
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtTotalGeral = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCodigoBarras = New System.Windows.Forms.TextBox()
         Me.txtStockActual = New System.Windows.Forms.TextBox()
@@ -89,16 +91,14 @@ Partial Class frmSaidaProdutos
         Me.qtdcaixa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSelecionar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.pnPesquisar = New System.Windows.Forms.Panel()
-        Me.btnAdicionar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel4.SuspendLayout()
         CType(Me.dgVendaItens, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgPesquisar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnPesquisar.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel4
@@ -239,6 +239,20 @@ Partial Class frmSaidaProdutos
         Me.GroupBox1.Size = New System.Drawing.Size(753, 180)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
+        '
+        'btnAdicionar
+        '
+        Me.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAdicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdicionar.Image = CType(resources.GetObject("btnAdicionar.Image"), System.Drawing.Image)
+        Me.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdicionar.Location = New System.Drawing.Point(468, 130)
+        Me.btnAdicionar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnAdicionar.Name = "btnAdicionar"
+        Me.btnAdicionar.Size = New System.Drawing.Size(285, 40)
+        Me.btnAdicionar.TabIndex = 5
+        Me.btnAdicionar.Text = "ADICIONAR A LISTA"
+        Me.btnAdicionar.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -540,6 +554,17 @@ Partial Class frmSaidaProdutos
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "TOTAL GERAL:"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.cb
+        Me.PictureBox1.Location = New System.Drawing.Point(384, 10)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(73, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -665,7 +690,7 @@ Partial Class frmSaidaProdutos
         Me.btnNovaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNovaVenda.ForeColor = System.Drawing.Color.White
         Me.btnNovaVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovaVenda.Location = New System.Drawing.Point(103, 521)
+        Me.btnNovaVenda.Location = New System.Drawing.Point(9, 527)
         Me.btnNovaVenda.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnNovaVenda.Name = "btnNovaVenda"
         Me.btnNovaVenda.Size = New System.Drawing.Size(171, 36)
@@ -824,31 +849,6 @@ Partial Class frmSaidaProdutos
         Me.pnPesquisar.TabIndex = 29
         Me.pnPesquisar.Visible = False
         '
-        'btnAdicionar
-        '
-        Me.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAdicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdicionar.Image = CType(resources.GetObject("btnAdicionar.Image"), System.Drawing.Image)
-        Me.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdicionar.Location = New System.Drawing.Point(468, 130)
-        Me.btnAdicionar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnAdicionar.Name = "btnAdicionar"
-        Me.btnAdicionar.Size = New System.Drawing.Size(285, 40)
-        Me.btnAdicionar.TabIndex = 5
-        Me.btnAdicionar.Text = "ADICIONAR A LISTA"
-        Me.btnAdicionar.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SGFarmacia.My.Resources.Resources.cb
-        Me.PictureBox1.Location = New System.Drawing.Point(384, 10)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(73, 34)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
         'frmSaidaProdutos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 16.0!)
@@ -890,9 +890,9 @@ Partial Class frmSaidaProdutos
         Me.GroupBox2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgPesquisar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnPesquisar.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -1,4 +1,5 @@
-﻿Public Class frmRelatorioVendas
+﻿Imports MySql.Data.MySqlClient
+Public Class frmRelatorioVendas
     Dim sql As String
     Dim ds, dst As New DataSet
     Dim tbl As New DataTable
@@ -55,6 +56,70 @@
     Private Sub frmRelatorioVendas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListarVendasDoDia()
         SomaTotais()
+        dataInicial = Format(dtpDateFrom.Value, "yyyy-MM-dd")
+        dataFinal = Format(dtpDateTo.Value, "yyyy-MM-dd")
+    End Sub
+    Public Sub ListarSaidaDeProdutos()
+        'dgListaVendas.Rows.Clear()
+        Try
+            ds = vendaBLL.ListaSaidaProduto(txtData.Text)
+        Catch ex As Exception
+            MsgBox("Ocorreu um erro ao trazer as vendas do dia: " + ex.Message, MsgBoxStyle.Critical, "ERRO")
+        Finally
+            ds = Nothing
+        End Try
+    End Sub
+
+    Private Sub dgCaixa_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCaixa.CellContentClick
+        'Dim colName As String = dgCaixa.Columns(e.ColumnIndex).Name
+        'If colName = "colDetalhes" Then
+        '    txtData.Text = Me.dgCaixa.Rows(e.RowIndex).Cells(0).Value
+        '    diaNaGrid = Format(Me.txtData.Text, "yyyy-MM-dd")
+        'End If
+        'ListarSaidaDeProdutos()
+
+    End Sub
+    Private Sub GetLucroEntreDatas()
+        Try
+            ds = vendas_itensBLL.CalculaLucroEntreDatas(dataInicial, dataFinal)
+            SomaTotais()
+        Catch ex As Exception
+            MsgBox("Erro ao trazer o codigo da categoria - " & ex.Message, MsgBoxStyle.Critical, "ERRO")
+        End Try
+        tbl = Nothing
+    End Sub
+    Private Sub btnGetData_Click(sender As Object, e As EventArgs) Handles btnGetData.Click
+        GetLucroEntreDatas()
+    End Sub
+
+    Private Sub dtpDateFrom_ValueChanged(sender As Object, e As EventArgs) Handles dtpDateFrom.ValueChanged
+        dataInicial = Format(dtpDateFrom.Value, "yyyy-MM-dd")
+    End Sub
+
+    Private Sub dtpDateTo_ValueChanged(sender As Object, e As EventArgs) Handles dtpDateTo.ValueChanged
+        dataFinal = Format(dtpDateTo.Value, "yyyy-MM-dd")
+    End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        ListarVendasDoDia()
+        SomaTotais()
+        dataInicial = Format(dtpDateFrom.Value, "yyyy-MM-dd")
+        dataFinal = Format(dtpDateTo.Value, "yyyy-MM-dd")
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim rel As New relVendas
+
+        dataInicial = Format(Me.dtpDateFrom.Value, "yyyy-MM-dd").ToString
+        dataFinal = Format(Me.dtpDateTo.Value, "yyyy-MM-dd").ToString
+
+        rel.SummaryInfo.ReportTitle = "Data inicial: " & Format(dpFrom.Value, "yyyy-MM-dd") & " - Data final: " & Format(dpTo.Value, "yyyy-MM-dd")
+
+        Me.CrystalReportViewer1.Enabled = True
+        Me.CrystalReportViewer1.ReportSource = "C:\Dados\Relatorios\relVendas.rpt"
+        CrystalReportViewer1.SelectionFormula = "{Command.data} >= #" & dataInicial & "# And {Command.data}<= #" & dataFinal & "#"
+        CrystalReportViewer1.Refresh()
+        CrystalReportViewer1.RefreshReport()
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint

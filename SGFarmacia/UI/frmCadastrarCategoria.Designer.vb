@@ -44,7 +44,7 @@ Partial Class frmCadastrarCategoria
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.ForestGreen
+        Me.Panel1.BackColor = System.Drawing.Color.Teal
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -125,7 +125,7 @@ Partial Class frmCadastrarCategoria
         '
         'btnRegistar
         '
-        Me.btnRegistar.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnRegistar.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegistar.FlatAppearance.BorderSize = 0
         Me.btnRegistar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange
@@ -141,7 +141,7 @@ Partial Class frmCadastrarCategoria
         '
         'btnNovo
         '
-        Me.btnNovo.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnNovo.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNovo.FlatAppearance.BorderSize = 0
         Me.btnNovo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange

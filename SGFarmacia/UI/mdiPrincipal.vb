@@ -87,7 +87,8 @@ Public Class mdiPrincipal
     End Sub
 
     Private Sub btnVenda_Click(sender As Object, e As EventArgs) Handles btnVenda.Click
-
+        frmResumo.MdiParent = Me
+        frmResumo.Show()
     End Sub
 
     Private Sub btnValorCaixa_Click(sender As Object, e As EventArgs) Handles btnValorCaixa.Click
